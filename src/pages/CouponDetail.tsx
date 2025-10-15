@@ -6,7 +6,7 @@ import { SEOHead } from '@/components/SEOHead';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { Copy, ExternalLink, Calendar, Percent, CheckCircle2 } from 'lucide-react';
+import { Copy, ExternalLink, Calendar, CheckCircle2 } from 'lucide-react';
 import { toast } from 'sonner';
 
 export default function CouponDetail() {
@@ -51,8 +51,7 @@ export default function CouponDetail() {
           <div className="container py-16">
             <div className="max-w-4xl mx-auto">
               <div className="flex flex-wrap items-center gap-3 mb-6">
-                <Badge className="bg-gradient-primary text-primary-foreground text-lg px-4 py-1">
-                  <Percent className="h-4 w-4 mr-2" />
+                <Badge className="bg-gradient-primary text-primary-foreground text-xl px-4 py-1 font-bold">
                   {coupon.discount}
                 </Badge>
                 {daysUntilExpiry <= 7 && (

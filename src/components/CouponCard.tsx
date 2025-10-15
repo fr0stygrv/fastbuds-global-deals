@@ -5,7 +5,7 @@ import { Coupon } from '@/data/coupons';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Copy, ExternalLink, Calendar, Percent } from 'lucide-react';
+import { Copy, ExternalLink, Calendar } from 'lucide-react';
 import { toast } from 'sonner';
 
 interface CouponCardProps {
@@ -41,8 +41,7 @@ export const CouponCard = ({ coupon }: CouponCardProps) => {
               {content.title}
             </h3>
           </Link>
-          <Badge className="bg-gradient-primary text-primary-foreground shrink-0">
-            <Percent className="h-3 w-3 mr-1" />
+          <Badge className="bg-gradient-primary text-primary-foreground shrink-0 text-lg font-bold">
             {coupon.discount}
           </Badge>
         </div>
