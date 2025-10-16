@@ -2,7 +2,7 @@ import { useLanguage } from '@/i18n/LanguageContext';
 import { SEOHead } from '@/components/SEOHead';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Instagram, Twitter } from 'lucide-react';
+import { Instagram, Twitter, Youtube } from 'lucide-react';
 
 // TikTok and Pinterest custom SVG icons
 const TikTokIcon = ({ className }: { className?: string }) => (
@@ -25,28 +25,35 @@ export default function Contact() {
       name: 'Instagram',
       label: t.contact.instagram,
       icon: Instagram,
-      url: 'https://instagram.com/fastbuds',
+      url: 'https://www.instagram.com/fr0stygrv',
       color: 'hover:bg-pink-600',
     },
     {
       name: 'Twitter',
       label: t.contact.twitter,
       icon: Twitter,
-      url: 'https://twitter.com/fastbuds',
+      url: 'https://x.com/frostygrv',
       color: 'hover:bg-blue-500',
     },
     {
       name: 'TikTok',
       label: t.contact.tiktok,
       icon: TikTokIcon,
-      url: 'https://tiktok.com/@fastbuds',
+      url: 'https://www.tiktok.com/@fr0stygrv',
       color: 'hover:bg-black dark:hover:bg-white dark:hover:text-black',
+    },
+    {
+      name: 'YouTube',
+      label: t.contact.youtube,
+      icon: Youtube,
+      url: 'https://www.youtube.com/@fr0stygrv',
+      color: 'hover:bg-red-600',
     },
     {
       name: 'Pinterest',
       label: t.contact.pinterest,
       icon: PinterestIcon,
-      url: 'https://pinterest.com/fastbuds',
+      url: 'https://www.pinterest.com/fr0stygrv',
       color: 'hover:bg-red-600',
     },
   ];

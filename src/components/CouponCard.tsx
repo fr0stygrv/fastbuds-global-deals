@@ -5,7 +5,7 @@ import { Coupon } from '@/data/coupons';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Copy, ExternalLink, Calendar } from 'lucide-react';
+import { Copy, ExternalLink, Calendar, Users } from 'lucide-react';
 import { toast } from 'sonner';
 
 interface CouponCardProps {
@@ -52,16 +52,22 @@ export const CouponCard = ({ coupon }: CouponCardProps) => {
           {content.description}
         </p>
 
-        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-          <Calendar className="h-4 w-4" />
-          <span>
-            {t.coupon.expires}: {new Date(coupon.expiryDate).toLocaleDateString(language)}
-          </span>
-          {daysUntilExpiry <= 7 && (
-            <Badge variant="destructive" className="ml-auto">
-              {daysUntilExpiry}d
-            </Badge>
-          )}
+        <div className="flex items-center justify-between gap-3 text-sm text-muted-foreground">
+          <div className="flex items-center gap-2">
+            <Calendar className="h-4 w-4" />
+            <span>
+              {t.coupon.expires}: {new Date(coupon.expiryDate).toLocaleDateString(language)}
+            </span>
+            {daysUntilExpiry <= 7 && (
+              <Badge variant="destructive">
+                {daysUntilExpiry}d
+              </Badge>
+            )}
+          </div>
+          <div className="flex items-center gap-1.5 text-primary font-medium">
+            <Users className="h-4 w-4" />
+            <span>{coupon.usageCount}</span>
+          </div>
         </div>
 
         <div className="mt-4 p-3 bg-muted rounded-lg border border-border">

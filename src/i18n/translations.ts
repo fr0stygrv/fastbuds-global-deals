@@ -57,6 +57,7 @@ export interface Translations {
     instagram: string;
     twitter: string;
     tiktok: string;
+    youtube: string;
     pinterest: string;
   };
   meta: {
@@ -130,6 +131,7 @@ export const translations: Record<Language, Translations> = {
       instagram: 'Follow on Instagram',
       twitter: 'Follow on Twitter',
       tiktok: 'Follow on TikTok',
+      youtube: 'Follow on YouTube',
       pinterest: 'Follow on Pinterest',
     },
     meta: {
@@ -201,6 +203,7 @@ export const translations: Record<Language, Translations> = {
       instagram: 'Auf Instagram folgen',
       twitter: 'Auf Twitter folgen',
       tiktok: 'Auf TikTok folgen',
+      youtube: 'Auf YouTube folgen',
       pinterest: 'Auf Pinterest folgen',
     },
     meta: {
@@ -272,6 +275,7 @@ export const translations: Record<Language, Translations> = {
       instagram: 'Seguir en Instagram',
       twitter: 'Seguir en Twitter',
       tiktok: 'Seguir en TikTok',
+      youtube: 'Seguir en YouTube',
       pinterest: 'Seguir en Pinterest',
     },
     meta: {
@@ -343,6 +347,7 @@ export const translations: Record<Language, Translations> = {
       instagram: 'Seguir no Instagram',
       twitter: 'Seguir no Twitter',
       tiktok: 'Seguir no TikTok',
+      youtube: 'Seguir no YouTube',
       pinterest: 'Seguir no Pinterest',
     },
     meta: {
@@ -414,6 +419,7 @@ export const translations: Record<Language, Translations> = {
       instagram: 'Suivre sur Instagram',
       twitter: 'Suivre sur Twitter',
       tiktok: 'Suivre sur TikTok',
+      youtube: 'Suivre sur YouTube',
       pinterest: 'Suivre sur Pinterest',
     },
     meta: {
@@ -485,6 +491,7 @@ export const translations: Record<Language, Translations> = {
       instagram: 'Segui su Instagram',
       twitter: 'Segui su Twitter',
       tiktok: 'Segui su TikTok',
+      youtube: 'Segui su YouTube',
       pinterest: 'Segui su Pinterest',
     },
     meta: {

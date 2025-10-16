@@ -12,6 +12,7 @@ export interface Coupon {
   discount: string;
   expiryDate: string;
   isActive: boolean;
+  usageCount: number;
   content: Record<Language, CouponContent>;
 }
 
@@ -22,6 +23,7 @@ export const coupons: Coupon[] = [
     discount: '20%',
     expiryDate: '2040-04-20',
     isActive: true,
+    usageCount: 45,
     content: {
       en: {
         title: 'Maximum Savings - 20% Off Everything!',
@@ -61,6 +63,7 @@ export const coupons: Coupon[] = [
     discount: '15%',
     expiryDate: '2040-04-20',
     isActive: true,
+    usageCount: 17,
     content: {
       en: {
         title: 'Personal Discount Just For You - 15% Off',
@@ -100,6 +103,7 @@ export const coupons: Coupon[] = [
     discount: '15%',
     expiryDate: '2040-04-20',
     isActive: true,
+    usageCount: 14,
     content: {
       en: {
         title: 'Stoner Special - 15% Off Premium Strains',
@@ -139,6 +143,7 @@ export const coupons: Coupon[] = [
     discount: '15%',
     expiryDate: '2040-04-20',
     isActive: true,
+    usageCount: 19,
     content: {
       en: {
         title: 'Slow Day Savings - 15% Off to Relax',
@@ -178,6 +183,7 @@ export const coupons: Coupon[] = [
     discount: '15%',
     expiryDate: '2040-04-20',
     isActive: true,
+    usageCount: 12,
     content: {
       en: {
         title: '420 Celebration Code - 15% Off All Seeds',
@@ -217,6 +223,7 @@ export const coupons: Coupon[] = [
     discount: '15%',
     expiryDate: '2040-04-20',
     isActive: true,
+    usageCount: 16,
     content: {
       en: {
         title: 'Earth Day Special - 15% Off Green Growing',
@@ -256,6 +263,7 @@ export const coupons: Coupon[] = [
     discount: '15%',
     expiryDate: '2040-04-20',
     isActive: true,
+    usageCount: 11,
     content: {
       en: {
         title: 'Bump Up Your Garden - 15% Off Premium Seeds',
@@ -295,6 +303,7 @@ export const coupons: Coupon[] = [
     discount: '15%',
     expiryDate: '2040-04-20',
     isActive: true,
+    usageCount: 18,
     content: {
       en: {
         title: 'Forever Grower Deal - 15% Off For Life',
@@ -334,6 +343,7 @@ export const coupons: Coupon[] = [
     discount: '15%',
     expiryDate: '2040-04-20',
     isActive: true,
+    usageCount: 13,
     content: {
       en: {
         title: 'Laugh Out Loud Savings - 15% Off Fun Strains',
@@ -373,6 +383,7 @@ export const coupons: Coupon[] = [
     discount: '15%',
     expiryDate: '2040-04-20',
     isActive: true,
+    usageCount: 15,
     content: {
       en: {
         title: 'Create The Buzz - 15% Off Trending Seeds',
