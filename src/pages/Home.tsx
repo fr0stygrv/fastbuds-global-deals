@@ -21,7 +21,7 @@ export default function Home() {
   const { t, language } = useLanguage();
   const [search, setSearch] = useState('');
   const [filter, setFilter] = useState<FilterType>('all');
-  const [sort, setSort] = useState<SortType>('latest');
+  const [sort, setSort] = useState<SortType>('discount');
 
   const filteredAndSortedCoupons = useMemo(() => {
     let result = coupons.filter(coupon => {
