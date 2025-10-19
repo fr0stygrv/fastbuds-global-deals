@@ -6,6 +6,7 @@ export interface Translations {
     faq: string;
     about: string;
     contact: string;
+    news: string;
   };
   home: {
     title: string;
@@ -60,6 +61,11 @@ export interface Translations {
     youtube: string;
     pinterest: string;
   };
+  news: {
+    title: string;
+    subtitle: string;
+    readMore: string;
+  };
   meta: {
     homeTitle: string;
     homeDescription: string;
@@ -70,6 +76,8 @@ export interface Translations {
     aboutDescription: string;
     contactTitle: string;
     contactDescription: string;
+    newsTitle: string;
+    newsDescription: string;
   };
 }
 
@@ -80,6 +88,7 @@ export const translations: Record<Language, Translations> = {
       faq: 'FAQ',
       about: 'About',
       contact: 'Contact',
+      news: 'News',
     },
     home: {
       title: 'Fast Buds Coupons & Promo Codes',
@@ -134,6 +143,11 @@ export const translations: Record<Language, Translations> = {
       youtube: 'Follow on YouTube',
       pinterest: 'Follow on Pinterest',
     },
+    news: {
+      title: 'Fast Buds News',
+      subtitle: 'Latest updates, strain releases, and cannabis industry news',
+      readMore: 'Read More',
+    },
     meta: {
       homeTitle: 'Fast Buds Coupon Code 2025 - Active Fast Buds Promo Codes & Deals',
       homeDescription: 'Get verified Fast Buds coupon codes, discount codes & promo deals for 2025. Save on Fast Buds seeds with exclusive offers, BOGO deals & free shipping codes.',
@@ -144,6 +158,8 @@ export const translations: Record<Language, Translations> = {
       aboutDescription: 'Trusted source for Fast Buds coupon codes and promo deals. Save on premium autoflower cannabis seeds with verified discount codes.',
       contactTitle: 'Contact - Fast Buds Coupons & Deals',
       contactDescription: 'Connect with us on social media for the latest Fast Buds coupon codes, promo deals, and exclusive discounts.',
+      newsTitle: 'Fast Buds News - Latest Updates & Strain Releases 2025',
+      newsDescription: 'Stay updated with Fast Buds latest news, strain releases, giveaways, and cannabis industry updates. Discover new genetics and exclusive drops.',
     },
   },
   de: {
@@ -152,6 +168,7 @@ export const translations: Record<Language, Translations> = {
       faq: 'FAQ',
       about: 'Über uns',
       contact: 'Kontakt',
+      news: 'Neuigkeiten',
     },
     home: {
       title: 'Fast Buds Gutscheine & Rabattcodes',
@@ -206,6 +223,11 @@ export const translations: Record<Language, Translations> = {
       youtube: 'Auf YouTube folgen',
       pinterest: 'Auf Pinterest folgen',
     },
+    news: {
+      title: 'Fast Buds Nachrichten',
+      subtitle: 'Neueste Updates, Sorten-Releases und Cannabis-Industrie-News',
+      readMore: 'Mehr lesen',
+    },
     meta: {
       homeTitle: 'Fast Buds Gutschein 2025 - Aktive Fast Buds Rabattcodes & Angebote',
       homeDescription: 'Erhalten Sie verifizierte Fast Buds Gutscheincodes, Rabattcodes & Promo-Angebote für 2025. Sparen Sie bei Fast Buds Samen mit exklusiven Angeboten, BOGO & gratis Versand.',
@@ -216,6 +238,8 @@ export const translations: Record<Language, Translations> = {
       aboutDescription: 'Vertrauenswürdige Quelle für Fast Buds Gutscheincodes und Promo-Angebote. Sparen Sie bei Premium Autoflower Cannabis-Samen mit verifizierten Rabattcodes.',
       contactTitle: 'Kontakt - Fast Buds Gutscheine & Angebote',
       contactDescription: 'Verbinden Sie sich mit uns in den sozialen Medien für die neuesten Fast Buds Gutscheincodes, Promo-Angebote und exklusive Rabatte.',
+      newsTitle: 'Fast Buds Nachrichten - Neueste Updates & Sorten-Releases 2025',
+      newsDescription: 'Bleiben Sie auf dem Laufenden mit Fast Buds neuesten Nachrichten, Sorten-Releases, Giveaways und Cannabis-Industrie-Updates. Entdecken Sie neue Genetik und exklusive Drops.',
     },
   },
   es: {
@@ -224,6 +248,7 @@ export const translations: Record<Language, Translations> = {
       faq: 'Preguntas',
       about: 'Acerca de',
       contact: 'Contacto',
+      news: 'Noticias',
     },
     home: {
       title: 'Cupones y Códigos Promocionales Fast Buds',
@@ -278,6 +303,11 @@ export const translations: Record<Language, Translations> = {
       youtube: 'Seguir en YouTube',
       pinterest: 'Seguir en Pinterest',
     },
+    news: {
+      title: 'Noticias Fast Buds',
+      subtitle: 'Últimas actualizaciones, lanzamientos de cepas y noticias de la industria del cannabis',
+      readMore: 'Leer más',
+    },
     meta: {
       homeTitle: 'Cupón Fast Buds 2025 - Códigos Promocionales Fast Buds Activos & Ofertas',
       homeDescription: 'Obtén cupones Fast Buds verificados, códigos de descuento y ofertas promocionales para 2025. Ahorra en semillas Fast Buds con ofertas exclusivas, BOGO y envío gratis.',
@@ -288,6 +318,8 @@ export const translations: Record<Language, Translations> = {
       aboutDescription: 'Fuente confiable de cupones Fast Buds y ofertas promocionales. Ahorra en semillas de cannabis autoflorecientes premium con códigos de descuento verificados.',
       contactTitle: 'Contacto - Cupones Fast Buds & Ofertas',
       contactDescription: 'Conéctate con nosotros en redes sociales para los últimos cupones Fast Buds, ofertas promocionales y descuentos exclusivos.',
+      newsTitle: 'Noticias Fast Buds - Últimas Actualizaciones & Lanzamientos 2025',
+      newsDescription: 'Mantente actualizado con las últimas noticias de Fast Buds, lanzamientos de cepas, sorteos y actualizaciones de la industria del cannabis. Descubre nueva genética y lanzamientos exclusivos.',
     },
   },
   pt: {
@@ -296,6 +328,7 @@ export const translations: Record<Language, Translations> = {
       faq: 'Perguntas',
       about: 'Sobre',
       contact: 'Contato',
+      news: 'Notícias',
     },
     home: {
       title: 'Cupons e Códigos Promocionais Fast Buds',
@@ -350,6 +383,11 @@ export const translations: Record<Language, Translations> = {
       youtube: 'Seguir no YouTube',
       pinterest: 'Seguir no Pinterest',
     },
+    news: {
+      title: 'Notícias Fast Buds',
+      subtitle: 'Últimas atualizações, lançamentos de variedades e notícias da indústria de cannabis',
+      readMore: 'Leia mais',
+    },
     meta: {
       homeTitle: 'Cupom Fast Buds 2025 - Códigos Promocionais Fast Buds Ativos & Ofertas',
       homeDescription: 'Obtenha cupons Fast Buds verificados, códigos de desconto e ofertas promocionais para 2025. Economize em sementes Fast Buds com ofertas exclusivas, BOGO e frete grátis.',
@@ -360,6 +398,8 @@ export const translations: Record<Language, Translations> = {
       aboutDescription: 'Fonte confiável de cupons Fast Buds e ofertas promocionais. Economize em sementes de cannabis autoflorescentes premium com códigos de desconto verificados.',
       contactTitle: 'Contato - Cupons Fast Buds & Ofertas',
       contactDescription: 'Conecte-se conosco nas redes sociais para os últimos cupons Fast Buds, ofertas promocionais e descontos exclusivos.',
+      newsTitle: 'Notícias Fast Buds - Últimas Atualizações & Lançamentos 2025',
+      newsDescription: 'Mantenha-se atualizado com as últimas notícias da Fast Buds, lançamentos de variedades, sorteios e atualizações da indústria de cannabis. Descubra novas genéticas e lançamentos exclusivos.',
     },
   },
   fr: {
@@ -368,6 +408,7 @@ export const translations: Record<Language, Translations> = {
       faq: 'FAQ',
       about: 'À propos',
       contact: 'Contact',
+      news: 'Actualités',
     },
     home: {
       title: 'Coupons et Codes Promo Fast Buds',
@@ -422,6 +463,11 @@ export const translations: Record<Language, Translations> = {
       youtube: 'Suivre sur YouTube',
       pinterest: 'Suivre sur Pinterest',
     },
+    news: {
+      title: 'Actualités Fast Buds',
+      subtitle: 'Dernières mises à jour, sorties de variétés et actualités de l\'industrie du cannabis',
+      readMore: 'Lire la suite',
+    },
     meta: {
       homeTitle: 'Coupon Fast Buds 2025 - Codes Promo Fast Buds Actifs & Offres',
       homeDescription: 'Obtenez des coupons Fast Buds vérifiés, codes de réduction et offres promotionnelles pour 2025. Économisez sur les graines Fast Buds avec offres exclusives, BOGO et livraison gratuite.',
@@ -432,6 +478,8 @@ export const translations: Record<Language, Translations> = {
       aboutDescription: 'Source fiable de coupons Fast Buds et offres promotionnelles. Économisez sur les graines de cannabis autoflorissantes premium avec codes de réduction vérifiés.',
       contactTitle: 'Contact - Coupons Fast Buds & Offres',
       contactDescription: 'Connectez-vous avec nous sur les réseaux sociaux pour les derniers coupons Fast Buds, offres promotionnelles et réductions exclusives.',
+      newsTitle: 'Actualités Fast Buds - Dernières Mises à Jour & Sorties 2025',
+      newsDescription: 'Restez informé avec les dernières actualités Fast Buds, sorties de variétés, concours et mises à jour de l\'industrie du cannabis. Découvrez de nouvelles génétiques et drops exclusifs.',
     },
   },
   it: {
@@ -440,6 +488,7 @@ export const translations: Record<Language, Translations> = {
       faq: 'Domande',
       about: 'Chi Siamo',
       contact: 'Contatti',
+      news: 'Notizie',
     },
     home: {
       title: 'Coupon e Codici Promozionali Fast Buds',
@@ -494,6 +543,11 @@ export const translations: Record<Language, Translations> = {
       youtube: 'Segui su YouTube',
       pinterest: 'Segui su Pinterest',
     },
+    news: {
+      title: 'Notizie Fast Buds',
+      subtitle: 'Ultimi aggiornamenti, rilasci di varietà e notizie dell\'industria della cannabis',
+      readMore: 'Leggi di più',
+    },
     meta: {
       homeTitle: 'Coupon Fast Buds 2025 - Codici Promo Fast Buds Attivi & Offerte',
       homeDescription: 'Ottieni coupon Fast Buds verificati, codici sconto e offerte promozionali per 2025. Risparmia sui semi Fast Buds con offerte esclusive, BOGO e spedizione gratuita.',
@@ -504,6 +558,8 @@ export const translations: Record<Language, Translations> = {
       aboutDescription: 'Fonte affidabile di coupon Fast Buds e offerte promozionali. Risparmia sui semi di cannabis autofiorenti premium con codici sconto verificati.',
       contactTitle: 'Contatti - Coupon Fast Buds & Offerte',
       contactDescription: 'Connettiti con noi sui social media per gli ultimi coupon Fast Buds, offerte promozionali e sconti esclusivi.',
+      newsTitle: 'Notizie Fast Buds - Ultimi Aggiornamenti & Rilasci 2025',
+      newsDescription: 'Resta aggiornato con le ultime notizie Fast Buds, rilasci di varietà, giveaway e aggiornamenti dell\'industria della cannabis. Scopri nuove genetiche e drop esclusivi.',
     },
   },
 };

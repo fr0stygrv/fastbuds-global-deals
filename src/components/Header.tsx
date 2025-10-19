@@ -27,6 +27,7 @@ export const Header = () => {
     { path: `/${language}/faq`, label: t.nav.faq, matchPath: '/faq' },
     { path: `/${language}/about`, label: t.nav.about, matchPath: '/about' },
     { path: `/${language}/contact`, label: t.nav.contact, matchPath: '/contact' },
+    { path: `/${language}/news`, label: t.nav.news, matchPath: '/news' },
   ];
 
   return (
