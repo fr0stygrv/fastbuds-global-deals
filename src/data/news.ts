@@ -14,42 +14,42 @@ export const newsData: Record<Language, NewsItem[]> = {
       title: "Vote For Us in The American Autoflower Cup 2026!",
       description: "Growmies, it's that time of year again! The 4th edition of the American Autoflower Cup is right around the corner, and we need your support to keep the winning streak...",
       image: "https://2fast4buds.com/temp/img_upload/m_bg_091a7459d2e81556613f62e6449906f8.jpg",
-      link: "https://2fast4buds.com/news/vote-for-us-in-the-aac-2026",
+      link: "https://2fast4buds.com/en/news/vote-for-us-in-the-aac-2026",
       date: "3 days ago"
     },
     {
       title: "Banana Purple Punch Auto RF3: Top Of The Line Upgrade",
       description: "We're proud to unveil a completely new generation of autoflowers: the RF3 Project. This marks the start of a new chapter in our genetics, built on precision, consistency, and performance that...",
       image: "https://2fast4buds.com/temp/img_upload/m_bg_0e124dee2c41c7b6ac5998b9366b2299.jpg",
-      link: "https://2fast4buds.com/news/new-breeding-project-rf3-line",
+      link: "https://2fast4buds.com/en/news/new-breeding-project-rf3-line",
       date: "2 weeks ago"
     },
     {
       title: "Buy 3 Get 3 Free on All Our Award-Winning Strains",
       description: "It's time to celebrate the champions of the Fast Buds lineup, the strains that made history and brought home the trophies. For a limited time only, we're giving you the chance to Buy 3...",
       image: "https://2fast4buds.com/temp/img_upload/m_bg_4eca96017c0b4b0499e60905390d8970.jpg",
-      link: "https://2fast4buds.com/news/buy-3-get-3-free-on-awarded-genetics",
+      link: "https://2fast4buds.com/en/news/buy-3-get-3-free-on-awarded-genetics",
       date: "3 weeks ago"
     },
     {
       title: "FastBuds.com Moving Back to 2fast4buds.com",
       description: "We are reverting our domain name from fastbuds.com back to 2fast4buds.com. Why to go back? While fastbuds.com was short and simple, the change created unexpected challenges. Some of our community...",
       image: "https://2fast4buds.com/temp/img_upload/m_bg_9d2d1ad6227d25d8309d3a9e88ca48eb.jpg",
-      link: "https://2fast4buds.com/news/moving-back-to-2-fast-4-buds",
+      link: "https://2fast4buds.com/en/news/moving-back-to-2-fast-4-buds",
       date: "3 weeks ago"
     },
     {
       title: "Apple Strudel Auto Shines at the Southside Cup 2025 in Germany",
       description: "Apple Strudel Auto scored a place in the Best Autoflower 2025 category at this year's Southside Cup in Stuttgart, Germany, where 85 talented growers presented their very best. What makes this...",
       image: "https://2fast4buds.com/temp/img_upload/m_bg_0cf3b1722d2d9e44e581a1d57c23c403.jpg",
-      link: "https://2fast4buds.com/news/apple-strudel-wins-at-the-southside-cup-2025",
+      link: "https://2fast4buds.com/en/news/apple-strudel-wins-at-the-southside-cup-2025",
       date: "1 month ago"
     },
     {
       title: "Win GG4 Fem on our Discord!",
       description: "Our brand-new GG4 Fem is up for grabs in the latest edition of our exclusive Discord Giveaway! Ten lucky winners will get the chance to grow one of the most iconic strains...",
       image: "https://2fast4buds.com/temp/img_upload/m_bg_818f02450ba13627685a828808930971.jpg",
-      link: "https://2fast4buds.com/news/september-2025-discord-giveaway",
+      link: "https://2fast4buds.com/en/news/september-2025-discord-giveaway",
       date: "1 month ago"
     },
   ],
