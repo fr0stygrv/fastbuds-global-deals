@@ -25,9 +25,9 @@ export const Header = () => {
   const navLinks = [
     { path: `/${language}`, label: t.nav.home, matchPath: `/${language}` },
     { path: `/${language}/faq`, label: t.nav.faq, matchPath: '/faq' },
+    { path: `/${language}/news`, label: t.nav.news, matchPath: '/news' },
     { path: `/${language}/about`, label: t.nav.about, matchPath: '/about' },
     { path: `/${language}/contact`, label: t.nav.contact, matchPath: '/contact' },
-    { path: `/${language}/news`, label: t.nav.news, matchPath: '/news' },
   ];
 
   return (
