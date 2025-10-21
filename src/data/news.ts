@@ -72,7 +72,7 @@ export const newsData: Record<Language, NewsItem[]> = {
       title: "FastBuds.com wechselt zurück zu 2fast4buds.com",
       description: "Wir ändern unseren Domainnamen von fastbuds.com zurück zu 2fast4buds.com. Warum zurückwechseln? Obwohl fastbuds.com kurz und einfach war, hat die Änderung unerwartete Herausforderungen...",
       image: "https://2fast4buds.com/temp/img_upload/m_bg_9d2d1ad6227d25d8309d3a9e88ca48eb.jpg",
-      link: "https://2fast4buds.com/de/news/zuruck-zu-2-fast-4-buds",
+      link: "https://2fast4buds.com/ww-de/news/zurueck-zu-2fast4buds",
       date: "Vor 3 Wochen"
     },
     {
@@ -93,7 +93,7 @@ export const newsData: Record<Language, NewsItem[]> = {
       title: "Aktion: 5+5 GRATIS auf alle Gorilla-Strains",
       description: "Mit der Veröffentlichung unserer brandneuen GG4 Fem wollen wir das legendäre Gorilla-Erbe mit euch feiern. Für eine begrenzte Zeit könnt ihr euch die Aktion 5+5 GRATIS sichern...",
       image: "https://2fast4buds.com/temp/img_upload/m_bg_0de4d20ff5bfd8f35135b2d92666bf8c.jpg",
-      link: "https://2fast4buds.com/de/news/aktion-5-plus-5-alle-gorillas",
+      link: "https://2fast4buds.com/ww-de/news/gorilla-aktion-5-plus-5",
       date: "Vor 1 Monat"
     },
   ],
