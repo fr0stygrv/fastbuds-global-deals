@@ -171,11 +171,18 @@ export const newsData: Record<Language, NewsItem[]> = {
       date: "Há 1 mês"
     },
     {
-      title: "Compra 5 e ganha 5 grátis em todas as variedades Gorilla",
-      description: "Com o lançamento da nossa nova GG4 Fem, queremos celebrar contigo o lendário legado Gorilla. Por tempo limitado, podes aproveitar a promoção Compra 5 e leva 5...",
-      image: "https://2fast4buds.com/temp/img_upload/m_bg_0de4d20ff5bfd8f35135b2d92666bf8c.jpg",
-      link: "https://2fast4buds.com/pt/news/compra-%205-e-leva-5-gratis-em-todas-as-gorilas",
-      date: "Há 1 mês"
+      title: "Lançamento EXCLUSIVO da variedade e sorteio: GG4 Fem",
+      description: "A GG4 Fem chegou oficialmente à nossa linha de fotoperiódicas 2025. Durante anos, cultivadores de todo o mundo pediram-nos para incluir este ícone na nossa coleção...",
+      image: "https://2fast4buds.com/temp/img_upload/m_bg_70a62939ae726b2d36142d15468d897d.jpg",
+      link: "https://2fast4buds.com/pt/news/lancamento-nova-estirpe-gg4-fem",
+      date: "Há 2 meses"
+    },
+    {
+      title: "O Pack Mix Fotoperiódico Atualizado",
+      description: "O Pack Mix sempre foi um dos favoritos da nossa comunidade, graças ao seu excelente custo-benefício, diversidade de sabores e a oportunidade única de experimentar genéticas...",
+      image: "https://2fast4buds.com/temp/img_upload/m_bg_696f429479ba45ac4b5c51bb167c7e2a.jpg",
+      link: "https://2fast4buds.com/pt/news/pack-mix-fotoperiodico-atualizado-2025",
+      date: "Há 2 meses"
     },
   ],
   fr: [
