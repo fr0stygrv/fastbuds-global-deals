@@ -265,5 +265,12 @@ export const newsData: Record<Language, NewsItem[]> = {
       link: "https://2fast4buds.com/it/news/nuova-varieta-esclusiva-gg4-fem",
       date: "2 mesi fa"
     },
+    {
+      title: "Il pacchetto misto fotoperiodico aggiornato",
+      description: "Il Mix Pack è sempre stato uno dei preferiti della nostra community, grazie al suo ottimo rapporto qualità-prezzo, alla varietà di sapori e all'opportunità unica di provare genetiche...",
+      image: "https://2fast4buds.com/temp/img_upload/m_bg_696f429479ba45ac4b5c51bb167c7e2a.jpg",
+      link: "https://2fast4buds.com/it/news/pacchetto-misto-fotoperiodico-aggiornato-2025",
+      date: "2 mesi fa"
+    },
   ],
 };
