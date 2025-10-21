@@ -32,11 +32,13 @@ export const CouponCard = ({ coupon }: CouponCardProps) => {
     window.open('https://2fast4buds.com/', '_blank', 'noopener,noreferrer');
   };
 
+  const couponPath = language === 'es' ? 'cupon' : language === 'pt' ? 'cupom' : 'coupon';
+
   return (
     <Card className="group hover:shadow-card-hover transition-all duration-300 shadow-card">
       <CardHeader>
         <div className="flex items-start justify-between gap-2">
-          <Link to={`/${content.slug}`} className="flex-1">
+          <Link to={`/${language}/${couponPath}/${content.slug}`} className="flex-1">
             <h3 className="text-lg font-bold group-hover:text-primary transition-colors line-clamp-2 min-h-[3.5rem]">
               {content.title}
             </h3>
