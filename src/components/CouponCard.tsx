@@ -33,12 +33,14 @@ export const CouponCard = ({ coupon }: CouponCardProps) => {
   };
 
   const couponPath = language === 'es' ? 'cupon' : language === 'pt' ? 'cupom' : 'coupon';
+  // Extract just the slug part (after the last /)
+  const slugPart = content.slug.split('/').pop();
 
   return (
     <Card className="group hover:shadow-card-hover transition-all duration-300 shadow-card">
       <CardHeader>
         <div className="flex items-start justify-between gap-2">
-          <Link to={`/${language}/${couponPath}/${content.slug}`} className="flex-1">
+          <Link to={`/${language}/${couponPath}/${slugPart}`} className="flex-1">
             <h3 className="text-lg font-bold group-hover:text-primary transition-colors line-clamp-2 min-h-[3.5rem]">
               {content.title}
             </h3>
