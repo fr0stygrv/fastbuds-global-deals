@@ -7,7 +7,7 @@ import { SEOHead } from '@/components/SEOHead';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { Copy, ExternalLink, Calendar, CheckCircle2 } from 'lucide-react';
+import { Copy, ExternalLink, CheckCircle2, CheckCircle } from 'lucide-react';
 import { toast } from 'sonner';
 
 export default function CouponDetail() {
@@ -26,9 +26,6 @@ export default function CouponDetail() {
   }
 
   const content = coupon.content[language];
-  const daysUntilExpiry = Math.ceil(
-    (new Date(coupon.expiryDate).getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24)
-  );
 
   const handleCopy = async () => {
     await navigator.clipboard.writeText(coupon.code);
@@ -58,9 +55,10 @@ export default function CouponDetail() {
                 <Badge className="bg-gradient-primary text-primary-foreground text-xl px-4 py-1 font-bold">
                   {coupon.discount}
                 </Badge>
-                {daysUntilExpiry <= 7 && (
-                  <Badge variant="destructive" className="text-base px-4 py-1">
-                    {t.coupon.expires} {daysUntilExpiry}d
+                {coupon.neverExpires && (
+                  <Badge className="bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20 text-base px-4 py-1 gap-2">
+                    <CheckCircle className="h-4 w-4" />
+                    {t.coupon.alwaysActive}
                   </Badge>
                 )}
               </div>
@@ -72,13 +70,6 @@ export default function CouponDetail() {
               <p className="text-lg text-muted-foreground mb-8">
                 {content.description}
               </p>
-
-              <div className="flex items-center gap-3 text-muted-foreground mb-8">
-                <Calendar className="h-5 w-5" />
-                <span className="text-base">
-                  {t.coupon.expires}: {new Date(coupon.expiryDate).toLocaleDateString(language)}
-                </span>
-              </div>
 
               {/* Code Box */}
               <Card className="mb-8 shadow-card-hover">

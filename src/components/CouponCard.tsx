@@ -5,7 +5,7 @@ import { Coupon } from '@/data/coupons';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Copy, ExternalLink, Calendar, Users } from 'lucide-react';
+import { Copy, ExternalLink, Users, CheckCircle } from 'lucide-react';
 import { toast } from 'sonner';
 
 interface CouponCardProps {
@@ -17,9 +17,6 @@ export const CouponCard = ({ coupon }: CouponCardProps) => {
   const [copied, setCopied] = useState(false);
   
   const content = coupon.content[language];
-  const daysUntilExpiry = Math.ceil(
-    (new Date(coupon.expiryDate).getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24)
-  );
 
   const handleCopy = async () => {
     await navigator.clipboard.writeText(coupon.code);
@@ -56,18 +53,19 @@ export const CouponCard = ({ coupon }: CouponCardProps) => {
           {content.description}
         </p>
 
-        <div className="flex items-center justify-between gap-3 text-sm text-muted-foreground">
-          <div className="flex items-center gap-2">
-            <Calendar className="h-4 w-4" />
-            <span>
-              {t.coupon.expires}: {new Date(coupon.expiryDate).toLocaleDateString(language)}
-            </span>
-            {daysUntilExpiry <= 7 && (
-              <Badge variant="destructive">
-                {daysUntilExpiry}d
-              </Badge>
-            )}
-          </div>
+        <div className="flex items-center justify-between gap-3 text-sm">
+          {coupon.neverExpires ? (
+            <Badge className="bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20 gap-1.5">
+              <CheckCircle className="h-3.5 w-3.5" />
+              {t.coupon.alwaysActive}
+            </Badge>
+          ) : (
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <span>
+                {t.coupon.expires}: {new Date(coupon.expiryDate).toLocaleDateString(language)}
+              </span>
+            </div>
+          )}
           <div className="flex items-center gap-1.5 text-primary font-medium">
             <Users className="h-4 w-4" />
             <span>{coupon.usageCount}</span>

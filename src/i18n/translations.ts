@@ -28,6 +28,7 @@ export interface Translations {
     goToStore: string;
     expires: string;
     discount: string;
+    alwaysActive: string;
     howToUse: string;
     instruction1: string;
     instruction2: string;
@@ -110,6 +111,7 @@ export const translations: Record<Language, Translations> = {
       goToStore: 'Go to Store',
       expires: 'Expires',
       discount: 'Discount',
+      alwaysActive: 'Always Active',
       howToUse: 'How to use this coupon',
       instruction1: 'Click "Copy Code" to copy the promo code to your clipboard',
       instruction2: 'Click "Go to Store" to visit Fast Buds official store',
@@ -190,6 +192,7 @@ export const translations: Record<Language, Translations> = {
       goToStore: 'Zum Shop',
       expires: 'Läuft ab',
       discount: 'Rabatt',
+      alwaysActive: 'Immer Aktiv',
       howToUse: 'So verwenden Sie diesen Gutschein',
       instruction1: 'Klicken Sie auf "Code kopieren", um den Promo-Code in die Zwischenablage zu kopieren',
       instruction2: 'Klicken Sie auf "Zum Shop", um den offiziellen Fast Buds Shop zu besuchen',
@@ -270,6 +273,7 @@ export const translations: Record<Language, Translations> = {
       goToStore: 'Ir a la Tienda',
       expires: 'Vence',
       discount: 'Descuento',
+      alwaysActive: 'Siempre Activo',
       howToUse: 'Cómo usar este cupón',
       instruction1: 'Haz clic en "Copiar Código" para copiar el código promocional al portapapeles',
       instruction2: 'Haz clic en "Ir a la Tienda" para visitar la tienda oficial de Fast Buds',
@@ -350,6 +354,7 @@ export const translations: Record<Language, Translations> = {
       goToStore: 'Ir para Loja',
       expires: 'Expira',
       discount: 'Desconto',
+      alwaysActive: 'Sempre Ativo',
       howToUse: 'Como usar este cupom',
       instruction1: 'Clique em "Copiar Código" para copiar o código promocional',
       instruction2: 'Clique em "Ir para Loja" para visitar a loja oficial Fast Buds',
@@ -430,6 +435,7 @@ export const translations: Record<Language, Translations> = {
       goToStore: 'Aller à la Boutique',
       expires: 'Expire',
       discount: 'Réduction',
+      alwaysActive: 'Toujours Actif',
       howToUse: 'Comment utiliser ce coupon',
       instruction1: 'Cliquez sur "Copier le Code" pour copier le code promo dans le presse-papiers',
       instruction2: 'Cliquez sur "Aller à la Boutique" pour visiter la boutique officielle Fast Buds',
@@ -510,6 +516,7 @@ export const translations: Record<Language, Translations> = {
       goToStore: 'Vai al Negozio',
       expires: 'Scade',
       discount: 'Sconto',
+      alwaysActive: 'Sempre Attivo',
       howToUse: 'Come usare questo coupon',
       instruction1: 'Clicca su "Copia Codice" per copiare il codice promozionale negli appunti',
       instruction2: 'Clicca su "Vai al Negozio" per visitare il negozio ufficiale Fast Buds',

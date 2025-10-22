@@ -14,8 +14,8 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 
-type FilterType = 'all' | 'active' | 'expiring';
-type SortType = 'latest' | 'expiring' | 'discount';
+type FilterType = 'all' | 'active';
+type SortType = 'latest' | 'discount';
 
 export default function Home() {
   const { t, language } = useLanguage();
@@ -34,12 +34,6 @@ export default function Home() {
       if (!matchesSearch) return false;
 
       if (filter === 'active') return coupon.isActive;
-      if (filter === 'expiring') {
-        const daysUntilExpiry = Math.ceil(
-          (new Date(coupon.expiryDate).getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24)
-        );
-        return daysUntilExpiry <= 7 && daysUntilExpiry > 0;
-      }
 
       return true;
     });
@@ -48,9 +42,6 @@ export default function Home() {
     result.sort((a, b) => {
       if (sort === 'latest') {
         return b.id.localeCompare(a.id);
-      }
-      if (sort === 'expiring') {
-        return new Date(a.expiryDate).getTime() - new Date(b.expiryDate).getTime();
       }
       if (sort === 'discount') {
         const aDiscount = parseInt(a.discount);
@@ -108,7 +99,6 @@ export default function Home() {
                 <SelectContent className="bg-popover">
                   <SelectItem value="all">{t.home.filter.all}</SelectItem>
                   <SelectItem value="active">{t.home.filter.active}</SelectItem>
-                  <SelectItem value="expiring">{t.home.filter.expiring}</SelectItem>
                 </SelectContent>
               </Select>
 
@@ -118,7 +108,6 @@ export default function Home() {
                 </SelectTrigger>
                 <SelectContent className="bg-popover">
                   <SelectItem value="latest">{t.home.sort.latest}</SelectItem>
-                  <SelectItem value="expiring">{t.home.sort.expiring}</SelectItem>
                   <SelectItem value="discount">{t.home.sort.discount}</SelectItem>
                 </SelectContent>
               </Select>
