@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { useLanguage } from '@/i18n/LanguageContext';
+import { Language } from '@/i18n/languages';
 import { coupons } from '@/data/coupons';
 import { SEOHead } from '@/components/SEOHead';
 import { Button } from '@/components/ui/button';
@@ -10,9 +11,12 @@ import { Copy, ExternalLink, Calendar, CheckCircle2 } from 'lucide-react';
 import { toast } from 'sonner';
 
 export default function CouponDetail() {
-  const { language, t } = useLanguage();
-  const { slug } = useParams();
+  const { t } = useLanguage();
+  const { slug, lang } = useParams();
   const [copied, setCopied] = useState(false);
+
+  // Use language from URL parameter
+  const language = (lang || 'en') as Language;
 
   // Find coupon by slug in current language
   const coupon = coupons.find(c => c.content[language].slug.split('/').pop() === slug);
