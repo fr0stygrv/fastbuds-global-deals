@@ -15,7 +15,7 @@ export default function CouponDetail() {
   const [copied, setCopied] = useState(false);
 
   // Find coupon by slug in current language
-  const coupon = coupons.find(c => c.content[language].slug === `${language}/coupon/${slug}`);
+  const coupon = coupons.find(c => c.content[language].slug.split('/').pop() === slug);
 
   if (!coupon) {
     return <Navigate to={`/${language}`} replace />;
