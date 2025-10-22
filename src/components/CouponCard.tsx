@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Coupon } from '@/data/coupons';
@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Copy, ExternalLink, Users, CheckCircle } from 'lucide-react';
 import { toast } from 'sonner';
+import { getUsageCount, incrementUsageCount } from '@/lib/couponStorage';
 
 interface CouponCardProps {
   coupon: Coupon;
@@ -15,12 +16,23 @@ interface CouponCardProps {
 export const CouponCard = ({ coupon }: CouponCardProps) => {
   const { language, t } = useLanguage();
   const [copied, setCopied] = useState(false);
+  const [displayCount, setDisplayCount] = useState<number>(coupon.usageCount);
   
   const content = coupon.content[language];
+
+  useEffect(() => {
+    const savedCount = getUsageCount(coupon.id, coupon.usageCount);
+    setDisplayCount(savedCount);
+  }, [coupon.id, coupon.usageCount]);
 
   const handleCopy = async () => {
     await navigator.clipboard.writeText(coupon.code);
     setCopied(true);
+    
+    // Увеличить счетчик (или сбросить при достижении 999)
+    const newCount = incrementUsageCount(coupon.id, coupon.usageCount);
+    setDisplayCount(newCount);
+    
     toast.success(`${t.coupon.copyCode}: ${coupon.code}`);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -68,7 +80,7 @@ export const CouponCard = ({ coupon }: CouponCardProps) => {
           )}
           <div className="flex items-center gap-1.5 text-primary font-medium">
             <Users className="h-4 w-4" />
-            <span>{coupon.usageCount}</span>
+            <span>{displayCount >= 999 ? '999+' : displayCount}</span>
           </div>
         </div>
 

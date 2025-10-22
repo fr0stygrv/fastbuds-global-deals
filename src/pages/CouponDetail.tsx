@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { Language } from '@/i18n/languages';
@@ -7,13 +7,15 @@ import { SEOHead } from '@/components/SEOHead';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { Copy, ExternalLink, CheckCircle2, CheckCircle } from 'lucide-react';
+import { Copy, ExternalLink, CheckCircle2, CheckCircle, Users } from 'lucide-react';
 import { toast } from 'sonner';
+import { getUsageCount, incrementUsageCount } from '@/lib/couponStorage';
 
 export default function CouponDetail() {
   const { t } = useLanguage();
   const { slug, lang } = useParams();
   const [copied, setCopied] = useState(false);
+  const [displayCount, setDisplayCount] = useState<number>(0);
 
   // Use language from URL parameter
   const language = (lang || 'en') as Language;
@@ -27,9 +29,21 @@ export default function CouponDetail() {
 
   const content = coupon.content[language];
 
+  useEffect(() => {
+    if (coupon) {
+      const savedCount = getUsageCount(coupon.id, coupon.usageCount);
+      setDisplayCount(savedCount);
+    }
+  }, [coupon]);
+
   const handleCopy = async () => {
     await navigator.clipboard.writeText(coupon.code);
     setCopied(true);
+    
+    // Увеличить счетчик (или сбросить при достижении 999)
+    const newCount = incrementUsageCount(coupon.id, coupon.usageCount);
+    setDisplayCount(newCount);
+    
     toast.success(`${t.coupon.copyCode}: ${coupon.code}`);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -61,6 +75,10 @@ export default function CouponDetail() {
                     {t.coupon.alwaysActive}
                   </Badge>
                 )}
+                <Badge variant="outline" className="text-base px-4 py-1 gap-2">
+                  <Users className="h-4 w-4" />
+                  <span>{displayCount >= 999 ? '999+' : displayCount}</span>
+                </Badge>
               </div>
 
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">

@@ -21,6 +21,7 @@ export interface Translations {
       latest: string;
       expiring: string;
       discount: string;
+      mostUsed: string;
     };
   };
   coupon: {
@@ -104,6 +105,7 @@ export const translations: Record<Language, Translations> = {
         latest: 'Latest',
         expiring: 'Expiring Soon',
         discount: 'Best Discount',
+        mostUsed: 'Most Used',
       },
     },
     coupon: {
@@ -185,6 +187,7 @@ export const translations: Record<Language, Translations> = {
         latest: 'Neueste',
         expiring: 'Läuft bald ab',
         discount: 'Bester Rabatt',
+        mostUsed: 'Am Meisten Verwendet',
       },
     },
     coupon: {
@@ -266,6 +269,7 @@ export const translations: Record<Language, Translations> = {
         latest: 'Más Recientes',
         expiring: 'Próximos a Vencer',
         discount: 'Mejor Descuento',
+        mostUsed: 'Más Usado',
       },
     },
     coupon: {
@@ -347,6 +351,7 @@ export const translations: Record<Language, Translations> = {
         latest: 'Mais Recentes',
         expiring: 'Expirando em Breve',
         discount: 'Melhor Desconto',
+        mostUsed: 'Mais Usado',
       },
     },
     coupon: {
@@ -428,6 +433,7 @@ export const translations: Record<Language, Translations> = {
         latest: 'Plus Récents',
         expiring: 'Expirant Bientôt',
         discount: 'Meilleure Réduction',
+        mostUsed: 'Le Plus Utilisé',
       },
     },
     coupon: {
@@ -509,6 +515,7 @@ export const translations: Record<Language, Translations> = {
         latest: 'Più Recenti',
         expiring: 'In Scadenza',
         discount: 'Miglior Sconto',
+        mostUsed: 'Più Usato',
       },
     },
     coupon: {

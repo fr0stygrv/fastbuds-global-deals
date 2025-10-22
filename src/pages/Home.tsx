@@ -6,6 +6,7 @@ import { SEOHead } from '@/components/SEOHead';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Search, SlidersHorizontal } from 'lucide-react';
+import { getUsageCount } from '@/lib/couponStorage';
 import {
   Select,
   SelectContent,
@@ -15,7 +16,7 @@ import {
 } from '@/components/ui/select';
 
 type FilterType = 'all' | 'active';
-type SortType = 'latest' | 'discount';
+type SortType = 'latest' | 'discount' | 'mostUsed';
 
 export default function Home() {
   const { t, language } = useLanguage();
@@ -47,6 +48,12 @@ export default function Home() {
         const aDiscount = parseInt(a.discount);
         const bDiscount = parseInt(b.discount);
         return bDiscount - aDiscount;
+      }
+      if (sort === 'mostUsed') {
+        // Получить счетчики из localStorage для каждого купона
+        const aCount = getUsageCount(a.id, a.usageCount);
+        const bCount = getUsageCount(b.id, b.usageCount);
+        return bCount - aCount; // сортировка по убыванию
       }
       return 0;
     });
@@ -109,6 +116,7 @@ export default function Home() {
                 <SelectContent className="bg-popover">
                   <SelectItem value="latest">{t.home.sort.latest}</SelectItem>
                   <SelectItem value="discount">{t.home.sort.discount}</SelectItem>
+                  <SelectItem value="mostUsed">{t.home.sort.mostUsed}</SelectItem>
                 </SelectContent>
               </Select>
             </div>
