@@ -8,9 +8,10 @@ interface SEOHeadProps {
   keywords?: string;
   canonical?: string;
   image?: string;
+  hreflangUrls?: Record<string, string>;
 }
 
-export const SEOHead = ({ title, description, keywords, canonical, image }: SEOHeadProps) => {
+export const SEOHead = ({ title, description, keywords, canonical, image, hreflangUrls }: SEOHeadProps) => {
   const { language } = useLanguage();
 
   useEffect(() => {
@@ -62,23 +63,35 @@ export const SEOHead = ({ title, description, keywords, canonical, image }: SEOH
     document.querySelectorAll('link[rel="alternate"]').forEach(el => el.remove());
 
     // Add hreflang for all languages
-    languages.forEach(lang => {
-      const hreflangLink = document.createElement('link');
-      hreflangLink.rel = 'alternate';
-      hreflangLink.hreflang = lang.code;
-      
-      const url = new URL(window.location.href);
-      const pathParts = url.pathname.split('/').filter(Boolean);
-      if (pathParts.length > 0 && ['en', 'de', 'es', 'pt', 'fr', 'it'].includes(pathParts[0])) {
-        pathParts[0] = lang.code;
-      } else {
-        pathParts.unshift(lang.code);
-      }
-      url.pathname = '/' + pathParts.join('/');
-      hreflangLink.href = url.toString();
-      
-      document.head.appendChild(hreflangLink);
-    });
+    if (hreflangUrls) {
+      // Use provided hreflang URLs (for coupon pages)
+      Object.entries(hreflangUrls).forEach(([langCode, url]) => {
+        const hreflangLink = document.createElement('link');
+        hreflangLink.rel = 'alternate';
+        hreflangLink.hreflang = langCode;
+        hreflangLink.href = url;
+        document.head.appendChild(hreflangLink);
+      });
+    } else {
+      // Auto-generate hreflang URLs (for regular pages)
+      languages.forEach(lang => {
+        const hreflangLink = document.createElement('link');
+        hreflangLink.rel = 'alternate';
+        hreflangLink.hreflang = lang.code;
+        
+        const url = new URL(window.location.href);
+        const pathParts = url.pathname.split('/').filter(Boolean);
+        if (pathParts.length > 0 && ['en', 'de', 'es', 'pt', 'fr', 'it'].includes(pathParts[0])) {
+          pathParts[0] = lang.code;
+        } else {
+          pathParts.unshift(lang.code);
+        }
+        url.pathname = '/' + pathParts.join('/');
+        hreflangLink.href = url.toString();
+        
+        document.head.appendChild(hreflangLink);
+      });
+    }
 
     // Add x-default hreflang
     const xDefaultLink = document.createElement('link');
@@ -87,7 +100,7 @@ export const SEOHead = ({ title, description, keywords, canonical, image }: SEOH
     xDefaultLink.href = canonical || window.location.href;
     document.head.appendChild(xDefaultLink);
 
-  }, [title, description, keywords, canonical, image, language]);
+  }, [title, description, keywords, canonical, image, language, hreflangUrls]);
 
   return null;
 };

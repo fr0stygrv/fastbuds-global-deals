@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { useLanguage } from '@/i18n/LanguageContext';
-import { Language } from '@/i18n/languages';
+import { Language, languages } from '@/i18n/languages';
 import { coupons } from '@/data/coupons';
 import { SEOHead } from '@/components/SEOHead';
 import { Button } from '@/components/ui/button';
@@ -28,6 +28,21 @@ export default function CouponDetail() {
   }
 
   const content = coupon.content[language];
+
+  // Generate hreflang URLs for all languages
+  const hreflangUrls = useMemo(() => {
+    const urls: Record<string, string> = {};
+    const baseUrl = 'https://fastbuds-coupon.com';
+    
+    languages.forEach(lang => {
+      const localizedContent = coupon.content[lang.code];
+      if (localizedContent) {
+        urls[lang.code] = `${baseUrl}/${localizedContent.slug}`;
+      }
+    });
+    
+    return urls;
+  }, [coupon]);
 
   useEffect(() => {
     if (coupon) {
@@ -58,7 +73,8 @@ export default function CouponDetail() {
         title={`${content.title} - Fast Buds Coupons`}
         description={content.description}
         keywords={`${coupon.code}, ${content.title}, Fast Buds`}
-        canonical={`${window.location.origin}/${content.slug}`}
+        canonical={`https://fastbuds-coupon.com/${content.slug}`}
+        hreflangUrls={hreflangUrls}
       />
 
       <div className="min-h-screen">
