@@ -8,13 +8,14 @@ import {
 } from '@/components/ui/accordion';
 
 export default function FAQ() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <>
       <SEOHead
         title={t.meta.faqTitle}
         description={t.meta.faqDescription}
+        canonical={`https://fastbuds-coupon.com/${language}/faq`}
       />
 
       <div className="min-h-screen">

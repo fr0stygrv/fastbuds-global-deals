@@ -18,7 +18,7 @@ const PinterestIcon = ({ className }: { className?: string }) => (
 );
 
 export default function Contact() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const socialMedia = [
     {
@@ -64,6 +64,7 @@ export default function Contact() {
         title={t.meta.contactTitle}
         description={t.meta.contactDescription}
         keywords="fast buds social media, fast buds instagram, fast buds twitter, fast buds tiktok, fast buds pinterest, fast buds contact"
+        canonical={`https://fastbuds-coupon.com/${language}/contact`}
       />
 
       <div className="min-h-screen">

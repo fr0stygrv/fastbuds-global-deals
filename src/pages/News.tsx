@@ -14,6 +14,7 @@ const News = () => {
       <SEOHead 
         title={t.meta.newsTitle}
         description={t.meta.newsDescription}
+        canonical={`https://fastbuds-coupon.com/${language}/news`}
       />
       <main className="min-h-screen bg-background">
         <div className="container py-12">

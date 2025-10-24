@@ -51,6 +51,10 @@ export const SEOHead = ({ title, description, keywords, canonical, image, hrefla
     document.documentElement.lang = language;
 
     // Canonical and hreflang
+    if (!canonical) {
+      console.warn('⚠️ SEOHead: canonical URL not provided, using window.location.href as fallback');
+    }
+    
     let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
     if (!canonicalLink) {
       canonicalLink = document.createElement('link');

@@ -67,6 +67,7 @@ export default function Home() {
         title={t.meta.homeTitle}
         description={t.meta.homeDescription}
         keywords={t.meta.homeKeywords}
+        canonical={`https://fastbuds-coupon.com/${language}`}
       />
 
       <div className="min-h-screen">

@@ -4,13 +4,14 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Sprout, Target, Heart } from 'lucide-react';
 
 export default function About() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <>
       <SEOHead
         title={t.meta.aboutTitle}
         description={t.meta.aboutDescription}
+        canonical={`https://fastbuds-coupon.com/${language}/about`}
       />
 
       <div className="min-h-screen">
