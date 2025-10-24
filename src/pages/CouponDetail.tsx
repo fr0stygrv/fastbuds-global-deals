@@ -13,15 +13,23 @@ import { getUsageCount, incrementUsageCount } from '@/lib/couponStorage';
 
 export default function CouponDetail() {
   const { t } = useLanguage();
-  const { slug, lang } = useParams();
+  const { slug, lang, word } = useParams();
   const [copied, setCopied] = useState(false);
   const [displayCount, setDisplayCount] = useState<number>(0);
 
   // Use language from URL parameter
   const language = (lang || 'en') as Language;
 
+  // Determine correct word for language
+  const correctWord = language === 'es' ? 'cupon' : language === 'pt' ? 'cupom' : 'coupon';
+  
+  // Redirect if word doesn't match language
+  if (word !== correctWord) {
+    return <Navigate to={`/${language}/${correctWord}/${slug}`} replace />;
+  }
+
   // Find coupon by slug in current language
-  const coupon = coupons.find(c => c.content[language].slug.split('/').pop() === slug);
+  const coupon = coupons.find(c => c.content[language].slug === `${language}/${word}/${slug}`);
 
   if (!coupon) {
     return <Navigate to={`/${language}`} replace />;

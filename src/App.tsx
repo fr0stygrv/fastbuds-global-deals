@@ -29,9 +29,7 @@ const App = () => (
             
             {/* Language-specific routes */}
             <Route path="/:lang" element={<Home />} />
-            <Route path="/:lang/coupon/:slug" element={<CouponDetail />} />
-            <Route path="/:lang/cupon/:slug" element={<CouponDetail />} />
-            <Route path="/:lang/cupom/:slug" element={<CouponDetail />} />
+            <Route path="/:lang/:word/:slug" element={<CouponDetail />} />
             <Route path="/:lang/faq" element={<FAQ />} />
             <Route path="/:lang/about" element={<About />} />
             <Route path="/:lang/contact" element={<Contact />} />
