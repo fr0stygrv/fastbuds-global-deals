@@ -30,36 +30,229 @@ export const coupons: Coupon[] = [
     isActive: true,
     usageCount: 45,
     neverExpires: true,
+    image: '/images/coupons/savemax.png',
     content: {
       en: {
         title: 'Maximum Savings - 20% Off Everything!',
         description: 'Unlock the biggest discount available! Save 20% on all Fast Buds premium autoflowering seeds. Your wallet will thank you.',
         slug: 'en/coupon/maximum-savings-20-off-everything',
+        longDescription: 'The Fast Buds SAVEMAX discount code represents the ultimate savings opportunity with an incredible 20% off on all premium autoflowering cannabis seeds. This exclusive Fast Buds promo code offers the highest discount available, giving growers unmatched value on championship-winning genetics. Whether you\'re stocking up on your favorite strains or exploring new varieties, the SAVEMAX coupon code makes premium cultivation more affordable than ever. Fast Buds has established itself as the global leader in autoflowering cannabis genetics, with numerous Cannabis Cup awards and a massive community of satisfied growers worldwide. This Fast Buds discount applies to their complete catalog of premium seeds, including legendary strains like Gorilla Glue Auto, Wedding Cheesecake Auto, Purple Lemonade Auto, Zkittlez Auto, and Gelato Auto. The 20% savings with this Fast Buds coupon code means substantial budget for nutrients, grow equipment, or simply more seeds to expand your garden. This is the maximum discount you can find on Fast Buds seeds – don\'t miss the opportunity to grow world-class genetics while saving big.',
+        features: [
+          'Save 20% on all Fast Buds premium autoflowering seeds - highest discount available',
+          'Access to championship-winning genetics including Cannabis Cup award winners',
+          'Unlimited usage - apply this Fast Buds discount code to every order',
+          'No minimum purchase required - save on orders of any size',
+          'Never expires - this Fast Buds promo code remains active indefinitely',
+          'Compatible with all strains: Gorilla Glue Auto, Wedding Cheesecake, Purple Lemonade, Zkittlez, Gelato',
+          'Stack maximum savings by ordering during Fast Buds promotional periods'
+        ],
+        faq: [
+          {
+            question: 'How do I apply the SAVEMAX Fast Buds coupon code at checkout?',
+            answer: 'Simply click the "Copy Code" button above to copy SAVEMAX to your clipboard. Then visit the Fast Buds official store, add your favorite autoflowering seeds to cart, and paste the code in the promo code field during checkout. Your 20% discount will be applied immediately to your order total.'
+          },
+          {
+            question: 'Does the SAVEMAX discount code work on all Fast Buds seeds?',
+            answer: 'Yes! The SAVEMAX promo code provides 20% off on the entire Fast Buds catalog, including their most popular autoflowering strains, new releases, and limited edition genetics. There are no restrictions on which seeds you can purchase with this coupon.'
+          },
+          {
+            question: 'Can I use the SAVEMAX coupon multiple times?',
+            answer: 'Absolutely! Unlike many promotional codes that are single-use only, the SAVEMAX Fast Buds discount code can be used on multiple orders. There\'s no limit to how many times you can save 20% on your Fast Buds seed purchases.'
+          },
+          {
+            question: 'Does this Fast Buds promo code have an expiration date?',
+            answer: 'No, the SAVEMAX coupon code never expires. This permanent 20% discount is available for all Fast Buds customers, making it perfect for planning your grows throughout the year without worrying about missing a limited-time deal.'
+          },
+          {
+            question: 'Is there a minimum order requirement to use the SAVEMAX code?',
+            answer: 'No minimum purchase is required. Whether you\'re buying a single 3-pack of seeds or stocking up with multiple strains, the SAVEMAX discount code will save you 20% on orders of any size at the Fast Buds store.'
+          }
+        ]
       },
       de: {
         title: 'Maximale Ersparnis - 20% auf Alles!',
         description: 'Sichern Sie sich den größten verfügbaren Rabatt! Sparen Sie 20% auf alle Fast Buds Premium-Autoflowering-Samen. Ihr Geldbeutel wird es Ihnen danken.',
         slug: 'de/coupon/maximale-ersparnis-20-auf-alles',
+        longDescription: 'Der Fast Buds SAVEMAX Rabattcode ist die ultimative Spargelegenheit mit unglaublichen 20% Rabatt auf alle Premium autoflowering Cannabis-Samen. Dieser exklusive Fast Buds Gutschein bietet den höchsten verfügbaren Rabatt und gibt Züchtern unschlagbaren Wert auf preisgekrönte Genetik. Ob Sie Ihre Lieblingssorten auffüllen oder neue Varietäten erkunden – der SAVEMAX Coupon macht Premium-Anbau erschwinglicher denn je. Fast Buds hat sich als globaler Marktführer für autoflowering Cannabis-Genetik etabliert, mit zahlreichen Cannabis Cup Auszeichnungen. Dieser Fast Buds Rabatt gilt für den kompletten Katalog, einschließlich legendärer Sorten wie Gorilla Glue Auto, Wedding Cheesecake Auto, Purple Lemonade Auto, Zkittlez Auto und Gelato Auto. Die 20% Ersparnis bedeuten mehr Budget für Nährstoffe, Ausrüstung oder einfach mehr Samen.',
+        features: [
+          '20% Rabatt auf alle Fast Buds Premium autoflowering Samen - höchster verfügbarer Rabatt',
+          'Zugang zu preisgekrönter Genetik einschließlich Cannabis Cup Gewinnern',
+          'Unbegrenzte Nutzung - wenden Sie diesen Fast Buds Rabatt bei jeder Bestellung an',
+          'Kein Mindestbestellwert erforderlich - sparen Sie bei Bestellungen jeder Größe',
+          'Läuft nie ab - dieser Fast Buds Gutschein bleibt dauerhaft aktiv',
+          'Kompatibel mit allen Sorten: Gorilla Glue Auto, Wedding Cheesecake, Purple Lemonade, Zkittlez, Gelato',
+          'Maximale Ersparnisse bei Bestellung während Fast Buds Aktionszeiträumen'
+        ],
+        faq: [
+          {
+            question: 'Wie wende ich den SAVEMAX Fast Buds Gutscheincode an der Kasse an?',
+            answer: 'Klicken Sie einfach auf "Code kopieren", um SAVEMAX in Ihre Zwischenablage zu kopieren. Besuchen Sie dann den offiziellen Fast Buds Shop, fügen Sie Ihre Lieblingssamen zum Warenkorb hinzu und fügen Sie den Code im Gutscheinfeld beim Checkout ein. Ihr 20% Rabatt wird sofort angewendet.'
+          },
+          {
+            question: 'Funktioniert der SAVEMAX Rabattcode bei allen Fast Buds Samen?',
+            answer: 'Ja! Der SAVEMAX Gutschein bietet 20% Rabatt auf den gesamten Fast Buds Katalog, einschließlich der beliebtesten autoflowering Sorten, neuen Releases und limitierten Editionen. Es gibt keine Einschränkungen.'
+          },
+          {
+            question: 'Kann ich den SAVEMAX Gutschein mehrmals verwenden?',
+            answer: 'Absolut! Anders als viele Aktionscodes, die nur einmal verwendet werden können, kann der SAVEMAX Fast Buds Rabattcode bei mehreren Bestellungen genutzt werden. Es gibt keine Begrenzung, wie oft Sie 20% sparen können.'
+          },
+          {
+            question: 'Hat dieser Fast Buds Gutschein ein Ablaufdatum?',
+            answer: 'Nein, der SAVEMAX Gutscheincode läuft nie ab. Dieser permanente 20% Rabatt ist für alle Fast Buds Kunden verfügbar, ideal für die Planung Ihrer Anbaus das ganze Jahr über.'
+          },
+          {
+            question: 'Gibt es einen Mindestbestellwert für den SAVEMAX Code?',
+            answer: 'Kein Mindestbestellwert erforderlich. Ob Sie ein einzelnes 3er-Pack kaufen oder mehrere Sorten bestellen, der SAVEMAX Rabattcode spart Ihnen 20% bei Bestellungen jeder Größe.'
+          }
+        ]
       },
       es: {
         title: 'Ahorro Máximo - ¡20% en Todo!',
         description: '¡Desbloquea el descuento más grande disponible! Ahorra 20% en todas las semillas autoflorecientes premium de Fast Buds. Tu billetera te lo agradecerá.',
         slug: 'es/cupon/ahorro-maximo-20-en-todo',
+        longDescription: 'El código de descuento SAVEMAX de Fast Buds representa la máxima oportunidad de ahorro con un increíble 20% de descuento en todas las semillas de cannabis autoflorecientes premium. Este código promocional exclusivo de Fast Buds ofrece el mayor descuento disponible, brindando a los cultivadores un valor inigualable en genética ganadora de campeonatos. Ya sea que estés abasteciendo tus variedades favoritas o explorando nuevas variedades, el cupón SAVEMAX hace que el cultivo premium sea más asequible que nunca. Fast Buds se ha establecido como el líder global en genética de cannabis autofloreciente, con numerosos premios Cannabis Cup. Este descuento de Fast Buds se aplica a su catálogo completo de semillas premium, incluidas variedades legendarias como Gorilla Glue Auto, Wedding Cheesecake Auto, Purple Lemonade Auto, Zkittlez Auto y Gelato Auto. El ahorro del 20% significa más presupuesto para nutrientes, equipo o simplemente más semillas.',
+        features: [
+          'Ahorra 20% en todas las semillas autoflorecientes premium de Fast Buds - mayor descuento disponible',
+          'Acceso a genética ganadora de campeonatos incluyendo premios Cannabis Cup',
+          'Uso ilimitado - aplica este código de descuento Fast Buds en cada pedido',
+          'Sin compra mínima requerida - ahorra en pedidos de cualquier tamaño',
+          'Nunca expira - este código promo de Fast Buds permanece activo indefinidamente',
+          'Compatible con todas las variedades: Gorilla Glue Auto, Wedding Cheesecake, Purple Lemonade, Zkittlez, Gelato',
+          'Acumula ahorros máximos ordenando durante períodos promocionales de Fast Buds'
+        ],
+        faq: [
+          {
+            question: '¿Cómo aplico el cupón SAVEMAX de Fast Buds al finalizar la compra?',
+            answer: 'Simplemente haz clic en el botón "Copiar Código" para copiar SAVEMAX al portapapeles. Luego visita la tienda oficial de Fast Buds, añade tus semillas favoritas al carrito y pega el código en el campo de código promocional durante el checkout. Tu descuento del 20% se aplicará inmediatamente.'
+          },
+          {
+            question: '¿El código SAVEMAX funciona en todas las semillas Fast Buds?',
+            answer: '¡Sí! El código promo SAVEMAX proporciona 20% de descuento en todo el catálogo de Fast Buds, incluyendo sus variedades autoflorecientes más populares, nuevos lanzamientos y genética de edición limitada. No hay restricciones.'
+          },
+          {
+            question: '¿Puedo usar el cupón SAVEMAX múltiples veces?',
+            answer: '¡Absolutamente! A diferencia de muchos códigos promocionales de un solo uso, el código de descuento SAVEMAX de Fast Buds puede usarse en múltiples pedidos. No hay límite para cuántas veces puedes ahorrar 20%.'
+          },
+          {
+            question: '¿Este código promo de Fast Buds tiene fecha de expiración?',
+            answer: 'No, el código SAVEMAX nunca expira. Este descuento permanente del 20% está disponible para todos los clientes de Fast Buds, perfecto para planificar tus cultivos durante todo el año.'
+          },
+          {
+            question: '¿Hay un pedido mínimo para usar el código SAVEMAX?',
+            answer: 'No se requiere compra mínima. Ya sea que compres un solo paquete de 3 semillas o hagas un pedido grande, el código SAVEMAX te ahorrará 20% en pedidos de cualquier tamaño.'
+          }
+        ]
       },
       pt: {
         title: 'Economia Máxima - 20% em Tudo!',
         description: 'Desbloqueie o maior desconto disponível! Economize 20% em todas as sementes autoflorescentes premium da Fast Buds. Sua carteira agradecerá.',
         slug: 'pt/cupom/economia-maxima-20-em-tudo',
+        longDescription: 'O código de desconto SAVEMAX da Fast Buds representa a máxima oportunidade de economia com incríveis 20% de desconto em todas as sementes de cannabis autoflorescentes premium. Este código promocional exclusivo da Fast Buds oferece o maior desconto disponível, dando aos cultivadores valor incomparável em genética vencedora de campeonatos. Seja você abastecendo suas variedades favoritas ou explorando novas variedades, o cupom SAVEMAX torna o cultivo premium mais acessível do que nunca. A Fast Buds se estabeleceu como líder global em genética de cannabis autoflorescente, com numerosos prêmios Cannabis Cup. Este desconto da Fast Buds se aplica ao catálogo completo de sementes premium, incluindo variedades lendárias como Gorilla Glue Auto, Wedding Cheesecake Auto, Purple Lemonade Auto, Zkittlez Auto e Gelato Auto. A economia de 20% significa mais orçamento para nutrientes, equipamentos ou simplesmente mais sementes.',
+        features: [
+          'Economize 20% em todas as sementes autoflorescentes premium da Fast Buds - maior desconto disponível',
+          'Acesso a genética vencedora de campeonatos incluindo prêmios Cannabis Cup',
+          'Uso ilimitado - aplique este código de desconto Fast Buds em cada pedido',
+          'Sem compra mínima necessária - economize em pedidos de qualquer tamanho',
+          'Nunca expira - este código promo da Fast Buds permanece ativo indefinidamente',
+          'Compatível com todas as variedades: Gorilla Glue Auto, Wedding Cheesecake, Purple Lemonade, Zkittlez, Gelato',
+          'Acumule economias máximas pedindo durante períodos promocionais da Fast Buds'
+        ],
+        faq: [
+          {
+            question: 'Como aplico o cupom SAVEMAX da Fast Buds no checkout?',
+            answer: 'Simplesmente clique no botão "Copiar Código" para copiar SAVEMAX para a área de transferência. Em seguida, visite a loja oficial da Fast Buds, adicione suas sementes favoritas ao carrinho e cole o código no campo de código promocional durante o checkout. Seu desconto de 20% será aplicado imediatamente.'
+          },
+          {
+            question: 'O código SAVEMAX funciona em todas as sementes Fast Buds?',
+            answer: 'Sim! O código promo SAVEMAX oferece 20% de desconto em todo o catálogo da Fast Buds, incluindo suas variedades autoflorescentes mais populares, novos lançamentos e genética de edição limitada. Não há restrições.'
+          },
+          {
+            question: 'Posso usar o cupom SAVEMAX múltiplas vezes?',
+            answer: 'Absolutamente! Ao contrário de muitos códigos promocionais de uso único, o código de desconto SAVEMAX da Fast Buds pode ser usado em múltiplos pedidos. Não há limite para quantas vezes você pode economizar 20%.'
+          },
+          {
+            question: 'Este código promo da Fast Buds tem data de validade?',
+            answer: 'Não, o código SAVEMAX nunca expira. Este desconto permanente de 20% está disponível para todos os clientes da Fast Buds, perfeito para planejar seus cultivos durante todo o ano.'
+          },
+          {
+            question: 'Há um pedido mínimo para usar o código SAVEMAX?',
+            answer: 'Nenhuma compra mínima é necessária. Seja você comprando um único pacote de 3 sementes ou fazendo um pedido grande, o código SAVEMAX economizará 20% em pedidos de qualquer tamanho.'
+          }
+        ]
       },
       fr: {
         title: 'Économies Maximales - 20% sur Tout!',
         description: 'Débloquez la plus grosse réduction disponible! Économisez 20% sur toutes les graines autoflorissantes premium Fast Buds. Votre portefeuille vous remerciera.',
         slug: 'fr/coupon/economies-maximales-20-sur-tout',
+        longDescription: 'Le code promo SAVEMAX de Fast Buds représente l\'opportunité d\'économie ultime avec un incroyable 20% de réduction sur toutes les graines de cannabis autofloraison premium. Ce code promotionnel exclusif Fast Buds offre la réduction la plus élevée disponible, donnant aux cultivateurs une valeur inégalée sur une génétique primée. Que vous fassiez le plein de vos variétés préférées ou que vous exploriez de nouvelles variétés, le coupon SAVEMAX rend la culture premium plus abordable que jamais. Fast Buds s\'est établi comme le leader mondial de la génétique autofloraison, avec de nombreux prix Cannabis Cup. Cette réduction Fast Buds s\'applique à leur catalogue complet de graines premium, y compris des variétés légendaires comme Gorilla Glue Auto, Wedding Cheesecake Auto, Purple Lemonade Auto, Zkittlez Auto et Gelato Auto. L\'économie de 20% signifie plus de budget pour les nutriments, l\'équipement ou simplement plus de graines.',
+        features: [
+          'Économisez 20% sur toutes les graines autofloraison premium Fast Buds - réduction la plus élevée disponible',
+          'Accès à la génétique primée incluant les gagnants de Cannabis Cup',
+          'Utilisation illimitée - appliquez ce code promo Fast Buds à chaque commande',
+          'Aucun achat minimum requis - économisez sur les commandes de toute taille',
+          'N\'expire jamais - ce code promo Fast Buds reste actif indéfiniment',
+          'Compatible avec toutes les variétés: Gorilla Glue Auto, Wedding Cheesecake, Purple Lemonade, Zkittlez, Gelato',
+          'Cumulez les économies maximales en commandant pendant les périodes promotionnelles Fast Buds'
+        ],
+        faq: [
+          {
+            question: 'Comment appliquer le coupon SAVEMAX de Fast Buds lors du paiement?',
+            answer: 'Cliquez simplement sur le bouton "Copier le Code" pour copier SAVEMAX dans votre presse-papiers. Ensuite, visitez la boutique officielle Fast Buds, ajoutez vos graines préférées au panier et collez le code dans le champ code promo lors du paiement. Votre réduction de 20% sera appliquée immédiatement.'
+          },
+          {
+            question: 'Le code SAVEMAX fonctionne-t-il sur toutes les graines Fast Buds?',
+            answer: 'Oui! Le code promo SAVEMAX offre 20% de réduction sur l\'ensemble du catalogue Fast Buds, y compris leurs variétés autofloraison les plus populaires, les nouvelles sorties et la génétique en édition limitée. Il n\'y a aucune restriction.'
+          },
+          {
+            question: 'Puis-je utiliser le coupon SAVEMAX plusieurs fois?',
+            answer: 'Absolument! Contrairement à de nombreux codes promotionnels à usage unique, le code promo SAVEMAX de Fast Buds peut être utilisé sur plusieurs commandes. Il n\'y a aucune limite au nombre de fois où vous pouvez économiser 20%.'
+          },
+          {
+            question: 'Ce code promo Fast Buds a-t-il une date d\'expiration?',
+            answer: 'Non, le code SAVEMAX n\'expire jamais. Cette réduction permanente de 20% est disponible pour tous les clients Fast Buds, parfaite pour planifier vos cultures tout au long de l\'année.'
+          },
+          {
+            question: 'Y a-t-il une commande minimum pour utiliser le code SAVEMAX?',
+            answer: 'Aucun achat minimum n\'est requis. Que vous achetiez un seul pack de 3 graines ou que vous fassiez une grosse commande, le code SAVEMAX vous fera économiser 20% sur les commandes de toute taille.'
+          }
+        ]
       },
       it: {
         title: 'Risparmio Massimo - 20% su Tutto!',
         description: 'Sblocca lo sconto più grande disponibile! Risparmia il 20% su tutti i semi autofiorenti premium Fast Buds. Il tuo portafoglio ti ringrazierà.',
         slug: 'it/coupon/risparmio-massimo-20-su-tutto',
+        longDescription: 'Il codice sconto SAVEMAX di Fast Buds rappresenta l\'opportunità di risparmio definitiva con un incredibile 20% di sconto su tutti i semi di cannabis autofiorenti premium. Questo codice promozionale esclusivo Fast Buds offre lo sconto più alto disponibile, dando ai coltivatori un valore impareggiabile su genetica vincitrice di campionati. Che tu stia rifornendo le tue varietà preferite o esplorando nuove varietà, il coupon SAVEMAX rende la coltivazione premium più accessibile che mai. Fast Buds si è affermata come leader globale nella genetica autofiorente, con numerosi premi Cannabis Cup. Questo sconto Fast Buds si applica al loro catalogo completo di semi premium, incluse varietà leggendarie come Gorilla Glue Auto, Wedding Cheesecake Auto, Purple Lemonade Auto, Zkittlez Auto e Gelato Auto. Il risparmio del 20% significa più budget per nutrienti, attrezzature o semplicemente più semi.',
+        features: [
+          'Risparmia il 20% su tutti i semi autofiorenti premium Fast Buds - sconto più alto disponibile',
+          'Accesso a genetica vincitrice di campionati inclusi i vincitori della Cannabis Cup',
+          'Utilizzo illimitato - applica questo codice sconto Fast Buds ad ogni ordine',
+          'Nessun acquisto minimo richiesto - risparmia su ordini di qualsiasi dimensione',
+          'Non scade mai - questo codice promo Fast Buds rimane attivo indefinitamente',
+          'Compatibile con tutte le varietà: Gorilla Glue Auto, Wedding Cheesecake, Purple Lemonade, Zkittlez, Gelato',
+          'Accumula risparmi massimi ordinando durante i periodi promozionali Fast Buds'
+        ],
+        faq: [
+          {
+            question: 'Come applico il coupon SAVEMAX di Fast Buds al checkout?',
+            answer: 'Fai semplicemente clic sul pulsante "Copia Codice" per copiare SAVEMAX negli appunti. Quindi visita lo store ufficiale Fast Buds, aggiungi i tuoi semi preferiti al carrello e incolla il codice nel campo codice promo durante il checkout. Il tuo sconto del 20% verrà applicato immediatamente.'
+          },
+          {
+            question: 'Il codice SAVEMAX funziona su tutti i semi Fast Buds?',
+            answer: 'Sì! Il codice promo SAVEMAX offre il 20% di sconto sull\'intero catalogo Fast Buds, incluse le loro varietà autofiorenti più popolari, nuovi lanci e genetica in edizione limitata. Non ci sono restrizioni.'
+          },
+          {
+            question: 'Posso usare il coupon SAVEMAX più volte?',
+            answer: 'Assolutamente! A differenza di molti codici promozionali monouso, il codice sconto SAVEMAX di Fast Buds può essere utilizzato su più ordini. Non c\'è limite a quante volte puoi risparmiare il 20%.'
+          },
+          {
+            question: 'Questo codice promo Fast Buds ha una data di scadenza?',
+            answer: 'No, il codice SAVEMAX non scade mai. Questo sconto permanente del 20% è disponibile per tutti i clienti Fast Buds, perfetto per pianificare le tue coltivazioni durante tutto l\'anno.'
+          },
+          {
+            question: 'C\'è un ordine minimo per usare il codice SAVEMAX?',
+            answer: 'Nessun acquisto minimo è richiesto. Che tu stia comprando un singolo pacchetto da 3 semi o facendo un grande ordine, il codice SAVEMAX ti farà risparmiare il 20% su ordini di qualsiasi dimensione.'
+          }
+        ]
       },
     },
   },
@@ -71,36 +264,229 @@ export const coupons: Coupon[] = [
     isActive: true,
     usageCount: 17,
     neverExpires: true,
+    image: '/images/coupons/save4u.png',
     content: {
       en: {
         title: 'Personal Discount Just For You - 15% Off',
         description: 'This exclusive deal was made with you in mind! Enjoy 15% off on your favorite Fast Buds strains. Because you deserve it.',
         slug: 'en/coupon/personal-discount-just-for-you-15-off',
+        longDescription: 'The Fast Buds SAVE4U discount code is your personal invitation to save 15% on premium autoflowering cannabis seeds. This exclusive Fast Buds promo code was designed specifically for dedicated growers who appreciate quality genetics at great prices. Whether you\'re a seasoned cultivator or just starting your growing journey, the SAVE4U coupon code delivers exceptional value on championship-winning strains. Fast Buds has built a reputation as one of the world\'s leading breeders of autoflowering cannabis genetics, with multiple Cannabis Cup victories and millions of satisfied customers globally. This Fast Buds discount applies to their entire range of premium seeds, including bestsellers like Gorilla Glue Auto, Wedding Cheesecake Auto, Purple Lemonade Auto, Zkittlez Auto, and Gelato Auto. The 15% savings with this Fast Buds coupon code means more budget for grow lights, nutrients, or simply expanding your seed collection. This is your personal discount – a reward for being part of the Fast Buds growing community.',
+        features: [
+          'Save 15% on all Fast Buds premium autoflowering seeds with your personal code',
+          'Access to championship-winning genetics including Cannabis Cup award winners',
+          'Unlimited usage - apply this Fast Buds discount code to every order',
+          'No minimum purchase required - save on any order size',
+          'Never expires - this Fast Buds promo code remains active indefinitely',
+          'Compatible with favorite strains: Gorilla Glue Auto, Wedding Cheesecake, Purple Lemonade, Zkittlez, Gelato',
+          'Personal discount designed for dedicated Fast Buds growers'
+        ],
+        faq: [
+          {
+            question: 'How do I apply the SAVE4U Fast Buds coupon code at checkout?',
+            answer: 'Simply click the "Copy Code" button above to copy SAVE4U to your clipboard. Then visit the Fast Buds official store, add your favorite autoflowering seeds to cart, and paste the code in the promo code field during checkout. Your 15% discount will be applied immediately to your order total.'
+          },
+          {
+            question: 'Does the SAVE4U discount code work on all Fast Buds seeds?',
+            answer: 'Yes! The SAVE4U promo code provides 15% off on the entire Fast Buds catalog, including their most popular autoflowering strains, new releases, and limited edition genetics. There are no restrictions on which seeds you can purchase with this coupon.'
+          },
+          {
+            question: 'Can I use the SAVE4U coupon multiple times?',
+            answer: 'Absolutely! Unlike many promotional codes that are single-use only, the SAVE4U Fast Buds discount code can be used on multiple orders. There\'s no limit to how many times you can save 15% on your Fast Buds seed purchases.'
+          },
+          {
+            question: 'Does this Fast Buds promo code have an expiration date?',
+            answer: 'No, the SAVE4U coupon code never expires. This permanent 15% discount is available for all Fast Buds customers, making it perfect for planning your grows throughout the year without worrying about missing a limited-time deal.'
+          },
+          {
+            question: 'Is there a minimum order requirement to use the SAVE4U code?',
+            answer: 'No minimum purchase is required. Whether you\'re buying a single 3-pack of seeds or stocking up with multiple strains, the SAVE4U discount code will save you 15% on orders of any size at the Fast Buds store.'
+          }
+        ]
       },
       de: {
         title: 'Persönlicher Rabatt Nur für Sie - 15% Rabatt',
         description: 'Dieses exklusive Angebot wurde speziell für Sie gemacht! Genießen Sie 15% Rabatt auf Ihre Lieblings-Fast Buds Sorten. Weil Sie es verdienen.',
         slug: 'de/coupon/personlicher-rabatt-nur-fur-sie-15-rabatt',
+        longDescription: 'Der Fast Buds SAVE4U Rabattcode ist Ihre persönliche Einladung, 15% auf Premium autoflowering Cannabis-Samen zu sparen. Dieser exklusive Fast Buds Gutschein wurde speziell für engagierte Züchter entwickelt, die Qualitätsgenetik zu tollen Preisen schätzen. Ob erfahrener Züchter oder Anfänger – der SAVE4U Coupon bietet außergewöhnlichen Wert auf preisgekrönte Sorten. Fast Buds hat sich als einer der weltweit führenden Züchter von autoflowering Cannabis-Genetik etabliert, mit mehreren Cannabis Cup Siegen. Dieser Fast Buds Rabatt gilt für die gesamte Palette an Premium-Samen, einschließlich Bestsellern wie Gorilla Glue Auto, Wedding Cheesecake Auto, Purple Lemonade Auto, Zkittlez Auto und Gelato Auto. Die 15% Ersparnis bedeuten mehr Budget für Growlampen, Nährstoffe oder einfach mehr Samen.',
+        features: [
+          '15% Rabatt auf alle Fast Buds Premium autoflowering Samen mit Ihrem persönlichen Code',
+          'Zugang zu preisgekrönter Genetik einschließlich Cannabis Cup Gewinnern',
+          'Unbegrenzte Nutzung - wenden Sie diesen Fast Buds Rabatt bei jeder Bestellung an',
+          'Kein Mindestbestellwert erforderlich - sparen Sie bei jeder Bestellgröße',
+          'Läuft nie ab - dieser Fast Buds Gutschein bleibt dauerhaft aktiv',
+          'Kompatibel mit Lieblingssorten: Gorilla Glue Auto, Wedding Cheesecake, Purple Lemonade, Zkittlez, Gelato',
+          'Persönlicher Rabatt für engagierte Fast Buds Züchter'
+        ],
+        faq: [
+          {
+            question: 'Wie wende ich den SAVE4U Fast Buds Gutscheincode an der Kasse an?',
+            answer: 'Klicken Sie einfach auf "Code kopieren", um SAVE4U in Ihre Zwischenablage zu kopieren. Besuchen Sie dann den offiziellen Fast Buds Shop, fügen Sie Ihre Lieblingssamen zum Warenkorb hinzu und fügen Sie den Code im Gutscheinfeld beim Checkout ein. Ihr 15% Rabatt wird sofort angewendet.'
+          },
+          {
+            question: 'Funktioniert der SAVE4U Rabattcode bei allen Fast Buds Samen?',
+            answer: 'Ja! Der SAVE4U Gutschein bietet 15% Rabatt auf den gesamten Fast Buds Katalog, einschließlich der beliebtesten autoflowering Sorten, neuen Releases und limitierten Editionen. Es gibt keine Einschränkungen.'
+          },
+          {
+            question: 'Kann ich den SAVE4U Gutschein mehrmals verwenden?',
+            answer: 'Absolut! Anders als viele Aktionscodes, die nur einmal verwendet werden können, kann der SAVE4U Fast Buds Rabattcode bei mehreren Bestellungen genutzt werden. Es gibt keine Begrenzung, wie oft Sie 15% sparen können.'
+          },
+          {
+            question: 'Hat dieser Fast Buds Gutschein ein Ablaufdatum?',
+            answer: 'Nein, der SAVE4U Gutscheincode läuft nie ab. Dieser permanente 15% Rabatt ist für alle Fast Buds Kunden verfügbar, ideal für die Planung Ihrer Anbaus das ganze Jahr über.'
+          },
+          {
+            question: 'Gibt es einen Mindestbestellwert für den SAVE4U Code?',
+            answer: 'Kein Mindestbestellwert erforderlich. Ob Sie ein einzelnes 3er-Pack kaufen oder mehrere Sorten bestellen, der SAVE4U Rabattcode spart Ihnen 15% bei Bestellungen jeder Größe.'
+          }
+        ]
       },
       es: {
         title: 'Descuento Personal Solo Para Ti - 15% de Descuento',
         description: '¡Esta oferta exclusiva fue hecha pensando en ti! Disfruta del 15% de descuento en tus variedades favoritas de Fast Buds. Porque te lo mereces.',
         slug: 'es/cupon/descuento-personal-solo-para-ti-15-descuento',
+        longDescription: 'El código de descuento SAVE4U de Fast Buds es tu invitación personal para ahorrar 15% en semillas de cannabis autoflorecientes premium. Este código promocional exclusivo de Fast Buds fue diseñado específicamente para cultivadores dedicados que aprecian la genética de calidad a excelentes precios. Ya seas un cultivador experimentado o estés comenzando tu viaje de cultivo, el cupón SAVE4U ofrece valor excepcional en variedades ganadoras de campeonatos. Fast Buds ha construido una reputación como uno de los criadores líderes mundiales de genética autofloreciente, con múltiples victorias en Cannabis Cup. Este descuento de Fast Buds se aplica a toda su gama de semillas premium, incluidos bestsellers como Gorilla Glue Auto, Wedding Cheesecake Auto, Purple Lemonade Auto, Zkittlez Auto y Gelato Auto. El ahorro del 15% significa más presupuesto para luces de cultivo, nutrientes o simplemente expandir tu colección de semillas.',
+        features: [
+          'Ahorra 15% en todas las semillas autoflorecientes premium de Fast Buds con tu código personal',
+          'Acceso a genética ganadora de campeonatos incluyendo premios Cannabis Cup',
+          'Uso ilimitado - aplica este código de descuento Fast Buds en cada pedido',
+          'Sin compra mínima requerida - ahorra en cualquier tamaño de pedido',
+          'Nunca expira - este código promo de Fast Buds permanece activo indefinidamente',
+          'Compatible con variedades favoritas: Gorilla Glue Auto, Wedding Cheesecake, Purple Lemonade, Zkittlez, Gelato',
+          'Descuento personal diseñado para cultivadores dedicados de Fast Buds'
+        ],
+        faq: [
+          {
+            question: '¿Cómo aplico el cupón SAVE4U de Fast Buds al finalizar la compra?',
+            answer: 'Simplemente haz clic en el botón "Copiar Código" para copiar SAVE4U al portapapeles. Luego visita la tienda oficial de Fast Buds, añade tus semillas favoritas al carrito y pega el código en el campo de código promocional durante el checkout. Tu descuento del 15% se aplicará inmediatamente.'
+          },
+          {
+            question: '¿El código SAVE4U funciona en todas las semillas Fast Buds?',
+            answer: '¡Sí! El código promo SAVE4U proporciona 15% de descuento en todo el catálogo de Fast Buds, incluyendo sus variedades autoflorecientes más populares, nuevos lanzamientos y genética de edición limitada. No hay restricciones.'
+          },
+          {
+            question: '¿Puedo usar el cupón SAVE4U múltiples veces?',
+            answer: '¡Absolutamente! A diferencia de muchos códigos promocionales de un solo uso, el código de descuento SAVE4U de Fast Buds puede usarse en múltiples pedidos. No hay límite para cuántas veces puedes ahorrar 15%.'
+          },
+          {
+            question: '¿Este código promo de Fast Buds tiene fecha de expiración?',
+            answer: 'No, el código SAVE4U nunca expira. Este descuento permanente del 15% está disponible para todos los clientes de Fast Buds, perfecto para planificar tus cultivos durante todo el año.'
+          },
+          {
+            question: '¿Hay un pedido mínimo para usar el código SAVE4U?',
+            answer: 'No se requiere compra mínima. Ya sea que compres un solo paquete de 3 semillas o hagas un pedido grande, el código SAVE4U te ahorrará 15% en pedidos de cualquier tamaño.'
+          }
+        ]
       },
       pt: {
         title: 'Desconto Pessoal Só Para Você - 15% de Desconto',
         description: 'Esta oferta exclusiva foi feita pensando em você! Aproveite 15% de desconto nas suas variedades favoritas da Fast Buds. Porque você merece.',
         slug: 'pt/cupom/desconto-pessoal-so-para-voce-15-desconto',
+        longDescription: 'O código de desconto SAVE4U da Fast Buds é seu convite pessoal para economizar 15% em sementes de cannabis autoflorescentes premium. Este código promocional exclusivo da Fast Buds foi projetado especificamente para cultivadores dedicados que apreciam genética de qualidade a ótimos preços. Seja você um cultivador experiente ou apenas começando sua jornada de cultivo, o cupom SAVE4U oferece valor excepcional em variedades vencedoras de campeonatos. A Fast Buds construiu uma reputação como um dos principais criadores mundiais de genética autoflorescente, com múltiplas vitórias na Cannabis Cup. Este desconto da Fast Buds se aplica a toda sua gama de sementes premium, incluindo bestsellers como Gorilla Glue Auto, Wedding Cheesecake Auto, Purple Lemonade Auto, Zkittlez Auto e Gelato Auto. A economia de 15% significa mais orçamento para luzes de cultivo, nutrientes ou simplesmente expandir sua coleção de sementes.',
+        features: [
+          'Economize 15% em todas as sementes autoflorescentes premium da Fast Buds com seu código pessoal',
+          'Acesso a genética vencedora de campeonatos incluindo prêmios Cannabis Cup',
+          'Uso ilimitado - aplique este código de desconto Fast Buds em cada pedido',
+          'Sem compra mínima necessária - economize em qualquer tamanho de pedido',
+          'Nunca expira - este código promo da Fast Buds permanece ativo indefinidamente',
+          'Compatível com variedades favoritas: Gorilla Glue Auto, Wedding Cheesecake, Purple Lemonade, Zkittlez, Gelato',
+          'Desconto pessoal projetado para cultivadores dedicados da Fast Buds'
+        ],
+        faq: [
+          {
+            question: 'Como aplico o cupom SAVE4U da Fast Buds no checkout?',
+            answer: 'Simplesmente clique no botão "Copiar Código" para copiar SAVE4U para a área de transferência. Em seguida, visite a loja oficial da Fast Buds, adicione suas sementes favoritas ao carrinho e cole o código no campo de código promocional durante o checkout. Seu desconto de 15% será aplicado imediatamente.'
+          },
+          {
+            question: 'O código SAVE4U funciona em todas as sementes Fast Buds?',
+            answer: 'Sim! O código promo SAVE4U oferece 15% de desconto em todo o catálogo da Fast Buds, incluindo suas variedades autoflorescentes mais populares, novos lançamentos e genética de edição limitada. Não há restrições.'
+          },
+          {
+            question: 'Posso usar o cupom SAVE4U múltiplas vezes?',
+            answer: 'Absolutamente! Ao contrário de muitos códigos promocionais de uso único, o código de desconto SAVE4U da Fast Buds pode ser usado em múltiplos pedidos. Não há limite para quantas vezes você pode economizar 15%.'
+          },
+          {
+            question: 'Este código promo da Fast Buds tem data de validade?',
+            answer: 'Não, o código SAVE4U nunca expira. Este desconto permanente de 15% está disponível para todos os clientes da Fast Buds, perfeito para planejar seus cultivos durante todo o ano.'
+          },
+          {
+            question: 'Há um pedido mínimo para usar o código SAVE4U?',
+            answer: 'Nenhuma compra mínima é necessária. Seja você comprando um único pacote de 3 sementes ou fazendo um pedido grande, o código SAVE4U economizará 15% em pedidos de qualquer tamanho.'
+          }
+        ]
       },
       fr: {
         title: 'Réduction Personnelle Rien que Pour Vous - 15% de Réduction',
         description: 'Cette offre exclusive a été créée en pensant à vous! Profitez de 15% de réduction sur vos variétés Fast Buds préférées. Parce que vous le méritez.',
         slug: 'fr/coupon/reduction-personnelle-rien-que-pour-vous-15-reduction',
+        longDescription: 'Le code promo SAVE4U de Fast Buds est votre invitation personnelle à économiser 15% sur les graines de cannabis autofloraison premium. Ce code promotionnel exclusif Fast Buds a été conçu spécifiquement pour les cultivateurs dévoués qui apprécient la génétique de qualité à d\'excellents prix. Que vous soyez un cultivateur expérimenté ou que vous commenciez votre parcours de culture, le coupon SAVE4U offre une valeur exceptionnelle sur des variétés primées. Fast Buds a construit une réputation en tant que l\'un des principaux sélectionneurs mondiaux de génétique autofloraison, avec de multiples victoires à la Cannabis Cup. Cette réduction Fast Buds s\'applique à toute leur gamme de graines premium, y compris les bestsellers comme Gorilla Glue Auto, Wedding Cheesecake Auto, Purple Lemonade Auto, Zkittlez Auto et Gelato Auto. L\'économie de 15% signifie plus de budget pour les lampes de culture, les nutriments ou simplement agrandir votre collection de graines.',
+        features: [
+          'Économisez 15% sur toutes les graines autofloraison premium Fast Buds avec votre code personnel',
+          'Accès à la génétique primée incluant les gagnants de Cannabis Cup',
+          'Utilisation illimitée - appliquez ce code promo Fast Buds à chaque commande',
+          'Aucun achat minimum requis - économisez sur toute taille de commande',
+          'N\'expire jamais - ce code promo Fast Buds reste actif indéfiniment',
+          'Compatible avec les variétés favorites: Gorilla Glue Auto, Wedding Cheesecake, Purple Lemonade, Zkittlez, Gelato',
+          'Réduction personnelle conçue pour les cultivateurs dévoués Fast Buds'
+        ],
+        faq: [
+          {
+            question: 'Comment appliquer le coupon SAVE4U de Fast Buds lors du paiement?',
+            answer: 'Cliquez simplement sur le bouton "Copier le Code" pour copier SAVE4U dans votre presse-papiers. Ensuite, visitez la boutique officielle Fast Buds, ajoutez vos graines préférées au panier et collez le code dans le champ code promo lors du paiement. Votre réduction de 15% sera appliquée immédiatement.'
+          },
+          {
+            question: 'Le code SAVE4U fonctionne-t-il sur toutes les graines Fast Buds?',
+            answer: 'Oui! Le code promo SAVE4U offre 15% de réduction sur l\'ensemble du catalogue Fast Buds, y compris leurs variétés autofloraison les plus populaires, les nouvelles sorties et la génétique en édition limitée. Il n\'y a aucune restriction.'
+          },
+          {
+            question: 'Puis-je utiliser le coupon SAVE4U plusieurs fois?',
+            answer: 'Absolument! Contrairement à de nombreux codes promotionnels à usage unique, le code promo SAVE4U de Fast Buds peut être utilisé sur plusieurs commandes. Il n\'y a aucune limite au nombre de fois où vous pouvez économiser 15%.'
+          },
+          {
+            question: 'Ce code promo Fast Buds a-t-il une date d\'expiration?',
+            answer: 'Non, le code SAVE4U n\'expire jamais. Cette réduction permanente de 15% est disponible pour tous les clients Fast Buds, parfaite pour planifier vos cultures tout au long de l\'année.'
+          },
+          {
+            question: 'Y a-t-il une commande minimum pour utiliser le code SAVE4U?',
+            answer: 'Aucun achat minimum n\'est requis. Que vous achetiez un seul pack de 3 graines ou que vous fassiez une grosse commande, le code SAVE4U vous fera économiser 15% sur les commandes de toute taille.'
+          }
+        ]
       },
       it: {
         title: 'Sconto Personale Solo Per Te - 15% di Sconto',
         description: 'Questa offerta esclusiva è stata pensata per te! Goditi il 15% di sconto sulle tue varietà Fast Buds preferite. Perché te lo meriti.',
         slug: 'it/coupon/sconto-personale-solo-per-te-15-sconto',
+        longDescription: 'Il codice sconto SAVE4U di Fast Buds è il tuo invito personale per risparmiare il 15% sui semi di cannabis autofiorenti premium. Questo codice promozionale esclusivo Fast Buds è stato progettato specificamente per coltivatori dedicati che apprezzano la genetica di qualità a ottimi prezzi. Che tu sia un coltivatore esperto o stia iniziando il tuo percorso di coltivazione, il coupon SAVE4U offre valore eccezionale su varietà vincitrici di campionati. Fast Buds ha costruito una reputazione come uno dei principali allevatori mondiali di genetica autofiorente, con multiple vittorie alla Cannabis Cup. Questo sconto Fast Buds si applica a tutta la loro gamma di semi premium, inclusi bestseller come Gorilla Glue Auto, Wedding Cheesecake Auto, Purple Lemonade Auto, Zkittlez Auto e Gelato Auto. Il risparmio del 15% significa più budget per luci di coltivazione, nutrienti o semplicemente espandere la tua collezione di semi.',
+        features: [
+          'Risparmia il 15% su tutti i semi autofiorenti premium Fast Buds con il tuo codice personale',
+          'Accesso a genetica vincitrice di campionati inclusi i vincitori della Cannabis Cup',
+          'Utilizzo illimitato - applica questo codice sconto Fast Buds ad ogni ordine',
+          'Nessun acquisto minimo richiesto - risparmia su qualsiasi dimensione ordine',
+          'Non scade mai - questo codice promo Fast Buds rimane attivo indefinitamente',
+          'Compatibile con varietà preferite: Gorilla Glue Auto, Wedding Cheesecake, Purple Lemonade, Zkittlez, Gelato',
+          'Sconto personale progettato per coltivatori dedicati Fast Buds'
+        ],
+        faq: [
+          {
+            question: 'Come applico il coupon SAVE4U di Fast Buds al checkout?',
+            answer: 'Fai semplicemente clic sul pulsante "Copia Codice" per copiare SAVE4U negli appunti. Quindi visita lo store ufficiale Fast Buds, aggiungi i tuoi semi preferiti al carrello e incolla il codice nel campo codice promo durante il checkout. Il tuo sconto del 15% verrà applicato immediatamente.'
+          },
+          {
+            question: 'Il codice SAVE4U funziona su tutti i semi Fast Buds?',
+            answer: 'Sì! Il codice promo SAVE4U offre il 15% di sconto sull\'intero catalogo Fast Buds, incluse le loro varietà autofiorenti più popolari, nuovi lanci e genetica in edizione limitata. Non ci sono restrizioni.'
+          },
+          {
+            question: 'Posso usare il coupon SAVE4U più volte?',
+            answer: 'Assolutamente! A differenza di molti codici promozionali monouso, il codice sconto SAVE4U di Fast Buds può essere utilizzato su più ordini. Non c\'è limite a quante volte puoi risparmiare il 15%.'
+          },
+          {
+            question: 'Questo codice promo Fast Buds ha una data di scadenza?',
+            answer: 'No, il codice SAVE4U non scade mai. Questo sconto permanente del 15% è disponibile per tutti i clienti Fast Buds, perfetto per pianificare le tue coltivazioni durante tutto l\'anno.'
+          },
+          {
+            question: 'C\'è un ordine minimo per usare il codice SAVE4U?',
+            answer: 'Nessun acquisto minimo è richiesto. Che tu stia comprando un singolo pacchetto da 3 semi o facendo un grande ordine, il codice SAVE4U ti farà risparmiare il 15% su ordini di qualsiasi dimensione.'
+          }
+        ]
       },
     },
   },
