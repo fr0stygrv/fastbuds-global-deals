@@ -3,6 +3,7 @@ import { useLanguage } from '@/i18n/LanguageContext';
 import { coupons } from '@/data/coupons';
 import { CouponCard } from '@/components/CouponCard';
 import { SEOHead } from '@/components/SEOHead';
+import { StructuredData } from '@/components/StructuredData';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Search, SlidersHorizontal } from 'lucide-react';
@@ -68,6 +69,30 @@ export default function Home() {
         description={t.meta.homeDescription}
         keywords={t.meta.homeKeywords}
         canonical={`https://fastbuds-coupon.com/${language}`}
+      />
+      
+      <StructuredData
+        type="website"
+        data={{
+          name: 'Fast Buds Coupons',
+          url: `https://fastbuds-coupon.com/${language}`,
+          description: t.meta.homeDescription
+        }}
+      />
+      
+      <StructuredData
+        type="organization"
+        data={{
+          name: 'Fast Buds Coupons',
+          url: 'https://fastbuds-coupon.com',
+          logo: 'https://fastbuds-coupon.com/favicon.ico',
+          sameAs: [
+            'https://www.instagram.com/fast_buds/',
+            'https://twitter.com/FastBuds_',
+            'https://www.tiktok.com/@fast_buds',
+            'https://www.pinterest.com/fastbuds/'
+          ]
+        }}
       />
 
       <div className="min-h-screen">

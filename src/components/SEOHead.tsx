@@ -15,10 +15,8 @@ export const SEOHead = ({ title, description, keywords, canonical, image, hrefla
   const { language } = useLanguage();
 
   useEffect(() => {
-    // Update title
     document.title = title;
 
-    // Update or create meta tags
     const updateMeta = (name: string, content: string, isProperty = false) => {
       const attr = isProperty ? 'property' : 'name';
       let element = document.querySelector(`meta[${attr}="${name}"]`);
@@ -39,18 +37,17 @@ export const SEOHead = ({ title, description, keywords, canonical, image, hrefla
     updateMeta('og:title', title, true);
     updateMeta('og:description', description, true);
     updateMeta('og:type', 'website', true);
+    updateMeta('og:url', canonical || window.location.href, true);
     if (image) updateMeta('og:image', image, true);
     
-    // Twitter
+    // Twitter Card
     updateMeta('twitter:card', 'summary_large_image');
     updateMeta('twitter:title', title);
     updateMeta('twitter:description', description);
     if (image) updateMeta('twitter:image', image);
 
-    // Update lang attribute
     document.documentElement.lang = language;
 
-    // Canonical and hreflang
     if (!canonical) {
       console.warn('⚠️ SEOHead: canonical URL not provided, using window.location.href as fallback');
     }
@@ -66,9 +63,7 @@ export const SEOHead = ({ title, description, keywords, canonical, image, hrefla
     // Remove old hreflang links
     document.querySelectorAll('link[rel="alternate"]').forEach(el => el.remove());
 
-    // Add hreflang for all languages
     if (hreflangUrls) {
-      // Use provided hreflang URLs (for coupon pages)
       Object.entries(hreflangUrls).forEach(([langCode, url]) => {
         const hreflangLink = document.createElement('link');
         hreflangLink.rel = 'alternate';
@@ -77,7 +72,6 @@ export const SEOHead = ({ title, description, keywords, canonical, image, hrefla
         document.head.appendChild(hreflangLink);
       });
     } else {
-      // Auto-generate hreflang URLs (for regular pages)
       languages.forEach(lang => {
         const hreflangLink = document.createElement('link');
         hreflangLink.rel = 'alternate';
@@ -97,7 +91,6 @@ export const SEOHead = ({ title, description, keywords, canonical, image, hrefla
       });
     }
 
-    // Add x-default hreflang
     const xDefaultLink = document.createElement('link');
     xDefaultLink.rel = 'alternate';
     xDefaultLink.hreflang = 'x-default';

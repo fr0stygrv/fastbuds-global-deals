@@ -1,5 +1,7 @@
 import { useLanguage } from '@/i18n/LanguageContext';
 import { SEOHead } from '@/components/SEOHead';
+import { StructuredData } from '@/components/StructuredData';
+import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { Card, CardContent } from '@/components/ui/card';
 import { Sprout, Target, Heart } from 'lucide-react';
 
@@ -13,8 +15,17 @@ export default function About() {
         description={t.meta.aboutDescription}
         canonical={`https://fastbuds-coupon.com/${language}/about`}
       />
+      
+      <StructuredData
+        type="breadcrumb"
+        data={[
+          { name: t.nav.home, url: `https://fastbuds-coupon.com/${language}` },
+          { name: t.nav.about, url: `https://fastbuds-coupon.com/${language}/about` }
+        ]}
+      />
 
       <div className="min-h-screen">
+        <Breadcrumbs items={[{ label: t.nav.about }]} />
         <section className="gradient-hero border-b border-border">
           <div className="container py-16 md:py-24">
             <div className="max-w-3xl mx-auto text-center space-y-4">

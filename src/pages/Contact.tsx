@@ -1,5 +1,7 @@
 import { useLanguage } from '@/i18n/LanguageContext';
 import { SEOHead } from '@/components/SEOHead';
+import { StructuredData } from '@/components/StructuredData';
+import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Instagram, Twitter, Youtube } from 'lucide-react';
@@ -66,8 +68,17 @@ export default function Contact() {
         keywords="fast buds social media, fast buds instagram, fast buds twitter, fast buds tiktok, fast buds pinterest, fast buds contact"
         canonical={`https://fastbuds-coupon.com/${language}/contact`}
       />
+      
+      <StructuredData
+        type="breadcrumb"
+        data={[
+          { name: t.nav.home, url: `https://fastbuds-coupon.com/${language}` },
+          { name: t.nav.contact, url: `https://fastbuds-coupon.com/${language}/contact` }
+        ]}
+      />
 
       <div className="min-h-screen">
+        <Breadcrumbs items={[{ label: t.nav.contact }]} />
         <section className="gradient-hero border-b border-border">
           <div className="container py-16 md:py-24">
             <div className="max-w-3xl mx-auto text-center space-y-4">

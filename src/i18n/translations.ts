@@ -398,7 +398,8 @@ export const translations: Record<Language, Translations> = {
       instruction1: 'Clique em "Copiar Código" para copiar o código promocional',
       instruction2: 'Clique em "Ir para Loja" para visitar a loja oficial Fast Buds',
       instruction3: 'Adicione suas sementes favoritas ao carrinho',
-      instruction4: 'Cole o código no checkout e aproveite sua economia',
+      instruction4: 'Cole o código no checkout e aproveite suas economias',
+      relatedCoupons: 'Cupons Relacionados',
     },
     faq: {
       title: 'Perguntas Frequentes',
@@ -490,6 +491,7 @@ export const translations: Record<Language, Translations> = {
       instruction2: 'Cliquez sur "Aller à la Boutique" pour visiter la boutique officielle Fast Buds',
       instruction3: 'Ajoutez vos graines préférées au panier',
       instruction4: 'Collez le code lors du paiement et profitez de vos économies',
+      relatedCoupons: 'Coupons Associés',
     },
     faq: {
       title: 'Questions Fréquentes',
@@ -581,6 +583,7 @@ export const translations: Record<Language, Translations> = {
       instruction2: 'Clicca su "Vai al Negozio" per visitare il negozio ufficiale Fast Buds',
       instruction3: 'Aggiungi i tuoi semi preferiti al carrello',
       instruction4: 'Incolla il codice al checkout e goditi il risparmio',
+      relatedCoupons: 'Coupon Correlati',
     },
     faq: {
       title: 'Domande Frequenti',

@@ -1,5 +1,7 @@
 import { useLanguage } from '@/i18n/LanguageContext';
 import { SEOHead } from '@/components/SEOHead';
+import { StructuredData } from '@/components/StructuredData';
+import { Breadcrumbs } from '@/components/Breadcrumbs';
 import {
   Accordion,
   AccordionContent,
@@ -17,8 +19,17 @@ export default function FAQ() {
         description={t.meta.faqDescription}
         canonical={`https://fastbuds-coupon.com/${language}/faq`}
       />
+      
+      <StructuredData
+        type="breadcrumb"
+        data={[
+          { name: t.nav.home, url: `https://fastbuds-coupon.com/${language}` },
+          { name: t.nav.faq, url: `https://fastbuds-coupon.com/${language}/faq` }
+        ]}
+      />
 
       <div className="min-h-screen">
+        <Breadcrumbs items={[{ label: t.nav.faq }]} />
         <section className="gradient-hero border-b border-border">
           <div className="container py-16 md:py-24">
             <div className="max-w-3xl mx-auto text-center space-y-4">

@@ -1,5 +1,7 @@
 import { useLanguage } from '@/i18n/LanguageContext';
 import { SEOHead } from '@/components/SEOHead';
+import { StructuredData } from '@/components/StructuredData';
+import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -16,7 +18,17 @@ const News = () => {
         description={t.meta.newsDescription}
         canonical={`https://fastbuds-coupon.com/${language}/news`}
       />
+      
+      <StructuredData
+        type="breadcrumb"
+        data={[
+          { name: t.nav.home, url: `https://fastbuds-coupon.com/${language}` },
+          { name: t.nav.news, url: `https://fastbuds-coupon.com/${language}/news` }
+        ]}
+      />
+      
       <main className="min-h-screen bg-background">
+        <Breadcrumbs items={[{ label: t.nav.news }]} />
         <div className="container py-12">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
