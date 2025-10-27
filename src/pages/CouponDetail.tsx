@@ -4,6 +4,9 @@ import { useLanguage } from '@/i18n/LanguageContext';
 import { Language, languages } from '@/i18n/languages';
 import { coupons } from '@/data/coupons';
 import { SEOHead } from '@/components/SEOHead';
+import { StructuredData } from '@/components/StructuredData';
+import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { RelatedCoupons } from '@/components/RelatedCoupons';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
@@ -84,8 +87,50 @@ export default function CouponDetail() {
         canonical={`https://fastbuds-coupon.com/${content.slug}`}
         hreflangUrls={hreflangUrls}
       />
+      
+      <StructuredData
+        type="offer"
+        data={{
+          name: content.title,
+          description: content.description,
+          priceDiscount: coupon.discount,
+          promoCode: coupon.code,
+          validThrough: coupon.neverExpires ? '2040-12-31' : coupon.expiryDate,
+          url: `https://fastbuds-coupon.com/${content.slug}`
+        }}
+      />
+      
+      <StructuredData
+        type="organization"
+        data={{
+          name: 'Fast Buds Coupons',
+          url: 'https://fastbuds-coupon.com',
+          logo: 'https://fastbuds-coupon.com/favicon.ico',
+          sameAs: [
+            'https://www.instagram.com/fast_buds/',
+            'https://twitter.com/FastBuds_',
+            'https://www.tiktok.com/@fast_buds',
+            'https://www.pinterest.com/fastbuds/'
+          ]
+        }}
+      />
+      
+      <StructuredData
+        type="breadcrumb"
+        data={[
+          { name: t.nav.home, url: `https://fastbuds-coupon.com/${language}` },
+          { name: t.nav.coupons || 'Coupons', url: `https://fastbuds-coupon.com/${language}` },
+          { name: content.title, url: `https://fastbuds-coupon.com/${content.slug}` }
+        ]}
+      />
 
       <div className="min-h-screen">
+        <Breadcrumbs 
+          items={[
+            { label: t.nav.coupons || 'Coupons', href: `/${language}` },
+            { label: content.title }
+          ]} 
+        />
         <section className="gradient-hero border-b border-border">
           <div className="container py-16">
             <div className="max-w-4xl mx-auto">
@@ -207,6 +252,9 @@ export default function CouponDetail() {
             </Card>
           </div>
         </section>
+
+        {/* Related Coupons */}
+        <RelatedCoupons currentCouponId={coupon.id} />
       </div>
     </>
   );

@@ -7,6 +7,8 @@ export interface Translations {
     about: string;
     contact: string;
     news: string;
+    sitemap: string;
+    coupons: string;
   };
   home: {
     title: string;
@@ -35,6 +37,7 @@ export interface Translations {
     instruction2: string;
     instruction3: string;
     instruction4: string;
+    relatedCoupons: string;
   };
   faq: {
     title: string;
@@ -80,6 +83,13 @@ export interface Translations {
     contactDescription: string;
     newsTitle: string;
     newsDescription: string;
+    sitemapTitle: string;
+    sitemapDescription: string;
+  };
+  sitemap: {
+    mainPages: string;
+    activeCoupons: string;
+    expiredCoupons: string;
   };
 }
 
@@ -91,6 +101,8 @@ export const translations: Record<Language, Translations> = {
       about: 'About',
       contact: 'Contact',
       news: 'News',
+      sitemap: 'Sitemap',
+      coupons: 'Coupons',
     },
     home: {
       title: 'Fast Buds Coupons & Promo Codes',
@@ -119,6 +131,7 @@ export const translations: Record<Language, Translations> = {
       instruction2: 'Click "Go to Store" to visit Fast Buds official store',
       instruction3: 'Add your favorite seeds to the cart',
       instruction4: 'Paste the code at checkout and enjoy your savings',
+      relatedCoupons: 'Related Coupons',
     },
     faq: {
       title: 'Frequently Asked Questions',
@@ -173,6 +186,8 @@ export const translations: Record<Language, Translations> = {
       about: 'Über uns',
       contact: 'Kontakt',
       news: 'Neuigkeiten',
+      sitemap: 'Sitemap',
+      coupons: 'Gutscheine',
     },
     home: {
       title: 'Fast Buds Gutscheine & Rabattcodes',
@@ -201,6 +216,7 @@ export const translations: Record<Language, Translations> = {
       instruction2: 'Klicken Sie auf "Zum Shop", um den offiziellen Fast Buds Shop zu besuchen',
       instruction3: 'Fügen Sie Ihre Lieblingssamen zum Warenkorb hinzu',
       instruction4: 'Fügen Sie den Code beim Bezahlen ein und genießen Sie Ihre Ersparnis',
+      relatedCoupons: 'Ähnliche Gutscheine',
     },
     faq: {
       title: 'Häufig gestellte Fragen',
@@ -246,6 +262,13 @@ export const translations: Record<Language, Translations> = {
       contactDescription: 'Verbinden Sie sich mit uns in den sozialen Medien für die neuesten Fast Buds Gutscheincodes, Promo-Angebote und exklusive Rabatte.',
       newsTitle: 'Fast Buds Nachrichten - Neueste Updates & Sorten-Releases 2025',
       newsDescription: 'Bleiben Sie auf dem Laufenden mit Fast Buds neuesten Nachrichten, Sorten-Releases, Giveaways und Cannabis-Industrie-Updates. Entdecken Sie neue Genetik und exklusive Drops.',
+      sitemapTitle: 'Sitemap - Fast Buds Gutscheine & Alle Seiten',
+      sitemapDescription: 'Vollständige Sitemap von Fast Buds Gutscheine. Finden Sie alle Gutscheincodes, Rabattangebote und Website-Seiten an einem Ort.',
+    },
+    sitemap: {
+      mainPages: 'Hauptseiten',
+      activeCoupons: 'Aktive Gutscheine',
+      expiredCoupons: 'Abgelaufene Gutscheine',
     },
   },
   es: {
@@ -255,6 +278,8 @@ export const translations: Record<Language, Translations> = {
       about: 'Acerca de',
       contact: 'Contacto',
       news: 'Noticias',
+      sitemap: 'Mapa del Sitio',
+      coupons: 'Cupones',
     },
     home: {
       title: 'Cupones y Códigos Promocionales Fast Buds',
@@ -283,6 +308,7 @@ export const translations: Record<Language, Translations> = {
       instruction2: 'Haz clic en "Ir a la Tienda" para visitar la tienda oficial de Fast Buds',
       instruction3: 'Añade tus semillas favoritas al carrito',
       instruction4: 'Pega el código al finalizar la compra y disfruta de tus ahorros',
+      relatedCoupons: 'Cupones Relacionados',
     },
     faq: {
       title: 'Preguntas Frecuentes',
@@ -328,15 +354,23 @@ export const translations: Record<Language, Translations> = {
       contactDescription: 'Conéctate con nosotros en redes sociales para los últimos cupones Fast Buds, ofertas promocionales y descuentos exclusivos.',
       newsTitle: 'Noticias Fast Buds - Últimas Actualizaciones & Lanzamientos 2025',
       newsDescription: 'Mantente actualizado con las últimas noticias de Fast Buds, lanzamientos de cepas, sorteos y actualizaciones de la industria del cannabis. Descubre nueva genética y lanzamientos exclusivos.',
+      sitemapTitle: 'Mapa del Sitio - Cupones Fast Buds & Todas las Páginas',
+      sitemapDescription: 'Mapa completo del sitio de Cupones Fast Buds. Encuentra todos los cupones, ofertas de descuento y páginas del sitio en un solo lugar.',
+    },
+    sitemap: {
+      mainPages: 'Páginas Principales',
+      activeCoupons: 'Cupones Activos',
+      expiredCoupons: 'Cupones Expirados',
     },
   },
-  pt: {
     nav: {
       home: 'Início',
       faq: 'Perguntas',
       about: 'Sobre',
       contact: 'Contato',
       news: 'Notícias',
+      sitemap: 'Mapa do Site',
+      coupons: 'Cupons',
     },
     home: {
       title: 'Cupons e Códigos Promocionais Fast Buds',
@@ -410,6 +444,13 @@ export const translations: Record<Language, Translations> = {
       contactDescription: 'Conecte-se conosco nas redes sociais para os últimos cupons Fast Buds, ofertas promocionais e descontos exclusivos.',
       newsTitle: 'Notícias Fast Buds - Últimas Atualizações & Lançamentos 2025',
       newsDescription: 'Mantenha-se atualizado com as últimas notícias da Fast Buds, lançamentos de variedades, sorteios e atualizações da indústria de cannabis. Descubra novas genéticas e lançamentos exclusivos.',
+      sitemapTitle: 'Mapa do Site - Cupons Fast Buds & Todas as Páginas',
+      sitemapDescription: 'Mapa completo do site de Cupons Fast Buds. Encontre todos os cupons, ofertas de desconto e páginas do site em um só lugar.',
+    },
+    sitemap: {
+      mainPages: 'Páginas Principais',
+      activeCoupons: 'Cupons Ativos',
+      expiredCoupons: 'Cupons Expirados',
     },
   },
   fr: {
@@ -419,6 +460,8 @@ export const translations: Record<Language, Translations> = {
       about: 'À propos',
       contact: 'Contact',
       news: 'Actualités',
+      sitemap: 'Plan du Site',
+      coupons: 'Coupons',
     },
     home: {
       title: 'Coupons et Codes Promo Fast Buds',
@@ -492,6 +535,13 @@ export const translations: Record<Language, Translations> = {
       contactDescription: 'Connectez-vous avec nous sur les réseaux sociaux pour les derniers coupons Fast Buds, offres promotionnelles et réductions exclusives.',
       newsTitle: 'Actualités Fast Buds - Dernières Mises à Jour & Sorties 2025',
       newsDescription: 'Restez informé avec les dernières actualités Fast Buds, sorties de variétés, concours et mises à jour de l\'industrie du cannabis. Découvrez de nouvelles génétiques et drops exclusifs.',
+      sitemapTitle: 'Plan du Site - Coupons Fast Buds & Toutes les Pages',
+      sitemapDescription: 'Plan complet du site Coupons Fast Buds. Trouvez tous les coupons, offres de réduction et pages du site en un seul endroit.',
+    },
+    sitemap: {
+      mainPages: 'Pages Principales',
+      activeCoupons: 'Coupons Actifs',
+      expiredCoupons: 'Coupons Expirés',
     },
   },
   it: {
@@ -501,6 +551,8 @@ export const translations: Record<Language, Translations> = {
       about: 'Chi Siamo',
       contact: 'Contatti',
       news: 'Notizie',
+      sitemap: 'Mappa del Sito',
+      coupons: 'Coupon',
     },
     home: {
       title: 'Coupon e Codici Promozionali Fast Buds',
@@ -574,6 +626,13 @@ export const translations: Record<Language, Translations> = {
       contactDescription: 'Connettiti con noi sui social media per gli ultimi coupon Fast Buds, offerte promozionali e sconti esclusivi.',
       newsTitle: 'Notizie Fast Buds - Ultimi Aggiornamenti & Rilasci 2025',
       newsDescription: 'Resta aggiornato con le ultime notizie Fast Buds, rilasci di varietà, giveaway e aggiornamenti dell\'industria della cannabis. Scopri nuove genetiche e drop esclusivi.',
+      sitemapTitle: 'Mappa del Sito - Coupon Fast Buds & Tutte le Pagine',
+      sitemapDescription: 'Mappa completa del sito Coupon Fast Buds. Trova tutti i coupon, offerte di sconto e pagine del sito in un unico posto.',
+    },
+    sitemap: {
+      mainPages: 'Pagine Principali',
+      activeCoupons: 'Coupon Attivi',
+      expiredCoupons: 'Coupon Scaduti',
     },
   },
 };

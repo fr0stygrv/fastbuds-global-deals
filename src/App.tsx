@@ -11,6 +11,7 @@ import FAQ from "./pages/FAQ";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import News from "./pages/News";
+import Sitemap from "./pages/Sitemap";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,7 @@ const App = () => (
             <Route path="/:lang/about" element={<About />} />
             <Route path="/:lang/contact" element={<Contact />} />
             <Route path="/:lang/news" element={<News />} />
+            <Route path="/:lang/sitemap" element={<Sitemap />} />
             
             {/* Catch-all 404 */}
             <Route path="*" element={<NotFound />} />
