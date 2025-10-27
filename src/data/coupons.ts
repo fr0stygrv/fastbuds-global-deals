@@ -498,36 +498,229 @@ export const coupons: Coupon[] = [
     isActive: true,
     usageCount: 14,
     neverExpires: true,
+    image: '/images/coupons/stoner.png',
     content: {
       en: {
         title: 'Stoner Special - 15% Off Premium Strains',
         description: 'For true cannabis enthusiasts! Get 15% off the finest Fast Buds genetics. Elevate your garden with legendary strains.',
         slug: 'en/coupon/stoner-special-15-off-premium-strains',
+        longDescription: 'The Fast Buds STONER discount code is your exclusive invitation to save 15% on premium autoflowering cannabis seeds designed for true cannabis enthusiasts. This special Fast Buds promo code was created specifically for dedicated growers who appreciate quality genetics at excellent prices. Whether you\'re a seasoned cultivator or starting your growing journey, the STONER coupon delivers exceptional value on championship-winning strains. Fast Buds has built a reputation as one of the world\'s leading autoflowering genetics breeders, with multiple Cannabis Cup victories. This Fast Buds discount applies to their entire range of premium seeds, including bestsellers like Gorilla Glue Auto, Wedding Cheesecake Auto, Purple Lemonade Auto, Zkittlez Auto, and Gelato Auto. The 15% savings means more budget for grow lights, nutrients, or simply expanding your seed collection.',
+        features: [
+          'Save 15% on all Fast Buds premium autoflowering seeds with your personal code',
+          'Access to championship-winning genetics including Cannabis Cup winners',
+          'Unlimited usage - apply this Fast Buds discount code to every order',
+          'No minimum purchase required - save on any order size',
+          'Never expires - this Fast Buds promo code remains active indefinitely',
+          'Compatible with favorite strains: Gorilla Glue Auto, Wedding Cheesecake, Purple Lemonade, Zkittlez, Gelato',
+          'Personal discount designed for dedicated Fast Buds growers'
+        ],
+        faq: [
+          {
+            question: 'How do I apply the STONER Fast Buds coupon at checkout?',
+            answer: 'Simply click the "Copy Code" button to copy STONER to your clipboard. Then visit the official Fast Buds store, add your favorite seeds to cart, and paste the code in the promo code field during checkout. Your 15% discount will be applied immediately.'
+          },
+          {
+            question: 'Does the STONER code work on all Fast Buds seeds?',
+            answer: 'Yes! The STONER promo code offers 15% off across the entire Fast Buds catalog, including their most popular autoflowering strains, new releases, and limited edition genetics. There are no restrictions.'
+          },
+          {
+            question: 'Can I use the STONER coupon multiple times?',
+            answer: 'Absolutely! Unlike many single-use promotional codes, the STONER Fast Buds discount code can be used on multiple orders. There\'s no limit to how many times you can save 15%.'
+          },
+          {
+            question: 'Does this Fast Buds promo code have an expiration date?',
+            answer: 'No, the STONER code never expires. This permanent 15% discount is available for all Fast Buds customers, perfect for planning your grows throughout the year.'
+          },
+          {
+            question: 'Is there a minimum order to use the STONER code?',
+            answer: 'No minimum purchase is required. Whether you\'re buying a single 3-pack of seeds or placing a large order, the STONER code will save you 15% on orders of any size.'
+          }
+        ]
       },
       de: {
         title: 'Stoner-Special - 15% Rabatt auf Premium-Sorten',
         description: 'Für echte Cannabis-Enthusiasten! Erhalten Sie 15% Rabatt auf die besten Fast Buds Genetiken. Verbessern Sie Ihren Garten mit legendären Sorten.',
         slug: 'de/coupon/stoner-special-15-rabatt-auf-premium-sorten',
+        longDescription: 'Der Fast Buds STONER Rabattcode ist Ihre exklusive Einladung, 15% auf premium autoflowering Cannabis-Samen zu sparen, die für wahre Cannabis-Enthusiasten entwickelt wurden. Dieser spezielle Fast Buds Gutschein wurde speziell für engagierte Züchter kreiert, die qualitativ hochwertige Genetik zu hervorragenden Preisen schätzen. Egal ob erfahrener Züchter oder Anfänger auf Ihrer Anbau-Reise, der STONER Coupon liefert außergewöhnlichen Wert bei preisgekrönten Sorten. Fast Buds hat sich einen Ruf als einer der weltweit führenden Züchter von autoflowering Genetik erarbeitet, mit mehreren Cannabis Cup Siegen. Dieser Fast Buds Rabatt gilt für deren gesamtes Sortiment an Premium-Samen, einschließlich Bestsellern wie Gorilla Glue Auto, Wedding Cheesecake Auto, Purple Lemonade Auto, Zkittlez Auto und Gelato Auto. Die 15% Ersparnis bedeuten mehr Budget für Anbaulampen, Nährstoffe oder einfach zur Erweiterung Ihrer Samensammlung.',
+        features: [
+          'Sparen Sie 15% auf alle Fast Buds Premium autoflowering Samen mit Ihrem persönlichen Code',
+          'Zugang zu preisgekrönter Genetik einschließlich Cannabis Cup Gewinnern',
+          'Unbegrenzte Nutzung - wenden Sie diesen Fast Buds Rabattcode bei jeder Bestellung an',
+          'Kein Mindestbestellwert erforderlich - sparen Sie bei jeder Bestellgröße',
+          'Läuft nie ab - dieser Fast Buds Gutschein bleibt auf unbestimmte Zeit aktiv',
+          'Kompatibel mit Lieblingssorten: Gorilla Glue Auto, Wedding Cheesecake, Purple Lemonade, Zkittlez, Gelato',
+          'Persönlicher Rabatt für engagierte Fast Buds Züchter'
+        ],
+        faq: [
+          {
+            question: 'Wie wende ich den STONER Fast Buds Gutschein beim Checkout an?',
+            answer: 'Klicken Sie einfach auf "Code kopieren", um STONER in Ihre Zwischenablage zu kopieren. Besuchen Sie dann den offiziellen Fast Buds Shop, fügen Sie Ihre Lieblingssamen zum Warenkorb hinzu und fügen Sie den Code im Gutscheinfeld beim Checkout ein. Ihr 15% Rabatt wird sofort angewendet.'
+          },
+          {
+            question: 'Funktioniert der STONER Code bei allen Fast Buds Samen?',
+            answer: 'Ja! Der STONER Gutschein bietet 15% Rabatt auf den gesamten Fast Buds Katalog, einschließlich ihrer beliebtesten autoflowering Sorten, neuen Veröffentlichungen und limitierten Genetik. Es gibt keine Einschränkungen.'
+          },
+          {
+            question: 'Kann ich den STONER Coupon mehrmals verwenden?',
+            answer: 'Absolut! Im Gegensatz zu vielen einmaligen Gutscheincodes kann der STONER Fast Buds Rabattcode bei mehreren Bestellungen verwendet werden. Es gibt keine Begrenzung, wie oft Sie 15% sparen können.'
+          },
+          {
+            question: 'Hat dieser Fast Buds Gutscheincode ein Ablaufdatum?',
+            answer: 'Nein, der STONER Code läuft nie ab. Dieser dauerhafte 15% Rabatt ist für alle Fast Buds Kunden verfügbar, perfekt um Ihre Anbauperioden das ganze Jahr über zu planen.'
+          },
+          {
+            question: 'Gibt es eine Mindestbestellung für die Nutzung des STONER Codes?',
+            answer: 'Kein Mindestbestellwert erforderlich. Ob Sie ein einzelnes 3er-Pack Samen kaufen oder eine große Bestellung aufgeben, der STONER Code spart Ihnen 15% bei Bestellungen jeder Größe.'
+          }
+        ]
       },
       es: {
         title: 'Especial Stoner - 15% en Variedades Premium',
         description: '¡Para verdaderos entusiastas del cannabis! Obtén 15% de descuento en la mejor genética de Fast Buds. Eleva tu jardín con variedades legendarias.',
         slug: 'es/cupon/especial-stoner-15-en-variedades-premium',
+        longDescription: 'El código de descuento STONER de Fast Buds es tu invitación exclusiva para ahorrar 15% en semillas de cannabis autoflorescentes premium diseñadas para verdaderos entusiastas del cannabis. Este código promocional especial de Fast Buds fue creado específicamente para cultivadores dedicados que aprecian genética de calidad a excelentes precios. Ya seas un cultivador experimentado o estés comenzando tu viaje de cultivo, el cupón STONER ofrece valor excepcional en variedades ganadoras de campeonatos. Fast Buds ha construido una reputación como uno de los principales criadores mundiales de genética autoflorescente, con múltiples victorias en Cannabis Cup. Este descuento de Fast Buds se aplica a toda su gama de semillas premium, incluyendo bestsellers como Gorilla Glue Auto, Wedding Cheesecake Auto, Purple Lemonade Auto, Zkittlez Auto y Gelato Auto. El ahorro del 15% significa más presupuesto para luces de cultivo, nutrientes o simplemente expandir tu colección de semillas.',
+        features: [
+          'Ahorra 15% en todas las semillas autoflorescentes premium de Fast Buds con tu código personal',
+          'Acceso a genética ganadora de campeonatos incluyendo ganadores de Cannabis Cup',
+          'Uso ilimitado - aplica este código de descuento Fast Buds en cada pedido',
+          'Sin compra mínima requerida - ahorra en cualquier tamaño de pedido',
+          'Nunca caduca - este código promo de Fast Buds permanece activo indefinidamente',
+          'Compatible con variedades favoritas: Gorilla Glue Auto, Wedding Cheesecake, Purple Lemonade, Zkittlez, Gelato',
+          'Descuento personal diseñado para cultivadores dedicados de Fast Buds'
+        ],
+        faq: [
+          {
+            question: '¿Cómo aplico el cupón STONER de Fast Buds en el checkout?',
+            answer: 'Simplemente haz clic en el botón "Copiar Código" para copiar STONER a tu portapapeles. Luego visita la tienda oficial de Fast Buds, añade tus semillas favoritas al carrito y pega el código en el campo de código promocional durante el checkout. Tu descuento del 15% se aplicará inmediatamente.'
+          },
+          {
+            question: '¿El código STONER funciona en todas las semillas de Fast Buds?',
+            answer: '¡Sí! El código promo STONER ofrece 15% de descuento en todo el catálogo de Fast Buds, incluyendo sus variedades autoflorescentes más populares, nuevos lanzamientos y genética de edición limitada. No hay restricciones.'
+          },
+          {
+            question: '¿Puedo usar el cupón STONER múltiples veces?',
+            answer: '¡Absolutamente! A diferencia de muchos códigos promocionales de un solo uso, el código de descuento STONER de Fast Buds puede usarse en múltiples pedidos. No hay límite de cuántas veces puedes ahorrar 15%.'
+          },
+          {
+            question: '¿Este código promo de Fast Buds tiene fecha de vencimiento?',
+            answer: 'No, el código STONER nunca caduca. Este descuento permanente del 15% está disponible para todos los clientes de Fast Buds, perfecto para planificar tus cultivos durante todo el año.'
+          },
+          {
+            question: '¿Hay un pedido mínimo para usar el código STONER?',
+            answer: 'No se requiere compra mínima. Ya sea que compres un solo paquete de 3 semillas o hagas un pedido grande, el código STONER te ahorrará 15% en pedidos de cualquier tamaño.'
+          }
+        ]
       },
       pt: {
         title: 'Especial Stoner - 15% em Variedades Premium',
         description: 'Para verdadeiros entusiastas da cannabis! Ganhe 15% de desconto na melhor genética da Fast Buds. Eleve seu jardim com variedades lendárias.',
         slug: 'pt/cupom/especial-stoner-15-em-variedades-premium',
+        longDescription: 'O código de desconto STONER da Fast Buds é seu convite exclusivo para economizar 15% em sementes de cannabis autoflorescentes premium projetadas para verdadeiros entusiastas da cannabis. Este código promocional especial da Fast Buds foi criado especificamente para cultivadores dedicados que apreciam genética de qualidade a excelentes preços. Seja você um cultivador experiente ou começando sua jornada de cultivo, o cupom STONER oferece valor excepcional em variedades vencedoras de campeonatos. A Fast Buds construiu uma reputação como um dos principais criadores mundiais de genética autoflorescente, com múltiplas vitórias na Cannabis Cup. Este desconto da Fast Buds se aplica a toda sua gama de sementes premium, incluindo bestsellers como Gorilla Glue Auto, Wedding Cheesecake Auto, Purple Lemonade Auto, Zkittlez Auto e Gelato Auto. A economia de 15% significa mais orçamento para luzes de cultivo, nutrientes ou simplesmente expandir sua coleção de sementes.',
+        features: [
+          'Economize 15% em todas as sementes autoflorescentes premium da Fast Buds com seu código pessoal',
+          'Acesso a genética vencedora de campeonatos incluindo vencedores da Cannabis Cup',
+          'Uso ilimitado - aplique este código de desconto Fast Buds em cada pedido',
+          'Sem compra mínima necessária - economize em qualquer tamanho de pedido',
+          'Nunca expira - este código promo da Fast Buds permanece ativo indefinidamente',
+          'Compatível com variedades favoritas: Gorilla Glue Auto, Wedding Cheesecake, Purple Lemonade, Zkittlez, Gelato',
+          'Desconto pessoal projetado para cultivadores dedicados da Fast Buds'
+        ],
+        faq: [
+          {
+            question: 'Como aplico o cupom STONER da Fast Buds no checkout?',
+            answer: 'Simplesmente clique no botão "Copiar Código" para copiar STONER para a área de transferência. Em seguida, visite a loja oficial da Fast Buds, adicione suas sementes favoritas ao carrinho e cole o código no campo de código promocional durante o checkout. Seu desconto de 15% será aplicado imediatamente.'
+          },
+          {
+            question: 'O código STONER funciona em todas as sementes Fast Buds?',
+            answer: 'Sim! O código promo STONER oferece 15% de desconto em todo o catálogo da Fast Buds, incluindo suas variedades autoflorescentes mais populares, novos lançamentos e genética de edição limitada. Não há restrições.'
+          },
+          {
+            question: 'Posso usar o cupom STONER múltiplas vezes?',
+            answer: 'Absolutamente! Ao contrário de muitos códigos promocionais de uso único, o código de desconto STONER da Fast Buds pode ser usado em múltiplos pedidos. Não há limite para quantas vezes você pode economizar 15%.'
+          },
+          {
+            question: 'Este código promo da Fast Buds tem data de validade?',
+            answer: 'Não, o código STONER nunca expira. Este desconto permanente de 15% está disponível para todos os clientes da Fast Buds, perfeit para planear seus cultivos durante todo o ano.'
+          },
+          {
+            question: 'Há um pedido mínimo para usar o código STONER?',
+            answer: 'Nenhuma compra mínima é necessária. Seja você comprando um único pacote de 3 sementes ou fazendo um pedido grande, o código STONER economizará 15% em pedidos de qualquer tamanho.'
+          }
+        ]
       },
       fr: {
         title: 'Spécial Stoner - 15% sur les Variétés Premium',
         description: 'Pour les vrais passionnés de cannabis! Obtenez 15% de réduction sur la meilleure génétique Fast Buds. Élevez votre jardin avec des variétés légendaires.',
         slug: 'fr/coupon/special-stoner-15-sur-les-varietes-premium',
+        longDescription: 'Le code promo STONER de Fast Buds est votre invitation exclusive à économiser 15% sur les graines de cannabis autofloraison premium conçues pour les vrais passionnés de cannabis. Ce code promotionnel spécial Fast Buds a été créé spécifiquement pour les cultivateurs dévoués qui apprécient la génétique de qualité à d\'excellents prix. Que vous soyez un cultivateur expérimenté ou que vous commenciez votre parcours de culture, le coupon STONER offre une valeur exceptionnelle sur des variétés primées. Fast Buds a construit une réputation en tant que l\'un des principaux sélectionneurs mondiaux de génétique autofloraison, avec de multiples victoires à la Cannabis Cup. Cette réduction Fast Buds s\'applique à toute leur gamme de graines premium, y compris les bestsellers comme Gorilla Glue Auto, Wedding Cheesecake Auto, Purple Lemonade Auto, Zkittlez Auto et Gelato Auto. L\'économie de 15% signifie plus de budget pour les lampes de culture, les nutriments ou simplement agrandir votre collection de graines.',
+        features: [
+          'Économisez 15% sur toutes les graines autofloraison premium Fast Buds avec votre code personnel',
+          'Accès à la génétique primée incluant les gagnants de Cannabis Cup',
+          'Utilisation illimitée - appliquez ce code promo Fast Buds à chaque commande',
+          'Aucun achat minimum requis - économisez sur toute taille de commande',
+          'N\'expire jamais - ce code promo Fast Buds reste actif indéfiniment',
+          'Compatible avec les variétés favorites: Gorilla Glue Auto, Wedding Cheesecake, Purple Lemonade, Zkittlez, Gelato',
+          'Réduction personnelle conçue pour les cultivateurs dévoués Fast Buds'
+        ],
+        faq: [
+          {
+            question: 'Comment appliquer le coupon STONER de Fast Buds lors du paiement?',
+            answer: 'Cliquez simplement sur le bouton "Copier le Code" pour copier STONER dans votre presse-papiers. Ensuite, visitez la boutique officielle Fast Buds, ajoutez vos graines préférées au panier et collez le code dans le champ code promo lors du paiement. Votre réduction de 15% sera appliquée immédiatement.'
+          },
+          {
+            question: 'Le code STONER fonctionne-t-il sur toutes les graines Fast Buds?',
+            answer: 'Oui! Le code promo STONER offre 15% de réduction sur l\'ensemble du catalogue Fast Buds, y compris leurs variétés autofloraison les plus populaires, les nouvelles sorties et la génétique en édition limitée. Il n\'y a aucune restriction.'
+          },
+          {
+            question: 'Puis-je utiliser le coupon STONER plusieurs fois?',
+            answer: 'Absolument! Contrairement à de nombreux codes promotionnels à usage unique, le code promo STONER de Fast Buds peut être utilisé sur plusieurs commandes. Il n\'y a aucune limite au nombre de fois où vous pouvez économiser 15%.'
+          },
+          {
+            question: 'Ce code promo Fast Buds a-t-il une date d\'expiration?',
+            answer: 'Non, le code STONER n\'expire jamais. Cette réduction permanente de 15% est disponible pour tous les clients Fast Buds, parfaite pour planifier vos cultures tout au long de l\'année.'
+          },
+          {
+            question: 'Y a-t-il une commande minimum pour utiliser le code STONER?',
+            answer: 'Aucun achat minimum n\'est requis. Que vous achetiez un seul pack de 3 graines ou que vous fassiez une grosse commande, le code STONER vous fera économiser 15% sur les commandes de toute taille.'
+          }
+        ]
       },
       it: {
         title: 'Speciale Stoner - 15% su Varietà Premium',
         description: 'Per veri appassionati di cannabis! Ottieni il 15% di sconto sulla migliore genetica Fast Buds. Eleva il tuo giardino con varietà leggendarie.',
         slug: 'it/coupon/speciale-stoner-15-su-varieta-premium',
+        longDescription: 'Il codice sconto STONER di Fast Buds è il tuo invito esclusivo per risparmiare il 15% sui semi di cannabis autofiorenti premium progettati per veri appassionati di cannabis. Questo codice promozionale speciale Fast Buds è stato creato specificamente per coltivatori dedicati che apprezzano la genetica di qualità a ottimi prezzi. Che tu sia un coltivatore esperto o stia iniziando il tuo percorso di coltivazione, il coupon STONER offre valore eccezionale su varietà vincitrici di campionati. Fast Buds ha costruito una reputazione come uno dei principali allevatori mondiali di genetica autofiorente, con multiple vittorie alla Cannabis Cup. Questo sconto Fast Buds si applica a tutta la loro gamma di semi premium, inclusi bestseller come Gorilla Glue Auto, Wedding Cheesecake Auto, Purple Lemonade Auto, Zkittlez Auto e Gelato Auto. Il risparmio del 15% significa più budget per luci di coltivazione, nutrienti o semplicemente espandere la tua collezione di semi.',
+        features: [
+          'Risparmia il 15% su tutti i semi autofiorenti premium Fast Buds con il tuo codice personale',
+          'Accesso a genetica vincitrice di campionati inclusi i vincitori della Cannabis Cup',
+          'Utilizzo illimitato - applica questo codice sconto Fast Buds ad ogni ordine',
+          'Nessun acquisto minimo richiesto - risparmia su qualsiasi dimensione ordine',
+          'Non scade mai - questo codice promo Fast Buds rimane attivo indefinitamente',
+          'Compatibile con varietà preferite: Gorilla Glue Auto, Wedding Cheesecake, Purple Lemonade, Zkittlez, Gelato',
+          'Sconto personale progettato per coltivatori dedicati Fast Buds'
+        ],
+        faq: [
+          {
+            question: 'Come applico il coupon STONER di Fast Buds al checkout?',
+            answer: 'Fai semplicemente clic sul pulsante "Copia Codice" per copiare STONER negli appunti. Quindi visita lo store ufficiale Fast Buds, aggiungi i tuoi semi preferiti al carrello e incolla il codice nel campo codice promo durante il checkout. Il tuo sconto del 15% verrà applicato immediatamente.'
+          },
+          {
+            question: 'Il codice STONER funziona su tutti i semi Fast Buds?',
+            answer: 'Sì! Il codice promo STONER offre il 15% di sconto sull\'intero catalogo Fast Buds, incluse le loro varietà autofiorenti più popolari, nuovi lanci e genetica in edizione limitata. Non ci sono restrizioni.'
+          },
+          {
+            question: 'Posso usare il coupon STONER più volte?',
+            answer: 'Assolutamente! A differenza di molti codici promozionali monouso, il codice sconto STONER di Fast Buds può essere utilizzato su più ordini. Non c\'è limite a quante volte puoi risparmiare il 15%.'
+          },
+          {
+            question: 'Questo codice promo Fast Buds ha una data di scadenza?',
+            answer: 'No, il codice STONER non scade mai. Questo sconto permanente del 15% è disponibile per tutti i clienti Fast Buds, perfetto per pianificare le tue coltivazioni durante tutto l\'anno.'
+          },
+          {
+            question: 'C\'è un ordine minimo per usare il codice STONER?',
+            answer: 'Nessun acquisto minimo è richiesto. Che tu stia comprando un singolo pacchetto da 3 semi o facendo un grande ordine, il codice STONER ti farà risparmiare il 15% su ordini di qualsiasi dimensione.'
+          }
+        ]
       },
     },
   },
@@ -539,36 +732,229 @@ export const coupons: Coupon[] = [
     isActive: true,
     usageCount: 19,
     neverExpires: true,
+    image: '/images/coupons/chuckle.png',
     content: {
       en: {
         title: 'Slow Day Savings - 15% Off to Relax',
         description: 'Take it easy with 15% off! Perfect for those chill days when you want to slow down and grow something special.',
         slug: 'en/coupon/slow-day-savings-15-off-to-relax',
+        longDescription: 'The Fast Buds SLOWDAY discount code is your exclusive invitation to save 15% on premium autoflowering cannabis seeds perfect for relaxed cultivation. This special Fast Buds promo code was created for those who appreciate taking their time and growing at their own pace. Whether you\'re an experienced cultivator or just starting your growing journey, the SLOWDAY coupon delivers exceptional value on championship-winning strains. Fast Buds has built a reputation as one of the world\'s leading autoflowering genetics breeders, with multiple Cannabis Cup victories. This Fast Buds discount applies to their entire range of premium seeds, including bestsellers like Gorilla Glue Auto, Wedding Cheesecake Auto, Purple Lemonade Auto, Zkittlez Auto, and Gelato Auto. The 15% savings means more budget for grow lights, nutrients, or simply expanding your seed collection.',
+        features: [
+          'Save 15% on all Fast Buds premium autoflowering seeds with your personal code',
+          'Access to championship-winning genetics including Cannabis Cup winners',
+          'Unlimited usage - apply this Fast Buds discount code to every order',
+          'No minimum purchase required - save on any order size',
+          'Never expires - this Fast Buds promo code remains active indefinitely',
+          'Compatible with favorite strains: Gorilla Glue Auto, Wedding Cheesecake, Purple Lemonade, Zkittlez, Gelato',
+          'Perfect for relaxed, stress-free cultivation at your own pace'
+        ],
+        faq: [
+          {
+            question: 'How do I apply the SLOWDAY Fast Buds coupon at checkout?',
+            answer: 'Simply click the "Copy Code" button to copy SLOWDAY to your clipboard. Then visit the official Fast Buds store, add your favorite seeds to cart, and paste the code in the promo code field during checkout. Your 15% discount will be applied immediately.'
+          },
+          {
+            question: 'Does the SLOWDAY code work on all Fast Buds seeds?',
+            answer: 'Yes! The SLOWDAY promo code offers 15% off across the entire Fast Buds catalog, including their most popular autoflowering strains, new releases, and limited edition genetics. There are no restrictions.'
+          },
+          {
+            question: 'Can I use the SLOWDAY coupon multiple times?',
+            answer: 'Absolutely! Unlike many single-use promotional codes, the SLOWDAY Fast Buds discount code can be used on multiple orders. There\'s no limit to how many times you can save 15%.'
+          },
+          {
+            question: 'Does this Fast Buds promo code have an expiration date?',
+            answer: 'No, the SLOWDAY code never expires. This permanent 15% discount is available for all Fast Buds customers, perfect for planning your grows throughout the year.'
+          },
+          {
+            question: 'Is there a minimum order to use the SLOWDAY code?',
+            answer: 'No minimum purchase is required. Whether you\'re buying a single 3-pack of seeds or placing a large order, the SLOWDAY code will save you 15% on orders of any size.'
+          }
+        ]
       },
       de: {
         title: 'Entspannungstag-Ersparnis - 15% zum Relaxen',
         description: 'Entspannen Sie sich mit 15% Rabatt! Perfekt für gemütliche Tage, an denen Sie es ruhig angehen und etwas Besonderes anbauen möchten.',
         slug: 'de/coupon/entspannungstag-ersparnis-15-zum-relaxen',
+        longDescription: 'Der Fast Buds SLOWDAY Rabattcode ist Ihre exklusive Einladung, 15% auf premium autoflowering Cannabis-Samen zu sparen, perfekt für entspannten Anbau. Dieser spezielle Fast Buds Gutschein wurde für diejenigen kreiert, die es schätzen, sich Zeit zu nehmen und in ihrem eigenen Tempo anzubauen. Egal ob erfahrener Züchter oder Anfänger auf Ihrer Anbau-Reise, der SLOWDAY Coupon liefert außergewöhnlichen Wert bei preisgekrönten Sorten. Fast Buds hat sich einen Ruf als einer der weltweit führenden Züchter von autoflowering Genetik erarbeitet, mit mehreren Cannabis Cup Siegen. Dieser Fast Buds Rabatt gilt für deren gesamtes Sortiment an Premium-Samen, einschließlich Bestsellern wie Gorilla Glue Auto, Wedding Cheesecake Auto, Purple Lemonade Auto, Zkittlez Auto und Gelato Auto. Die 15% Ersparnis bedeuten mehr Budget für Anbaulampen, Nährstoffe oder einfach zur Erweiterung Ihrer Samensammlung.',
+        features: [
+          'Sparen Sie 15% auf alle Fast Buds Premium autoflowering Samen mit Ihrem persönlichen Code',
+          'Zugang zu preisgekrönter Genetik einschließlich Cannabis Cup Gewinnern',
+          'Unbegrenzte Nutzung - wenden Sie diesen Fast Buds Rabattcode bei jeder Bestellung an',
+          'Kein Mindestbestellwert erforderlich - sparen Sie bei jeder Bestellgröße',
+          'Läuft nie ab - dieser Fast Buds Gutschein bleibt auf unbestimmte Zeit aktiv',
+          'Kompatibel mit Lieblingssorten: Gorilla Glue Auto, Wedding Cheesecake, Purple Lemonade, Zkittlez, Gelato',
+          'Perfekt für entspannten, stressfreien Anbau in Ihrem eigenen Tempo'
+        ],
+        faq: [
+          {
+            question: 'Wie wende ich den SLOWDAY Fast Buds Gutschein beim Checkout an?',
+            answer: 'Klicken Sie einfach auf "Code kopieren", um SLOWDAY in Ihre Zwischenablage zu kopieren. Besuchen Sie dann den offiziellen Fast Buds Shop, fügen Sie Ihre Lieblingssamen zum Warenkorb hinzu und fügen Sie den Code im Gutscheinfeld beim Checkout ein. Ihr 15% Rabatt wird sofort angewendet.'
+          },
+          {
+            question: 'Funktioniert der SLOWDAY Code bei allen Fast Buds Samen?',
+            answer: 'Ja! Der SLOWDAY Gutschein bietet 15% Rabatt auf den gesamten Fast Buds Katalog, einschließlich ihrer beliebtesten autoflowering Sorten, neuen Veröffentlichungen und limitierten Genetik. Es gibt keine Einschränkungen.'
+          },
+          {
+            question: 'Kann ich den SLOWDAY Coupon mehrmals verwenden?',
+            answer: 'Absolut! Im Gegensatz zu vielen einmaligen Gutscheincodes kann der SLOWDAY Fast Buds Rabattcode bei mehreren Bestellungen verwendet werden. Es gibt keine Begrenzung, wie oft Sie 15% sparen können.'
+          },
+          {
+            question: 'Hat dieser Fast Buds Gutscheincode ein Ablaufdatum?',
+            answer: 'Nein, der SLOWDAY Code läuft nie ab. Dieser dauerhafte 15% Rabatt ist für alle Fast Buds Kunden verfügbar, perfekt um Ihre Anbauperioden das ganze Jahr über zu planen.'
+          },
+          {
+            question: 'Gibt es eine Mindestbestellung für die Nutzung des SLOWDAY Codes?',
+            answer: 'Kein Mindestbestellwert erforderlich. Ob Sie ein einzelnes 3er-Pack Samen kaufen oder eine große Bestellung aufgeben, der SLOWDAY Code spart Ihnen 15% bei Bestellungen jeder Größe.'
+          }
+        ]
       },
       es: {
         title: 'Ahorro de Día Tranquilo - 15% para Relajarte',
         description: '¡Tómatelo con calma con 15% de descuento! Perfecto para esos días relajados cuando quieres ir despacio y cultivar algo especial.',
         slug: 'es/cupon/ahorro-de-dia-tranquilo-15-para-relajarte',
+        longDescription: 'El código de descuento SLOWDAY de Fast Buds es tu invitación exclusiva para ahorrar 15% en semillas de cannabis autoflorescentes premium perfectas para cultivo relajado. Este código promocional especial de Fast Buds fue creado para quienes aprecian tomarse su tiempo y cultivar a su propio ritmo. Ya seas un cultivador experimentado o estés comenzando tu viaje de cultivo, el cupón SLOWDAY ofrece valor excepcional en variedades ganadoras de campeonatos. Fast Buds ha construido una reputación como uno de los principales criadores mundiales de genética autoflorescente, con múltiples victorias en Cannabis Cup. Este descuento de Fast Buds se aplica a toda su gama de semillas premium, incluyendo bestsellers como Gorilla Glue Auto, Wedding Cheesecake Auto, Purple Lemonade Auto, Zkittlez Auto y Gelato Auto. El ahorro del 15% significa más presupuesto para luces de cultivo, nutrientes o simplemente expandir tu colección de semillas.',
+        features: [
+          'Ahorra 15% en todas las semillas autoflorescentes premium de Fast Buds con tu código personal',
+          'Acceso a genética ganadora de campeonatos incluyendo ganadores de Cannabis Cup',
+          'Uso ilimitado - aplica este código de descuento Fast Buds en cada pedido',
+          'Sin compra mínima requerida - ahorra en cualquier tamaño de pedido',
+          'Nunca caduca - este código promo de Fast Buds permanece activo indefinidamente',
+          'Compatible con variedades favoritas: Gorilla Glue Auto, Wedding Cheesecake, Purple Lemonade, Zkittlez, Gelato',
+          'Perfecto para cultivo relajado y sin estrés a tu propio ritmo'
+        ],
+        faq: [
+          {
+            question: '¿Cómo aplico el cupón SLOWDAY de Fast Buds en el checkout?',
+            answer: 'Simplemente haz clic en el botón "Copiar Código" para copiar SLOWDAY a tu portapapeles. Luego visita la tienda oficial de Fast Buds, añade tus semillas favoritas al carrito y pega el código en el campo de código promocional durante el checkout. Tu descuento del 15% se aplicará inmediatamente.'
+          },
+          {
+            question: '¿El código SLOWDAY funciona en todas las semillas de Fast Buds?',
+            answer: '¡Sí! El código promo SLOWDAY ofrece 15% de descuento en todo el catálogo de Fast Buds, incluyendo sus variedades autoflorescentes más populares, nuevos lanzamientos y genética de edición limitada. No hay restricciones.'
+          },
+          {
+            question: '¿Puedo usar el cupón SLOWDAY múltiples veces?',
+            answer: '¡Absolutamente! A diferencia de muchos códigos promocionales de un solo uso, el código de descuento SLOWDAY de Fast Buds puede usarse en múltiples pedidos. No hay límite de cuántas veces puedes ahorrar 15%.'
+          },
+          {
+            question: '¿Este código promo de Fast Buds tiene fecha de vencimiento?',
+            answer: 'No, el código SLOWDAY nunca caduca. Este descuento permanente del 15% está disponible para todos los clientes de Fast Buds, perfecto para planificar tus cultivos durante todo el año.'
+          },
+          {
+            question: '¿Hay un pedido mínimo para usar el código SLOWDAY?',
+            answer: 'No se requiere compra mínima. Ya sea que compres un solo paquete de 3 semillas o hagas un pedido grande, el código SLOWDAY te ahorrará 15% en pedidos de cualquier tamaño.'
+          }
+        ]
       },
       pt: {
         title: 'Economia de Dia Tranquilo - 15% para Relaxar',
         description: 'Vá com calma com 15% de desconto! Perfeito para aqueles dias tranquilos quando você quer desacelerar e cultivar algo especial.',
         slug: 'pt/cupom/economia-de-dia-tranquilo-15-para-relaxar',
+        longDescription: 'O código de desconto SLOWDAY da Fast Buds é seu convite exclusivo para economizar 15% em sementes de cannabis autoflorescentes premium perfeitas para cultivo relaxado. Este código promocional especial da Fast Buds foi criado para quem aprecia levar seu tempo e cultivar no seu próprio ritmo. Seja você um cultivador experiente ou começando sua jornada de cultivo, o cupom SLOWDAY oferece valor excepcional em variedades vencedoras de campeonatos. A Fast Buds construiu uma reputação como um dos principais criadores mundiais de genética autoflorescente, com múltiplas vitórias na Cannabis Cup. Este desconto da Fast Buds se aplica a toda sua gama de sementes premium, incluindo bestsellers como Gorilla Glue Auto, Wedding Cheesecake Auto, Purple Lemonade Auto, Zkittlez Auto e Gelato Auto. A economia de 15% significa mais orçamento para luzes de cultivo, nutrientes ou simplesmente expandir sua coleção de sementes.',
+        features: [
+          'Economize 15% em todas as sementes autoflorescentes premium da Fast Buds com seu código pessoal',
+          'Acesso a genética vencedora de campeonatos incluindo vencedores da Cannabis Cup',
+          'Uso ilimitado - aplique este código de desconto Fast Buds em cada pedido',
+          'Sem compra mínima necessária - economize em qualquer tamanho de pedido',
+          'Nunca expira - este código promo da Fast Buds permanece ativo indefinidamente',
+          'Compatível com variedades favoritas: Gorilla Glue Auto, Wedding Cheesecake, Purple Lemonade, Zkittlez, Gelato',
+          'Perfeito para cultivo relaxado e sem estresse no seu próprio ritmo'
+        ],
+        faq: [
+          {
+            question: 'Como aplico o cupom SLOWDAY da Fast Buds no checkout?',
+            answer: 'Simplesmente clique no botão "Copiar Código" para copiar SLOWDAY para a área de transferência. Em seguida, visite a loja oficial da Fast Buds, adicione suas sementes favoritas ao carrinho e cole o código no campo de código promocional durante o checkout. Seu desconto de 15% será aplicado imediatamente.'
+          },
+          {
+            question: 'O código SLOWDAY funciona em todas as sementes Fast Buds?',
+            answer: 'Sim! O código promo SLOWDAY oferece 15% de desconto em todo o catálogo da Fast Buds, incluindo suas variedades autoflorescentes mais populares, novos lançamentos e genética de edição limitada. Não há restrições.'
+          },
+          {
+            question: 'Posso usar o cupom SLOWDAY múltiplas vezes?',
+            answer: 'Absolutamente! Ao contrário de muitos códigos promocionais de uso único, o código de desconto SLOWDAY da Fast Buds pode ser usado em múltiplos pedidos. Não há limite para quantas vezes você pode economizar 15%.'
+          },
+          {
+            question: 'Este código promo da Fast Buds tem data de validade?',
+            answer: 'Não, o código SLOWDAY nunca expira. Este desconto permanente de 15% está disponível para todos os clientes da Fast Buds, perfeito para planear seus cultivos durante todo o ano.'
+          },
+          {
+            question: 'Há um pedido mínimo para usar o código SLOWDAY?',
+            answer: 'Nenhuma compra mínima é necessária. Seja você comprando um único pacote de 3 sementes ou fazendo um pedido grande, o código SLOWDAY economizará 15% em pedidos de qualquer tamanho.'
+          }
+        ]
       },
       fr: {
         title: 'Économies Journée Tranquille - 15% pour se Détendre',
         description: 'Prenez votre temps avec 15% de réduction! Parfait pour ces journées chill quand vous voulez ralentir et cultiver quelque chose de spécial.',
         slug: 'fr/coupon/economies-journee-tranquille-15-pour-se-detendre',
+        longDescription: 'Le code promo SLOWDAY de Fast Buds est votre invitation exclusive à économiser 15% sur les graines de cannabis autofloraison premium parfaites pour une culture relaxée. Ce code promotionnel spécial Fast Buds a été créé pour ceux qui apprécient prendre leur temps et cultiver à leur propre rythme. Que vous soyez un cultivateur expérimenté ou que vous commenciez votre parcours de culture, le coupon SLOWDAY offre une valeur exceptionnelle sur des variétés primées. Fast Buds a construit une réputation en tant que l\'un des principaux sélectionneurs mondiaux de génétique autofloraison, avec de multiples victoires à la Cannabis Cup. Cette réduction Fast Buds s\'applique à toute leur gamme de graines premium, y compris les bestsellers comme Gorilla Glue Auto, Wedding Cheesecake Auto, Purple Lemonade Auto, Zkittlez Auto et Gelato Auto. L\'économie de 15% signifie plus de budget pour les lampes de culture, les nutriments ou simplement agrandir votre collection de graines.',
+        features: [
+          'Économisez 15% sur toutes les graines autofloraison premium Fast Buds avec votre code personnel',
+          'Accès à la génétique primée incluant les gagnants de Cannabis Cup',
+          'Utilisation illimitée - appliquez ce code promo Fast Buds à chaque commande',
+          'Aucun achat minimum requis - économisez sur toute taille de commande',
+          'N\'expire jamais - ce code promo Fast Buds reste actif indéfiniment',
+          'Compatible avec les variétés favorites: Gorilla Glue Auto, Wedding Cheesecake, Purple Lemonade, Zkittlez, Gelato',
+          'Parfait pour une culture relaxée et sans stress à votre propre rythme'
+        ],
+        faq: [
+          {
+            question: 'Comment appliquer le coupon SLOWDAY de Fast Buds lors du paiement?',
+            answer: 'Cliquez simplement sur le bouton "Copier le Code" pour copier SLOWDAY dans votre presse-papiers. Ensuite, visitez la boutique officielle Fast Buds, ajoutez vos graines préférées au panier et collez le code dans le champ code promo lors du paiement. Votre réduction de 15% sera appliquée immédiatement.'
+          },
+          {
+            question: 'Le code SLOWDAY fonctionne-t-il sur toutes les graines Fast Buds?',
+            answer: 'Oui! Le code promo SLOWDAY offre 15% de réduction sur l\'ensemble du catalogue Fast Buds, y compris leurs variétés autofloraison les plus populaires, les nouvelles sorties et la génétique en édition limitée. Il n\'y a aucune restriction.'
+          },
+          {
+            question: 'Puis-je utiliser le coupon SLOWDAY plusieurs fois?',
+            answer: 'Absolument! Contrairement à de nombreux codes promotionnels à usage unique, le code promo SLOWDAY de Fast Buds peut être utilisé sur plusieurs commandes. Il n\'y a aucune limite au nombre de fois où vous pouvez économiser 15%.'
+          },
+          {
+            question: 'Ce code promo Fast Buds a-t-il une date d\'expiration?',
+            answer: 'Non, le code SLOWDAY n\'expire jamais. Cette réduction permanente de 15% est disponible pour tous les clients Fast Buds, parfaite pour planifier vos cultures tout au long de l\'année.'
+          },
+          {
+            question: 'Y a-t-il une commande minimum pour utiliser le code SLOWDAY?',
+            answer: 'Aucun achat minimum n\'est requis. Que vous achetiez un seul pack de 3 graines ou que vous fassiez une grosse commande, le code SLOWDAY vous fera économiser 15% sur les commandes de toute taille.'
+          }
+        ]
       },
       it: {
         title: 'Risparmio Giornata Tranquilla - 15% per Rilassarsi',
         description: 'Prendila con calma con il 15% di sconto! Perfetto per quelle giornate rilassanti quando vuoi rallentare e coltivare qualcosa di speciale.',
         slug: 'it/coupon/risparmio-giornata-tranquilla-15-per-rilassarsi',
+        longDescription: 'Il codice sconto SLOWDAY di Fast Buds è il tuo invito esclusivo per risparmiare il 15% sui semi di cannabis autofiorenti premium perfetti per coltivazione rilassata. Questo codice promozionale speciale Fast Buds è stato creato per chi apprezza prendersi il proprio tempo e coltivare al proprio ritmo. Che tu sia un coltivatore esperto o stia iniziando il tuo percorso di coltivazione, il coupon SLOWDAY offre valore eccezionale su varietà vincitrici di campionati. Fast Buds ha costruito una reputazione come uno dei principali allevatori mondiali di genetica autofiorente, con multiple vittorie alla Cannabis Cup. Questo sconto Fast Buds si applica a tutta la loro gamma di semi premium, inclusi bestseller come Gorilla Glue Auto, Wedding Cheesecake Auto, Purple Lemonade Auto, Zkittlez Auto e Gelato Auto. Il risparmio del 15% significa più budget per luci di coltivazione, nutrienti o semplicemente espandere la tua collezione di semi.',
+        features: [
+          'Risparmia il 15% su tutti i semi autofiorenti premium Fast Buds con il tuo codice personale',
+          'Accesso a genetica vincitrice di campionati inclusi i vincitori della Cannabis Cup',
+          'Utilizzo illimitato - applica questo codice sconto Fast Buds ad ogni ordine',
+          'Nessun acquisto minimo richiesto - risparmia su qualsiasi dimensione ordine',
+          'Non scade mai - questo codice promo Fast Buds rimane attivo indefinitamente',
+          'Compatibile con varietà preferite: Gorilla Glue Auto, Wedding Cheesecake, Purple Lemonade, Zkittlez, Gelato',
+          'Perfetto per coltivazione rilassata e senza stress al tuo proprio ritmo'
+        ],
+        faq: [
+          {
+            question: 'Come applico il coupon SLOWDAY di Fast Buds al checkout?',
+            answer: 'Fai semplicemente clic sul pulsante "Copia Codice" per copiare SLOWDAY negli appunti. Quindi visita lo store ufficiale Fast Buds, aggiungi i tuoi semi preferiti al carrello e incolla il codice nel campo codice promo durante il checkout. Il tuo sconto del 15% verrà applicato immediatamente.'
+          },
+          {
+            question: 'Il codice SLOWDAY funziona su tutti i semi Fast Buds?',
+            answer: 'Sì! Il codice promo SLOWDAY offre il 15% di sconto sull\'intero catalogo Fast Buds, incluse le loro varietà autofiorenti più popolari, nuovi lanci e genetica in edizione limitata. Non ci sono restrizioni.'
+          },
+          {
+            question: 'Posso usare il coupon SLOWDAY più volte?',
+            answer: 'Assolutamente! A differenza di molti codici promozionali monouso, il codice sconto SLOWDAY di Fast Buds può essere utilizzato su più ordini. Non c\'è limite a quante volte puoi risparmiare il 15%.'
+          },
+          {
+            question: 'Questo codice promo Fast Buds ha una data di scadenza?',
+            answer: 'No, il codice SLOWDAY non scade mai. Questo sconto permanente del 15% è disponibile per tutti i clienti Fast Buds, perfetto per pianificare le tue coltivazioni durante tutto l\'anno.'
+          },
+          {
+            question: 'C\'è un ordine minimo per usare il codice SLOWDAY?',
+            answer: 'Nessun acquisto minimo è richiesto. Che tu stia comprando un singolo pacchetto da 3 semi o facendo un grande ordine, il codice SLOWDAY ti farà risparmiare il 15% su ordini di qualsiasi dimensione.'
+          }
+        ]
       },
     },
   },
