@@ -14,7 +14,6 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Copy, ExternalLink, CheckCircle2, CheckCircle, Users, Sparkles } from 'lucide-react';
 import { toast } from 'sonner';
 import { getUsageCount, incrementUsageCount } from '@/lib/couponStorage';
-import fastbudsLogo from '@/assets/fastbuds-logo.png';
 
 export default function CouponDetail() {
   const { t } = useLanguage();
@@ -147,38 +146,22 @@ export default function CouponDetail() {
         <section className="gradient-hero border-b border-border">
           <div className="container py-16">
             <div className="max-w-4xl mx-auto">
-              {/* Coupon Card */}
+              {/* Coupon Image */}
               {coupon.image && (
-                <div 
-                  className="mb-8 rounded-lg overflow-hidden shadow-lg relative bg-cover bg-center min-h-[300px] flex items-center p-8"
-                  style={{ backgroundImage: `url(${coupon.image})` }}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
-                  
-                  <div className="relative z-10 flex items-center justify-between w-full">
-                    {/* Left: Title */}
-                    <div className="flex-1">
-                      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white drop-shadow-lg">
-                        {content.title}
-                      </h1>
-                    </div>
-                    
-                    {/* Right: Logo and Discount */}
-                    <div className="flex flex-col items-end gap-4 ml-8">
-                      <img 
-                        src={fastbudsLogo} 
-                        alt="Fast Buds"
-                        className="w-32 md:w-40 h-auto drop-shadow-lg"
-                      />
-                      <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-lg">
-                        {coupon.discount}
-                      </div>
-                    </div>
-                  </div>
+                <div className="mb-8 rounded-lg overflow-hidden shadow-lg">
+                  <img 
+                    src={coupon.image} 
+                    alt={content.title}
+                    className="w-full h-auto object-cover"
+                    loading="eager"
+                  />
                 </div>
               )}
 
               <div className="flex flex-wrap items-center gap-3 mb-6">
+                <Badge className="bg-gradient-primary text-primary-foreground text-xl px-4 py-1 font-bold">
+                  {coupon.discount}
+                </Badge>
                 {coupon.neverExpires && (
                   <Badge className="bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20 text-base px-4 py-1 gap-2">
                     <CheckCircle className="h-4 w-4" />
@@ -190,6 +173,10 @@ export default function CouponDetail() {
                   <span>{displayCount >= 999 ? '999+' : displayCount}</span>
                 </Badge>
               </div>
+
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+                {content.title}
+              </h1>
 
               <p className="text-lg text-muted-foreground mb-8">
                 {content.description}
