@@ -4,6 +4,9 @@ export interface CouponContent {
   title: string;
   description: string;
   slug: string;
+  longDescription?: string;
+  features?: string[];
+  faq?: Array<{ question: string; answer: string }>;
 }
 
 export interface Coupon {
@@ -14,6 +17,7 @@ export interface Coupon {
   isActive: boolean;
   usageCount: number;
   neverExpires?: boolean;
+  image?: string;
   content: Record<Language, CouponContent>;
 }
 
@@ -395,36 +399,229 @@ export const coupons: Coupon[] = [
     isActive: true,
     usageCount: 15,
     neverExpires: true,
+    image: '/images/coupons/buzz-trending-seeds.jpg',
     content: {
       en: {
         title: 'Create The Buzz - 15% Off Trending Seeds',
         description: 'Get the buzz going with 15% off! Join the hype and grow the most talked-about Fast Buds strains at an amazing price.',
         slug: 'en/coupon/create-buzz-15-off-trending-seeds',
+        longDescription: 'The Fast Buds BUZZ discount code represents an exclusive opportunity to save 15% on the most trending and sought-after autoflowering cannabis seeds in the market. This premium Fast Buds promo code gives growers access to championship-winning genetics at a reduced price, making it the perfect time to stock up on legendary strains. Whether you\'re an experienced cultivator looking to expand your collection or a beginner seeking premium autoflowering seeds, the BUZZ coupon code delivers exceptional value. Fast Buds has earned its reputation as a leading breeder of autoflowering cannabis genetics, with multiple Cannabis Cup wins and a global community of satisfied growers. This Fast Buds discount applies to their entire catalog of premium seeds, including fan favorites like Gorilla Glue Auto, Wedding Cheesecake Auto, and Purple Lemonade Auto. The 15% savings with this Fast Buds coupon code means more budget for nutrients, equipment, or simply more seeds to diversify your garden. Don\'t miss this chance to grow world-class cannabis genetics while saving money – the BUZZ promo code is your gateway to premium cultivation at an unbeatable price point.',
+        features: [
+          'Save 15% on all Fast Buds premium autoflowering seeds with verified coupon code',
+          'Access to championship-winning genetics including Cannabis Cup award winners',
+          'Unlimited usage - apply this Fast Buds discount code to every order',
+          'No minimum purchase required - save on small or bulk seed orders',
+          'Never expires - this Fast Buds promo code remains active indefinitely',
+          'Compatible with trending strains: Gorilla Glue Auto, Wedding Cheesecake, Purple Lemonade',
+          'Stack savings by ordering during Fast Buds promotional periods and sales events'
+        ],
+        faq: [
+          {
+            question: 'How do I apply the BUZZ Fast Buds coupon code at checkout?',
+            answer: 'Simply click the "Copy Code" button above to copy BUZZ to your clipboard. Then visit the Fast Buds official store, add your favorite autoflowering seeds to cart, and paste the code in the promo code field during checkout. Your 15% discount will be applied immediately to your order total.'
+          },
+          {
+            question: 'Does the BUZZ discount code work on all Fast Buds seeds?',
+            answer: 'Yes! The BUZZ promo code provides 15% off on the entire Fast Buds catalog, including their most popular autoflowering strains, new releases, and limited edition genetics. There are no restrictions on which seeds you can purchase with this coupon.'
+          },
+          {
+            question: 'Can I use the BUZZ coupon multiple times?',
+            answer: 'Absolutely! Unlike many promotional codes that are single-use only, the BUZZ Fast Buds discount code can be used on multiple orders. There\'s no limit to how many times you can save 15% on your Fast Buds seed purchases.'
+          },
+          {
+            question: 'Does this Fast Buds promo code have an expiration date?',
+            answer: 'No, the BUZZ coupon code never expires. This permanent 15% discount is available for all Fast Buds customers, making it perfect for planning your grows throughout the year without worrying about missing a limited-time deal.'
+          },
+          {
+            question: 'Is there a minimum order requirement to use the BUZZ code?',
+            answer: 'No minimum purchase is required. Whether you\'re buying a single 3-pack of seeds or stocking up with multiple strains, the BUZZ discount code will save you 15% on orders of any size at the Fast Buds store.'
+          }
+        ]
       },
       de: {
         title: 'Sorgen Sie Für Aufsehen - 15% auf Trend-Samen',
         description: 'Bringen Sie das Gespräch in Gang mit 15% Rabatt! Steigen Sie ein in den Hype und züchten Sie die meistdiskutierten Fast Buds Sorten zu einem tollen Preis.',
         slug: 'de/coupon/sorgen-sie-aufsehen-15-trend-samen',
+        longDescription: 'Der Fast Buds BUZZ Rabattcode ist eine exklusive Gelegenheit, 15% auf die gefragtesten autoflowering Cannabis-Samen zu sparen. Dieser Premium Fast Buds Gutschein gewährt Züchtern Zugang zu preisgekrönter Genetik zu reduzierten Preisen. Ob erfahrener Züchter oder Anfänger – der BUZZ Coupon bietet außergewöhnlichen Wert. Fast Buds hat sich als führender Züchter von autoflowering Cannabis-Genetik etabliert, mit mehreren Cannabis Cup Auszeichnungen. Dieser Fast Buds Rabatt gilt für den gesamten Katalog, einschließlich Favoriten wie Gorilla Glue Auto, Wedding Cheesecake Auto und Purple Lemonade Auto. Die 15% Ersparnis bedeuten mehr Budget für Nährstoffe, Ausrüstung oder einfach mehr Samen. Verpassen Sie nicht diese Chance, Weltklasse-Genetik anzubauen und dabei Geld zu sparen.',
+        features: [
+          '15% Rabatt auf alle Fast Buds Premium autoflowering Samen mit verifiziertem Code',
+          'Zugang zu preisgekrönter Genetik einschließlich Cannabis Cup Gewinnern',
+          'Unbegrenzte Nutzung - wenden Sie diesen Fast Buds Rabatt bei jeder Bestellung an',
+          'Kein Mindestbestellwert erforderlich - sparen Sie bei kleinen oder großen Bestellungen',
+          'Läuft nie ab - dieser Fast Buds Gutschein bleibt dauerhaft aktiv',
+          'Kompatibel mit Trend-Sorten: Gorilla Glue Auto, Wedding Cheesecake, Purple Lemonade',
+          'Zusätzliche Ersparnisse bei Bestellung während Fast Buds Aktionszeiträumen'
+        ],
+        faq: [
+          {
+            question: 'Wie wende ich den BUZZ Fast Buds Gutscheincode an der Kasse an?',
+            answer: 'Klicken Sie einfach auf "Code kopieren", um BUZZ in Ihre Zwischenablage zu kopieren. Besuchen Sie dann den offiziellen Fast Buds Shop, fügen Sie Ihre Lieblingssamen zum Warenkorb hinzu und fügen Sie den Code im Gutscheinfeld beim Checkout ein. Ihr 15% Rabatt wird sofort angewendet.'
+          },
+          {
+            question: 'Funktioniert der BUZZ Rabattcode bei allen Fast Buds Samen?',
+            answer: 'Ja! Der BUZZ Gutschein bietet 15% Rabatt auf den gesamten Fast Buds Katalog, einschließlich der beliebtesten autoflowering Sorten, neuen Releases und limitierten Editionen. Es gibt keine Einschränkungen.'
+          },
+          {
+            question: 'Kann ich den BUZZ Gutschein mehrmals verwenden?',
+            answer: 'Absolut! Anders als viele Aktionscodes, die nur einmal verwendet werden können, kann der BUZZ Fast Buds Rabattcode bei mehreren Bestellungen genutzt werden. Es gibt keine Begrenzung, wie oft Sie 15% sparen können.'
+          },
+          {
+            question: 'Hat dieser Fast Buds Gutschein ein Ablaufdatum?',
+            answer: 'Nein, der BUZZ Gutscheincode läuft nie ab. Dieser permanente 15% Rabatt ist für alle Fast Buds Kunden verfügbar, ideal für die Planung Ihrer Anbaus das ganze Jahr über.'
+          },
+          {
+            question: 'Gibt es einen Mindestbestellwert für den BUZZ Code?',
+            answer: 'Kein Mindestbestellwert erforderlich. Ob Sie ein einzelnes 3er-Pack kaufen oder mehrere Sorten bestellen, der BUZZ Rabattcode spart Ihnen 15% bei Bestellungen jeder Größe.'
+          }
+        ]
       },
       es: {
         title: 'Crea El Buzz - 15% en Semillas Tendencia',
         description: '¡Crea el buzz con 15% de descuento! Únete al hype y cultiva las variedades Fast Buds más comentadas a un precio increíble.',
         slug: 'es/cupon/crea-buzz-15-semillas-tendencia',
+        longDescription: 'El código de descuento BUZZ de Fast Buds representa una oportunidad exclusiva para ahorrar 15% en las semillas de cannabis autoflorecientes más populares del mercado. Este cupón premium de Fast Buds ofrece a los cultivadores acceso a genética ganadora de campeonatos a precio reducido. Ya seas un cultivador experimentado que busca expandir su colección o un principiante que busca semillas autoflorecientes premium, el código BUZZ ofrece un valor excepcional. Fast Buds se ha ganado su reputación como criador líder de genética autofloreciente, con múltiples premios Cannabis Cup y una comunidad global de cultivadores satisfechos. Este descuento de Fast Buds se aplica a todo su catálogo de semillas premium, incluidos los favoritos como Gorilla Glue Auto, Wedding Cheesecake Auto y Purple Lemonade Auto. El ahorro del 15% con este código promocional significa más presupuesto para nutrientes, equipo o simplemente más semillas.',
+        features: [
+          'Ahorra 15% en todas las semillas autoflorecientes premium de Fast Buds con código verificado',
+          'Acceso a genética ganadora de campeonatos incluyendo premios Cannabis Cup',
+          'Uso ilimitado - aplica este código de descuento Fast Buds en cada pedido',
+          'Sin compra mínima requerida - ahorra en pedidos pequeños o grandes',
+          'Nunca expira - este código promo de Fast Buds permanece activo indefinidamente',
+          'Compatible con variedades tendencia: Gorilla Glue Auto, Wedding Cheesecake, Purple Lemonade',
+          'Acumula ahorros ordenando durante períodos promocionales de Fast Buds'
+        ],
+        faq: [
+          {
+            question: '¿Cómo aplico el cupón BUZZ de Fast Buds al finalizar la compra?',
+            answer: 'Simplemente haz clic en el botón "Copiar Código" para copiar BUZZ al portapapeles. Luego visita la tienda oficial de Fast Buds, añade tus semillas favoritas al carrito y pega el código en el campo de código promocional durante el checkout. Tu descuento del 15% se aplicará inmediatamente.'
+          },
+          {
+            question: '¿El código BUZZ funciona en todas las semillas Fast Buds?',
+            answer: '¡Sí! El código promo BUZZ proporciona 15% de descuento en todo el catálogo de Fast Buds, incluyendo sus variedades autoflorecientes más populares, nuevos lanzamientos y genética de edición limitada. No hay restricciones.'
+          },
+          {
+            question: '¿Puedo usar el cupón BUZZ múltiples veces?',
+            answer: '¡Absolutamente! A diferencia de muchos códigos promocionales de un solo uso, el código de descuento BUZZ de Fast Buds puede usarse en múltiples pedidos. No hay límite para cuántas veces puedes ahorrar 15%.'
+          },
+          {
+            question: '¿Este código promo de Fast Buds tiene fecha de expiración?',
+            answer: 'No, el código BUZZ nunca expira. Este descuento permanente del 15% está disponible para todos los clientes de Fast Buds, perfecto para planificar tus cultivos durante todo el año.'
+          },
+          {
+            question: '¿Hay un pedido mínimo para usar el código BUZZ?',
+            answer: 'No se requiere compra mínima. Ya sea que compres un solo paquete de 3 semillas o hagas un pedido grande, el código BUZZ te ahorrará 15% en pedidos de cualquier tamaño.'
+          }
+        ]
       },
       pt: {
         title: 'Crie O Buzz - 15% em Sementes Tendência',
         description: 'Crie o buzz com 15% de desconto! Junte-se ao hype e cultive as variedades Fast Buds mais comentadas a um preço incrível.',
         slug: 'pt/cupom/crie-buzz-15-sementes-tendencia',
+        longDescription: 'O código de desconto BUZZ da Fast Buds representa uma oportunidade exclusiva para economizar 15% nas sementes de cannabis autoflorescentes mais populares do mercado. Este cupom premium da Fast Buds oferece aos cultivadores acesso a genética vencedora de campeonatos a preço reduzido. Seja você um cultivador experiente procurando expandir sua coleção ou um iniciante buscando sementes autoflorescentes premium, o código BUZZ oferece valor excepcional. A Fast Buds conquistou sua reputação como criador líder de genética autoflorescente, com múltiplos prêmios Cannabis Cup e uma comunidade global de cultivadores satisfeitos. Este desconto da Fast Buds se aplica a todo o catálogo de semillas premium, incluindo favoritos como Gorilla Glue Auto, Wedding Cheesecake Auto e Purple Lemonade Auto. A economia de 15% com este código promocional significa mais orçamento para nutrientes, equipamentos ou simplesmente mais sementes.',
+        features: [
+          'Economize 15% em todas as sementes autoflorescentes premium da Fast Buds com código verificado',
+          'Acesso a genética vencedora de campeonatos incluindo prêmios Cannabis Cup',
+          'Uso ilimitado - aplique este código de desconto Fast Buds em cada pedido',
+          'Sem compra mínima necessária - economize em pedidos pequenos ou grandes',
+          'Nunca expira - este código promo da Fast Buds permanece ativo indefinidamente',
+          'Compatível com variedades tendência: Gorilla Glue Auto, Wedding Cheesecake, Purple Lemonade',
+          'Acumule economias pedindo durante períodos promocionais da Fast Buds'
+        ],
+        faq: [
+          {
+            question: 'Como aplico o cupom BUZZ da Fast Buds no checkout?',
+            answer: 'Simplesmente clique no botão "Copiar Código" para copiar BUZZ para a área de transferência. Em seguida, visite a loja oficial da Fast Buds, adicione suas sementes favoritas ao carrinho e cole o código no campo de código promocional durante o checkout. Seu desconto de 15% será aplicado imediatamente.'
+          },
+          {
+            question: 'O código BUZZ funciona em todas as sementes Fast Buds?',
+            answer: 'Sim! O código promo BUZZ oferece 15% de desconto em todo o catálogo da Fast Buds, incluindo suas variedades autoflorescentes mais populares, novos lançamentos e genética de edição limitada. Não há restrições.'
+          },
+          {
+            question: 'Posso usar o cupom BUZZ múltiplas vezes?',
+            answer: 'Absolutamente! Ao contrário de muitos códigos promocionais de uso único, o código de desconto BUZZ da Fast Buds pode ser usado em múltiplos pedidos. Não há limite para quantas vezes você pode economizar 15%.'
+          },
+          {
+            question: 'Este código promo da Fast Buds tem data de validade?',
+            answer: 'Não, o código BUZZ nunca expira. Este desconto permanente de 15% está disponível para todos os clientes da Fast Buds, perfeito para planejar seus cultivos durante todo o ano.'
+          },
+          {
+            question: 'Há um pedido mínimo para usar o código BUZZ?',
+            answer: 'Nenhuma compra mínima é necessária. Seja você comprando um único pacote de 3 sementes ou fazendo um pedido grande, o código BUZZ economizará 15% em pedidos de qualquer tamanho.'
+          }
+        ]
       },
       fr: {
         title: 'Créez Le Buzz - 15% sur Graines Tendance',
         description: 'Créez le buzz avec 15% de réduction! Rejoignez le hype et cultivez les variétés Fast Buds les plus populaires à un prix incroyable.',
         slug: 'fr/coupon/creez-buzz-15-graines-tendance',
+        longDescription: 'Le code promo BUZZ de Fast Buds représente une opportunité exclusive d\'économiser 15% sur les graines de cannabis autofloraison les plus tendance du marché. Ce coupon premium Fast Buds offre aux cultivateurs un accès à une génétique primée à prix réduit. Que vous soyez un cultivateur expérimenté cherchant à élargir votre collection ou un débutant à la recherche de graines autofloraison premium, le code BUZZ offre une valeur exceptionnelle. Fast Buds a gagné sa réputation en tant que sélectionneur leader de génétique autofloraison, avec de multiples prix Cannabis Cup et une communauté mondiale de cultivateurs satisfaits. Cette réduction Fast Buds s\'applique à l\'ensemble du catalogue de graines premium, y compris les favoris comme Gorilla Glue Auto, Wedding Cheesecake Auto et Purple Lemonade Auto. L\'économie de 15% avec ce code promotionnel signifie plus de budget pour les nutriments, l\'équipement ou simplement plus de graines.',
+        features: [
+          'Économisez 15% sur toutes les graines autofloraison premium Fast Buds avec code vérifié',
+          'Accès à la génétique primée incluant les gagnants de Cannabis Cup',
+          'Utilisation illimitée - appliquez ce code promo Fast Buds à chaque commande',
+          'Aucun achat minimum requis - économisez sur les petites ou grandes commandes',
+          'N\'expire jamais - ce code promo Fast Buds reste actif indéfiniment',
+          'Compatible avec les variétés tendance: Gorilla Glue Auto, Wedding Cheesecake, Purple Lemonade',
+          'Cumulez les économies en commandant pendant les périodes promotionnelles Fast Buds'
+        ],
+        faq: [
+          {
+            question: 'Comment appliquer le coupon BUZZ de Fast Buds lors du paiement?',
+            answer: 'Cliquez simplement sur le bouton "Copier le Code" pour copier BUZZ dans votre presse-papiers. Ensuite, visitez la boutique officielle Fast Buds, ajoutez vos graines préférées au panier et collez le code dans le champ code promo lors du paiement. Votre réduction de 15% sera appliquée immédiatement.'
+          },
+          {
+            question: 'Le code BUZZ fonctionne-t-il sur toutes les graines Fast Buds?',
+            answer: 'Oui! Le code promo BUZZ offre 15% de réduction sur l\'ensemble du catalogue Fast Buds, y compris leurs variétés autofloraison les plus populaires, les nouvelles sorties et la génétique en édition limitée. Il n\'y a aucune restriction.'
+          },
+          {
+            question: 'Puis-je utiliser le coupon BUZZ plusieurs fois?',
+            answer: 'Absolument! Contrairement à de nombreux codes promotionnels à usage unique, le code promo BUZZ de Fast Buds peut être utilisé sur plusieurs commandes. Il n\'y a aucune limite au nombre de fois où vous pouvez économiser 15%.'
+          },
+          {
+            question: 'Ce code promo Fast Buds a-t-il une date d\'expiration?',
+            answer: 'Non, le code BUZZ n\'expire jamais. Cette réduction permanente de 15% est disponible pour tous les clients Fast Buds, parfaite pour planifier vos cultures tout au long de l\'année.'
+          },
+          {
+            question: 'Y a-t-il une commande minimum pour utiliser le code BUZZ?',
+            answer: 'Aucun achat minimum n\'est requis. Que vous achetiez un seul pack de 3 graines ou que vous fassiez une grosse commande, le code BUZZ vous fera économiser 15% sur les commandes de toute taille.'
+          }
+        ]
       },
       it: {
         title: 'Crea Il Buzz - 15% su Semi Di Tendenza',
         description: 'Crea il buzz con il 15% di sconto! Unisciti all\'hype e coltiva le varietà Fast Buds più discusse a un prezzo fantastico.',
         slug: 'it/coupon/crea-buzz-15-semi-tendenza',
+        longDescription: 'Il codice sconto BUZZ di Fast Buds rappresenta un\'opportunità esclusiva per risparmiare il 15% sui semi di cannabis autofiorenti più richiesti sul mercato. Questo coupon premium Fast Buds offre ai coltivatori l\'accesso a genetica vincitrice di campionati a prezzo ridotto. Che tu sia un coltivatore esperto che cerca di espandere la propria collezione o un principiante alla ricerca di semi autofiorenti premium, il codice BUZZ offre un valore eccezionale. Fast Buds ha guadagnato la sua reputazione come allevatore leader di genetica autofiorente, con molteplici premi Cannabis Cup e una comunità globale di coltivatori soddisfatti. Questo sconto Fast Buds si applica all\'intero catalogo di semi premium, inclusi i favoriti come Gorilla Glue Auto, Wedding Cheesecake Auto e Purple Lemonade Auto. Il risparmio del 15% con questo codice promozionale significa più budget per nutrienti, attrezzature o semplicemente più semi.',
+        features: [
+          'Risparmia il 15% su tutti i semi autofiorenti premium Fast Buds con codice verificato',
+          'Accesso a genetica vincitrice di campionati inclusi i vincitori della Cannabis Cup',
+          'Utilizzo illimitato - applica questo codice sconto Fast Buds ad ogni ordine',
+          'Nessun acquisto minimo richiesto - risparmia su ordini piccoli o grandi',
+          'Non scade mai - questo codice promo Fast Buds rimane attivo indefinitamente',
+          'Compatibile con varietà di tendenza: Gorilla Glue Auto, Wedding Cheesecake, Purple Lemonade',
+          'Accumula risparmi ordinando durante i periodi promozionali Fast Buds'
+        ],
+        faq: [
+          {
+            question: 'Come applico il coupon BUZZ di Fast Buds al checkout?',
+            answer: 'Fai semplicemente clic sul pulsante "Copia Codice" per copiare BUZZ negli appunti. Quindi visita lo store ufficiale Fast Buds, aggiungi i tuoi semi preferiti al carrello e incolla il codice nel campo codice promo durante il checkout. Il tuo sconto del 15% verrà applicato immediatamente.'
+          },
+          {
+            question: 'Il codice BUZZ funziona su tutti i semi Fast Buds?',
+            answer: 'Sì! Il codice promo BUZZ offre il 15% di sconto sull\'intero catalogo Fast Buds, incluse le loro varietà autofiorenti più popolari, nuovi lanci e genetica in edizione limitata. Non ci sono restrizioni.'
+          },
+          {
+            question: 'Posso usare il coupon BUZZ più volte?',
+            answer: 'Assolutamente! A differenza di molti codici promozionali monouso, il codice sconto BUZZ di Fast Buds può essere utilizzato su più ordini. Non c\'è limite a quante volte puoi risparmiare il 15%.'
+          },
+          {
+            question: 'Questo codice promo Fast Buds ha una data di scadenza?',
+            answer: 'No, il codice BUZZ non scade mai. Questo sconto permanente del 15% è disponibile per tutti i clienti Fast Buds, perfetto per pianificare le tue coltivazioni durante tutto l\'anno.'
+          },
+          {
+            question: 'C\'è un ordine minimo per usare il codice BUZZ?',
+            answer: 'Nessun acquisto minimo è richiesto. Che tu stia comprando un singolo pacchetto da 3 semi o facendo un grande ordine, il codice BUZZ ti farà risparmiare il 15% su ordini di qualsiasi dimensione.'
+          }
+        ]
       },
     },
   },

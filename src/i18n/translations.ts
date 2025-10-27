@@ -38,6 +38,9 @@ export interface Translations {
     instruction3: string;
     instruction4: string;
     relatedCoupons: string;
+    aboutDiscount: string;
+    keyBenefits: string;
+    frequentlyAskedQuestions: string;
   };
   faq: {
     title: string;
@@ -132,6 +135,9 @@ export const translations: Record<Language, Translations> = {
       instruction3: 'Add your favorite seeds to the cart',
       instruction4: 'Paste the code at checkout and enjoy your savings',
       relatedCoupons: 'Related Coupons',
+      aboutDiscount: 'About This Discount',
+      keyBenefits: 'Key Benefits',
+      frequentlyAskedQuestions: 'Frequently Asked Questions',
     },
     faq: {
       title: 'Frequently Asked Questions',
@@ -224,6 +230,9 @@ export const translations: Record<Language, Translations> = {
       instruction3: 'Fügen Sie Ihre Lieblingssamen zum Warenkorb hinzu',
       instruction4: 'Fügen Sie den Code beim Bezahlen ein und genießen Sie Ihre Ersparnis',
       relatedCoupons: 'Ähnliche Gutscheine',
+      aboutDiscount: 'Über diesen Rabatt',
+      keyBenefits: 'Hauptvorteile',
+      frequentlyAskedQuestions: 'Häufig gestellte Fragen',
     },
     faq: {
       title: 'Häufig gestellte Fragen',
@@ -316,6 +325,9 @@ export const translations: Record<Language, Translations> = {
       instruction3: 'Añade tus semillas favoritas al carrito',
       instruction4: 'Pega el código al finalizar la compra y disfruta de tus ahorros',
       relatedCoupons: 'Cupones Relacionados',
+      aboutDiscount: 'Acerca de este Descuento',
+      keyBenefits: 'Beneficios Clave',
+      frequentlyAskedQuestions: 'Preguntas Frecuentes',
     },
     faq: {
       title: 'Preguntas Frecuentes',
@@ -408,6 +420,9 @@ export const translations: Record<Language, Translations> = {
       instruction3: 'Adicione suas sementes favoritas ao carrinho',
       instruction4: 'Cole o código no checkout e aproveite suas economias',
       relatedCoupons: 'Cupons Relacionados',
+      aboutDiscount: 'Sobre este Desconto',
+      keyBenefits: 'Principais Benefícios',
+      frequentlyAskedQuestions: 'Perguntas Frequentes',
     },
     faq: {
       title: 'Perguntas Frequentes',
@@ -500,6 +515,9 @@ export const translations: Record<Language, Translations> = {
       instruction3: 'Ajoutez vos graines préférées au panier',
       instruction4: 'Collez le code lors du paiement et profitez de vos économies',
       relatedCoupons: 'Coupons Associés',
+      aboutDiscount: 'À propos de cette Réduction',
+      keyBenefits: 'Avantages Clés',
+      frequentlyAskedQuestions: 'Questions Fréquentes',
     },
     faq: {
       title: 'Questions Fréquentes',
@@ -592,6 +610,9 @@ export const translations: Record<Language, Translations> = {
       instruction3: 'Aggiungi i tuoi semi preferiti al carrello',
       instruction4: 'Incolla il codice al checkout e goditi il risparmio',
       relatedCoupons: 'Coupon Correlati',
+      aboutDiscount: 'Informazioni su questo Sconto',
+      keyBenefits: 'Vantaggi Principali',
+      frequentlyAskedQuestions: 'Domande Frequenti',
     },
     faq: {
       title: 'Domande Frequenti',

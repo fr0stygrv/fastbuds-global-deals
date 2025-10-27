@@ -10,7 +10,8 @@ import { RelatedCoupons } from '@/components/RelatedCoupons';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { Copy, ExternalLink, CheckCircle2, CheckCircle, Users } from 'lucide-react';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Copy, ExternalLink, CheckCircle2, CheckCircle, Users, Sparkles } from 'lucide-react';
 import { toast } from 'sonner';
 import { getUsageCount, incrementUsageCount } from '@/lib/couponStorage';
 
@@ -124,6 +125,17 @@ export default function CouponDetail() {
         ]}
       />
 
+      {/* FAQPage Structured Data */}
+      {content.faq && content.faq.length > 0 && (
+        <StructuredData
+          type="faqpage"
+          data={content.faq.map(item => ({
+            question: item.question,
+            answer: item.answer
+          }))}
+        />
+      )}
+
       <div className="min-h-screen">
         <Breadcrumbs 
           items={[
@@ -134,6 +146,18 @@ export default function CouponDetail() {
         <section className="gradient-hero border-b border-border">
           <div className="container py-16">
             <div className="max-w-4xl mx-auto">
+              {/* Coupon Image */}
+              {coupon.image && (
+                <div className="mb-8 rounded-lg overflow-hidden shadow-lg">
+                  <img 
+                    src={coupon.image} 
+                    alt={content.title}
+                    className="w-full h-auto object-cover"
+                    loading="eager"
+                  />
+                </div>
+              )}
+
               <div className="flex flex-wrap items-center gap-3 mb-6">
                 <Badge className="bg-gradient-primary text-primary-foreground text-xl px-4 py-1 font-bold">
                   {coupon.discount}
@@ -205,6 +229,45 @@ export default function CouponDetail() {
           </div>
         </section>
 
+        {/* Long Description Section */}
+        {content.longDescription && (
+          <section className="container py-16 border-b border-border">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold mb-6">{t.coupon.aboutDiscount}</h2>
+              <div className="prose prose-lg dark:prose-invert max-w-none">
+                <p className="text-muted-foreground leading-relaxed">
+                  {content.longDescription}
+                </p>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Key Benefits Section */}
+        {content.features && content.features.length > 0 && (
+          <section className="container py-16 border-b border-border bg-muted/30">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold mb-8">{t.coupon.keyBenefits}</h2>
+              <div className="grid gap-4">
+                {content.features.map((feature, index) => (
+                  <Card key={index} className="border-l-4 border-l-primary">
+                    <CardContent className="p-6">
+                      <div className="flex gap-4">
+                        <div className="flex-shrink-0">
+                          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-primary">
+                            <Sparkles className="h-5 w-5 text-primary-foreground" />
+                          </div>
+                        </div>
+                        <p className="text-base leading-relaxed">{feature}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* How to Use Section */}
         <section className="container py-16">
           <div className="max-w-4xl mx-auto">
@@ -252,6 +315,27 @@ export default function CouponDetail() {
             </Card>
           </div>
         </section>
+
+        {/* FAQ Section */}
+        {content.faq && content.faq.length > 0 && (
+          <section className="container py-16 border-b border-border">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold mb-8">{t.coupon.frequentlyAskedQuestions}</h2>
+              <Accordion type="single" collapsible className="w-full">
+                {content.faq.map((item, index) => (
+                  <AccordionItem key={index} value={`item-${index}`}>
+                    <AccordionTrigger className="text-left text-lg font-semibold">
+                      {item.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-base text-muted-foreground leading-relaxed">
+                      {item.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </section>
+        )}
 
         {/* Related Coupons */}
         <RelatedCoupons currentCouponId={coupon.id} />

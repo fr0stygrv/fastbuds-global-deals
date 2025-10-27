@@ -27,9 +27,14 @@ interface WebSiteData {
   description: string;
 }
 
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
 interface StructuredDataProps {
-  type: 'offer' | 'organization' | 'breadcrumb' | 'website';
-  data: OfferData | OrganizationData | BreadcrumbItem[] | WebSiteData;
+  type: 'offer' | 'organization' | 'breadcrumb' | 'website' | 'faqpage';
+  data: OfferData | OrganizationData | BreadcrumbItem[] | WebSiteData | FAQItem[];
 }
 
 export const StructuredData = ({ type, data }: StructuredDataProps) => {
@@ -98,6 +103,19 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
           "@type": "Organization",
           "name": "Fast Buds Coupons"
         }
+      };
+    } else if (type === 'faqpage' && Array.isArray(data)) {
+      structuredData = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": data.map((item: any) => ({
+          "@type": "Question",
+          "name": item.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": item.answer
+          }
+        }))
       };
     }
 
