@@ -177,6 +177,13 @@ export const translations: Record<Language, Translations> = {
       contactDescription: 'Connect with us on social media for the latest Fast Buds coupon codes, promo deals, and exclusive discounts.',
       newsTitle: 'Fast Buds News - Latest Updates & Strain Releases 2025',
       newsDescription: 'Stay updated with Fast Buds latest news, strain releases, giveaways, and cannabis industry updates. Discover new genetics and exclusive drops.',
+      sitemapTitle: 'Sitemap - Fast Buds Coupons & All Pages',
+      sitemapDescription: 'Complete sitemap of Fast Buds Coupons. Find all coupon codes, discount offers, and website pages in one place.',
+    },
+    sitemap: {
+      mainPages: 'Main Pages',
+      activeCoupons: 'Active Coupons',
+      expiredCoupons: 'Expired Coupons',
     },
   },
   de: {
@@ -363,6 +370,7 @@ export const translations: Record<Language, Translations> = {
       expiredCoupons: 'Cupones Expirados',
     },
   },
+  pt: {
     nav: {
       home: 'Início',
       faq: 'Perguntas',

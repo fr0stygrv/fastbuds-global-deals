@@ -68,7 +68,6 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
       };
     } else if (type === 'organization' && 'name' in data && 'url' in data && !('promoCode' in data)) {
       const orgData = data as OrganizationData;
-      const orgData = data as OrganizationData;
       structuredData = {
         "@context": "https://schema.org",
         "@type": "Organization",
