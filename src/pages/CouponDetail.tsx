@@ -148,7 +148,7 @@ export default function CouponDetail() {
             <div className="max-w-4xl mx-auto">
               {/* Coupon Image */}
               {coupon.image && (
-                <div className="mb-8 rounded-lg overflow-hidden shadow-lg">
+                <div className="mb-8">
                   <img 
                     src={coupon.image} 
                     alt={content.title}
