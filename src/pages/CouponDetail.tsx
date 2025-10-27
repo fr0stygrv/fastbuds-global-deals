@@ -245,24 +245,26 @@ export default function CouponDetail() {
 
         {/* Key Benefits Section */}
         {content.features && content.features.length > 0 && (
-          <section className="container py-16 border-b border-border bg-muted/30">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8">{t.coupon.keyBenefits}</h2>
-              <div className="grid gap-4">
-                {content.features.map((feature, index) => (
-                  <Card key={index} className="border-l-4 border-l-primary">
-                    <CardContent className="p-6">
-                      <div className="flex gap-4">
-                        <div className="flex-shrink-0">
-                          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-primary">
-                            <Sparkles className="h-5 w-5 text-primary-foreground" />
+          <section className="py-16 border-b border-border bg-muted/30">
+            <div className="container">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl font-bold mb-8">{t.coupon.keyBenefits}</h2>
+                <div className="grid gap-4">
+                  {content.features.map((feature, index) => (
+                    <Card key={index} className="border-l-4 border-l-primary">
+                      <CardContent className="p-6">
+                        <div className="flex gap-4">
+                          <div className="flex-shrink-0">
+                            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-primary">
+                              <Sparkles className="h-5 w-5 text-primary-foreground" />
+                            </div>
                           </div>
+                          <p className="text-base leading-relaxed">{feature}</p>
                         </div>
-                        <p className="text-base leading-relaxed">{feature}</p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
               </div>
             </div>
           </section>
