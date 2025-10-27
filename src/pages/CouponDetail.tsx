@@ -63,6 +63,10 @@ export default function CouponDetail() {
     }
   }, [coupon]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handleCopy = async () => {
     await navigator.clipboard.writeText(coupon.code);
     setCopied(true);
