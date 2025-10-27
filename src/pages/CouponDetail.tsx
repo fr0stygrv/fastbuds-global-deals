@@ -146,8 +146,8 @@ export default function CouponDetail() {
         <section className="gradient-hero border-b border-border">
           <div className="container py-16">
             <div className="max-w-4xl mx-auto">
-              {/* Coupon Image */}
-              {coupon.image && (
+              {/* Coupon Image - Temporarily hidden */}
+              {/* {coupon.image && (
                 <div className="mb-8 rounded-lg overflow-hidden shadow-lg">
                   <img 
                     src={coupon.image} 
@@ -156,7 +156,7 @@ export default function CouponDetail() {
                     loading="eager"
                   />
                 </div>
-              )}
+              )} */}
 
               <div className="flex flex-wrap items-center gap-3 mb-6">
                 <Badge className="bg-gradient-primary text-primary-foreground text-xl px-4 py-1 font-bold">
