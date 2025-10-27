@@ -1,6 +1,7 @@
 import { useLanguage } from '@/i18n/LanguageContext';
 import { languages, Language } from '@/i18n/languages';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { coupons } from '@/data/coupons';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -20,8 +21,26 @@ export const LanguageSwitcher = () => {
   const handleLanguageChange = (newLang: Language) => {
     setLanguage(newLang);
     
-    // Replace language in URL path
     const pathParts = location.pathname.split('/').filter(Boolean);
+    
+    // Check if we're on a coupon detail page
+    if (pathParts.length >= 3 && ['coupon', 'cupon', 'cupom'].includes(pathParts[1])) {
+      const currentSlug = pathParts.slice(1).join('/');
+      const fullSlug = `${language}/${currentSlug}`;
+      
+      // Find the current coupon
+      const currentCoupon = coupons.find(c => 
+        Object.values(c.content).some(content => content.slug === fullSlug)
+      );
+      
+      if (currentCoupon && currentCoupon.content[newLang]) {
+        // Navigate to the same coupon in the new language
+        navigate(`/${currentCoupon.content[newLang].slug}`);
+        return;
+      }
+    }
+    
+    // For other pages, just replace the language code
     if (pathParts.length > 0 && ['en', 'de', 'es', 'pt', 'fr', 'it'].includes(pathParts[0])) {
       pathParts[0] = newLang;
     } else {
