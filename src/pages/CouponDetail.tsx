@@ -90,6 +90,7 @@ export default function CouponDetail() {
         description={content.description}
         keywords={`${coupon.code}, ${content.title}, Fast Buds`}
         canonical={`https://fastbuds-coupon.com/${content.slug}`}
+        image={coupon.image ? `https://fastbuds-coupon.com${coupon.image}` : undefined}
         hreflangUrls={hreflangUrls}
       />
       
@@ -158,6 +159,9 @@ export default function CouponDetail() {
                     alt={content.title}
                     className="w-full h-auto object-cover"
                     loading="eager"
+                    decoding="async"
+                    width="1200"
+                    height="630"
                   />
                 </div>
               )}

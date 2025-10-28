@@ -69,6 +69,7 @@ export default function Home() {
         description={t.meta.homeDescription}
         keywords={t.meta.homeKeywords}
         canonical={`https://fastbuds-coupon.com/${language}`}
+        image="https://fastbuds-coupon.com/images/coupons/fastbuds.png"
       />
       
       <StructuredData
@@ -157,8 +158,8 @@ export default function Home() {
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredAndSortedCoupons.map((coupon) => (
-                <CouponCard key={coupon.id} coupon={coupon} />
+              {filteredAndSortedCoupons.map((coupon, index) => (
+                <CouponCard key={coupon.id} coupon={coupon} priority={index < 3} />
               ))}
             </div>
           )}

@@ -11,9 +11,10 @@ import { getUsageCount, incrementUsageCount } from '@/lib/couponStorage';
 
 interface CouponCardProps {
   coupon: Coupon;
+  priority?: boolean;
 }
 
-export const CouponCard = ({ coupon }: CouponCardProps) => {
+export const CouponCard = ({ coupon, priority = false }: CouponCardProps) => {
   const { language, t } = useLanguage();
   const [copied, setCopied] = useState(false);
   const [displayCount, setDisplayCount] = useState<number>(coupon.usageCount);
