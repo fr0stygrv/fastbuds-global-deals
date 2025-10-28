@@ -2,6 +2,7 @@ import { useLanguage } from '@/i18n/LanguageContext';
 import { SEOHead } from '@/components/SEOHead';
 import { StructuredData } from '@/components/StructuredData';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { BackToTop } from '@/components/BackToTop';
 import {
   Accordion,
   AccordionContent,
@@ -18,6 +19,7 @@ export default function FAQ() {
         title={t.meta.faqTitle}
         description={t.meta.faqDescription}
         canonical={`https://fastbuds-coupon.com/${language}/faq`}
+        image="https://fastbuds-coupon.com/images/coupons/fastbuds.png"
       />
       
       <StructuredData
@@ -95,6 +97,7 @@ export default function FAQ() {
           </div>
         </section>
       </div>
+      <BackToTop />
     </>
   );
 }

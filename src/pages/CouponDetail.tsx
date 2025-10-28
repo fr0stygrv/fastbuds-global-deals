@@ -7,6 +7,7 @@ import { SEOHead } from '@/components/SEOHead';
 import { StructuredData } from '@/components/StructuredData';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { RelatedCoupons } from '@/components/RelatedCoupons';
+import { BackToTop } from '@/components/BackToTop';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
@@ -350,6 +351,7 @@ export default function CouponDetail() {
         {/* Related Coupons */}
         <RelatedCoupons currentCouponId={coupon.id} />
       </div>
+      <BackToTop />
     </>
   );
 }

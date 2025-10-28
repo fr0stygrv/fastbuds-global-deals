@@ -2,6 +2,7 @@ import { useLanguage } from '@/i18n/LanguageContext';
 import { SEOHead } from '@/components/SEOHead';
 import { StructuredData } from '@/components/StructuredData';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { BackToTop } from '@/components/BackToTop';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -17,6 +18,7 @@ const News = () => {
         title={t.meta.newsTitle}
         description={t.meta.newsDescription}
         canonical={`https://fastbuds-coupon.com/${language}/news`}
+        image="https://fastbuds-coupon.com/images/coupons/fastbuds.png"
       />
       
       <StructuredData
@@ -48,6 +50,9 @@ const News = () => {
                     alt={item.title}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                     loading="lazy"
+                    decoding="async"
+                    width="800"
+                    height="450"
                   />
                 </div>
                 <CardHeader>
@@ -80,6 +85,7 @@ const News = () => {
           </div>
         </div>
       </main>
+      <BackToTop />
     </>
   );
 };

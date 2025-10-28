@@ -2,6 +2,7 @@ import { useLanguage } from '@/i18n/LanguageContext';
 import { SEOHead } from '@/components/SEOHead';
 import { StructuredData } from '@/components/StructuredData';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { BackToTop } from '@/components/BackToTop';
 import { Card, CardContent } from '@/components/ui/card';
 import { Sprout, Target, Heart } from 'lucide-react';
 
@@ -14,6 +15,7 @@ export default function About() {
         title={t.meta.aboutTitle}
         description={t.meta.aboutDescription}
         canonical={`https://fastbuds-coupon.com/${language}/about`}
+        image="https://fastbuds-coupon.com/images/coupons/fastbuds.png"
       />
       
       <StructuredData
@@ -50,7 +52,7 @@ export default function About() {
             </Card>
 
             <div className="grid md:grid-cols-3 gap-6">
-              <Card className="shadow-card hover:shadow-card-hover transition-all">
+              <Card className="shadow-card hover:shadow-card-hover hover:scale-105 transition-all">
                 <CardContent className="p-6 text-center space-y-4">
                   <div className="mx-auto w-16 h-16 rounded-full bg-gradient-primary flex items-center justify-center">
                     <Sprout className="h-8 w-8 text-primary-foreground" />
@@ -62,7 +64,7 @@ export default function About() {
                 </CardContent>
               </Card>
 
-              <Card className="shadow-card hover:shadow-card-hover transition-all">
+              <Card className="shadow-card hover:shadow-card-hover hover:scale-105 transition-all">
                 <CardContent className="p-6 text-center space-y-4">
                   <div className="mx-auto w-16 h-16 rounded-full bg-gradient-primary flex items-center justify-center">
                     <Target className="h-8 w-8 text-primary-foreground" />
@@ -74,7 +76,7 @@ export default function About() {
                 </CardContent>
               </Card>
 
-              <Card className="shadow-card hover:shadow-card-hover transition-all">
+              <Card className="shadow-card hover:shadow-card-hover hover:scale-105 transition-all">
                 <CardContent className="p-6 text-center space-y-4">
                   <div className="mx-auto w-16 h-16 rounded-full bg-gradient-primary flex items-center justify-center">
                     <Heart className="h-8 w-8 text-primary-foreground" />
@@ -89,6 +91,7 @@ export default function About() {
           </div>
         </section>
       </div>
+      <BackToTop />
     </>
   );
 }

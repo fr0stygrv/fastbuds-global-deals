@@ -2,6 +2,7 @@ import { useLanguage } from '@/i18n/LanguageContext';
 import { SEOHead } from '@/components/SEOHead';
 import { StructuredData } from '@/components/StructuredData';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { BackToTop } from '@/components/BackToTop';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Instagram, Twitter, Youtube } from 'lucide-react';
@@ -67,6 +68,7 @@ export default function Contact() {
         description={t.meta.contactDescription}
         keywords="fast buds social media, fast buds instagram, fast buds twitter, fast buds tiktok, fast buds pinterest, fast buds contact"
         canonical={`https://fastbuds-coupon.com/${language}/contact`}
+        image="https://fastbuds-coupon.com/images/coupons/fastbuds.png"
       />
       
       <StructuredData
@@ -131,6 +133,7 @@ export default function Contact() {
           </div>
         </section>
       </div>
+      <BackToTop />
     </>
   );
 }
