@@ -13,6 +13,7 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Copy, ExternalLink, CheckCircle2, CheckCircle, Users, Sparkles } from 'lucide-react';
+import { cn } from '@/lib/utils';
 import { toast } from 'sonner';
 import { getUsageCount, incrementUsageCount } from '@/lib/couponStorage';
 
@@ -154,11 +155,11 @@ export default function CouponDetail() {
             <div className="max-w-4xl mx-auto">
               {/* Coupon Image */}
               {coupon.image && (
-                <div className="mb-8">
+                <div className="mb-8 relative aspect-[1200/630] overflow-hidden rounded-lg">
                   <img 
                     src={coupon.image} 
                     alt={content.title}
-                    className="w-full h-auto object-cover"
+                    className="absolute inset-0 w-full h-full object-cover"
                     loading="eager"
                     decoding="async"
                     width="1200"
@@ -208,7 +209,10 @@ export default function CouponDetail() {
                         onClick={handleCopy}
                         variant="outline"
                         size="lg"
-                        className="gap-2 w-full md:w-auto"
+                        className={cn(
+                          "gap-2 w-full md:w-auto transition-all duration-200",
+                          copied && "bg-green-500/10 border-green-500 text-green-600 dark:text-green-400 scale-105"
+                        )}
                       >
                         {copied ? (
                           <>

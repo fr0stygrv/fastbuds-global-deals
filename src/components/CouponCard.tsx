@@ -6,6 +6,7 @@ import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card'
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Copy, ExternalLink, Users, CheckCircle } from 'lucide-react';
+import { cn } from '@/lib/utils';
 import { toast } from 'sonner';
 import { getUsageCount, incrementUsageCount } from '@/lib/couponStorage';
 
@@ -47,7 +48,7 @@ export const CouponCard = ({ coupon, priority = false }: CouponCardProps) => {
   const slugPart = content.slug.split('/').pop();
 
   return (
-    <Card className="group hover:shadow-card-hover transition-all duration-300 shadow-card">
+    <Card className="group hover:shadow-card-hover hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300 shadow-card">
       <CardHeader>
         <div className="flex items-start justify-between gap-2">
           <Link to={`/${language}/${couponPath}/${slugPart}`} className="flex-1">
@@ -55,7 +56,7 @@ export const CouponCard = ({ coupon, priority = false }: CouponCardProps) => {
               {content.title}
             </h3>
           </Link>
-          <Badge className="bg-gradient-primary text-primary-foreground shrink-0 text-lg font-bold">
+          <Badge className="bg-gradient-primary text-primary-foreground shrink-0 text-lg font-bold animate-pulse">
             {coupon.discount}
           </Badge>
         </div>
@@ -92,10 +93,22 @@ export const CouponCard = ({ coupon, priority = false }: CouponCardProps) => {
               size="sm"
               variant="outline"
               onClick={handleCopy}
-              className="gap-2"
+              className={cn(
+                "gap-2 transition-all duration-200",
+                copied && "bg-green-500/10 border-green-500 text-green-600 dark:text-green-400 scale-105"
+              )}
             >
-              <Copy className="h-4 w-4" />
-              {copied ? '✓' : t.coupon.copyCode}
+              {copied ? (
+                <>
+                  <CheckCircle className="h-4 w-4" />
+                  Copied!
+                </>
+              ) : (
+                <>
+                  <Copy className="h-4 w-4" />
+                  {t.coupon.copyCode}
+                </>
+              )}
             </Button>
           </div>
         </div>
