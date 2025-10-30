@@ -62,6 +62,22 @@ export const CouponCard = ({ coupon, priority = false }: CouponCardProps) => {
         </div>
       </CardHeader>
 
+      {coupon.image && (
+        <div className="overflow-hidden">
+          <Link to={`/${language}/${couponPath}/${slugPart}`}>
+            <img 
+              src={coupon.image} 
+              alt={content.title}
+              className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              loading={priority ? "eager" : "lazy"}
+              decoding="async"
+              width="400"
+              height="200"
+            />
+          </Link>
+        </div>
+      )}
+
       <CardContent>
         <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
           {content.description}

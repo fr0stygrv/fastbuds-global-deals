@@ -155,11 +155,11 @@ export default function CouponDetail() {
             <div className="max-w-4xl mx-auto">
               {/* Coupon Image */}
               {coupon.image && (
-                <div className="mb-8 relative aspect-[1200/630] overflow-hidden rounded-lg">
+                <div className="mb-8 overflow-hidden rounded-lg">
                   <img 
                     src={coupon.image} 
                     alt={content.title}
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className="w-full h-auto"
                     loading="eager"
                     decoding="async"
                     width="1200"
