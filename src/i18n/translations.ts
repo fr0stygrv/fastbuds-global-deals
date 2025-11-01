@@ -94,6 +94,12 @@ export interface Translations {
     activeCoupons: string;
     expiredCoupons: string;
   };
+  footer: {
+    quickLinks: string;
+    other: string;
+    rights: string;
+    disclaimer: string;
+  };
 }
 
 export const translations: Record<Language, Translations> = {
@@ -191,6 +197,12 @@ export const translations: Record<Language, Translations> = {
       activeCoupons: 'Active Coupons',
       expiredCoupons: 'Expired Coupons',
     },
+    footer: {
+      quickLinks: 'Quick Links',
+      other: 'Other',
+      rights: 'All rights reserved',
+      disclaimer: 'Coupon codes and offers are subject to change without notice.',
+    },
   },
   de: {
     nav: {
@@ -285,6 +297,12 @@ export const translations: Record<Language, Translations> = {
       mainPages: 'Hauptseiten',
       activeCoupons: 'Aktive Gutscheine',
       expiredCoupons: 'Abgelaufene Gutscheine',
+    },
+    footer: {
+      quickLinks: 'Schnelllinks',
+      other: 'Sonstiges',
+      rights: 'Alle Rechte vorbehalten',
+      disclaimer: 'Gutscheincodes und Angebote können ohne Vorankündigung geändert werden.',
     },
   },
   es: {
@@ -381,6 +399,12 @@ export const translations: Record<Language, Translations> = {
       activeCoupons: 'Cupones Activos',
       expiredCoupons: 'Cupones Expirados',
     },
+    footer: {
+      quickLinks: 'Enlaces Rápidos',
+      other: 'Otros',
+      rights: 'Todos los derechos reservados',
+      disclaimer: 'Los cupones y ofertas están sujetos a cambios sin previo aviso.',
+    },
   },
   pt: {
     nav: {
@@ -475,6 +499,12 @@ export const translations: Record<Language, Translations> = {
       mainPages: 'Páginas Principais',
       activeCoupons: 'Cupons Ativos',
       expiredCoupons: 'Cupons Expirados',
+    },
+    footer: {
+      quickLinks: 'Links Rápidos',
+      other: 'Outros',
+      rights: 'Todos os direitos reservados',
+      disclaimer: 'Cupons e ofertas estão sujeitos a alterações sem aviso prévio.',
     },
   },
   fr: {
@@ -571,6 +601,12 @@ export const translations: Record<Language, Translations> = {
       activeCoupons: 'Coupons Actifs',
       expiredCoupons: 'Coupons Expirés',
     },
+    footer: {
+      quickLinks: 'Liens Rapides',
+      other: 'Autre',
+      rights: 'Tous droits réservés',
+      disclaimer: 'Les coupons et offres sont sujets à modification sans préavis.',
+    },
   },
   it: {
     nav: {
@@ -665,6 +701,12 @@ export const translations: Record<Language, Translations> = {
       mainPages: 'Pagine Principali',
       activeCoupons: 'Coupon Attivi',
       expiredCoupons: 'Coupon Scaduti',
+    },
+    footer: {
+      quickLinks: 'Link Veloci',
+      other: 'Altro',
+      rights: 'Tutti i diritti riservati',
+      disclaimer: 'I coupon e le offerte sono soggetti a modifiche senza preavviso.',
     },
   },
 };
