@@ -26,6 +26,7 @@ export default function Sitemap() {
         title={`${t.nav.sitemap || 'Sitemap'} - Fast Buds Coupons`}
         description={`Complete sitemap of Fast Buds Coupons website. Find all pages and ${coupons.length} coupon codes in ${language.toUpperCase()}.`}
         canonical={`https://fastbuds-coupon.com/${language}/sitemap`}
+        robots="noindex, follow"
       />
 
       <div className="min-h-screen">
