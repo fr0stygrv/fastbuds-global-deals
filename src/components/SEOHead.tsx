@@ -91,10 +91,26 @@ export const SEOHead = ({ title, description, keywords, canonical, image, hrefla
       });
     }
 
+    // x-default should always point to the English version
     const xDefaultLink = document.createElement('link');
     xDefaultLink.rel = 'alternate';
     xDefaultLink.hreflang = 'x-default';
-    xDefaultLink.href = canonical || window.location.href;
+    
+    if (canonical) {
+      // Replace current language with 'en' in canonical URL
+      const enUrl = canonical.replace(/\/(en|de|es|pt|fr|it)\//, '/en/').replace(/\/(en|de|es|pt|fr|it)$/, '/en');
+      xDefaultLink.href = enUrl;
+    } else {
+      // Fallback: construct EN URL from current location
+      const url = new URL(window.location.href);
+      const pathParts = url.pathname.split('/').filter(Boolean);
+      if (pathParts.length > 0 && ['en', 'de', 'es', 'pt', 'fr', 'it'].includes(pathParts[0])) {
+        pathParts[0] = 'en';
+      }
+      url.pathname = '/' + pathParts.join('/');
+      xDefaultLink.href = url.toString();
+    }
+    
     document.head.appendChild(xDefaultLink);
 
   }, [title, description, keywords, canonical, image, language, hreflangUrls]);
