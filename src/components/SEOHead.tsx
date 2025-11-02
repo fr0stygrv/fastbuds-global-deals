@@ -9,9 +9,10 @@ interface SEOHeadProps {
   canonical?: string;
   image?: string;
   hreflangUrls?: Record<string, string>;
+  robots?: string;
 }
 
-export const SEOHead = ({ title, description, keywords, canonical, image, hreflangUrls }: SEOHeadProps) => {
+export const SEOHead = ({ title, description, keywords, canonical, image, hreflangUrls, robots }: SEOHeadProps) => {
   const { language } = useLanguage();
 
   useEffect(() => {
@@ -32,6 +33,7 @@ export const SEOHead = ({ title, description, keywords, canonical, image, hrefla
 
     updateMeta('description', description);
     if (keywords) updateMeta('keywords', keywords);
+    if (robots) updateMeta('robots', robots);
     
     // Open Graph
     updateMeta('og:title', title, true);
@@ -113,7 +115,7 @@ export const SEOHead = ({ title, description, keywords, canonical, image, hrefla
     
     document.head.appendChild(xDefaultLink);
 
-  }, [title, description, keywords, canonical, image, language, hreflangUrls]);
+  }, [title, description, keywords, canonical, image, language, hreflangUrls, robots]);
 
   return null;
 };
