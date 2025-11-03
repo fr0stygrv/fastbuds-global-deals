@@ -101,8 +101,8 @@ export default function CouponDetail() {
         data={{
           name: content.title,
           description: content.description,
-          priceDiscount: coupon.discount,
           promoCode: coupon.code,
+          validFrom: "2024-01-01",
           validThrough: coupon.neverExpires ? '2040-12-31' : coupon.expiryDate,
           url: `https://fastbuds-coupon.com/${content.slug}`
         }}

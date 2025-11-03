@@ -3,8 +3,8 @@ import { useEffect } from 'react';
 interface OfferData {
   name: string;
   description: string;
-  priceDiscount: string;
   promoCode: string;
+  validFrom?: string;
   validThrough?: string;
   url: string;
 }
@@ -54,21 +54,19 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
         "@type": "Offer",
         "name": data.name,
         "description": data.description,
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "price": data.priceDiscount,
-          "priceCurrency": "USD"
-        },
+        "url": data.url,
+        "category": "Discount Coupon",
+        "availability": "https://schema.org/InStock",
+        "validFrom": data.validFrom || "2024-01-01",
         "priceValidUntil": data.validThrough || "2040-12-31",
         "eligibleRegion": {
           "@type": "Place",
           "name": "Worldwide"
         },
-        "url": data.url,
-        "promoCode": data.promoCode,
         "seller": {
           "@type": "Organization",
-          "name": "Fast Buds"
+          "name": "Fast Buds",
+          "url": "https://2fast4buds.com/"
         }
       };
     } else if (type === 'organization' && 'name' in data && 'url' in data && !('promoCode' in data)) {
