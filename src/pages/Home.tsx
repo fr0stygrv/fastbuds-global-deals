@@ -70,6 +70,7 @@ export default function Home() {
         keywords={t.meta.homeKeywords}
         canonical={`https://fastbuds-coupon.com/${language}`}
         image="https://fastbuds-coupon.com/images/coupons/fastbuds.png"
+        robots="index, follow"
       />
       
       <StructuredData

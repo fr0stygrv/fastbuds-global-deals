@@ -20,6 +20,7 @@ export default function FAQ() {
         description={t.meta.faqDescription}
         canonical={`https://fastbuds-coupon.com/${language}/faq`}
         image="https://fastbuds-coupon.com/images/coupons/fastbuds.png"
+        robots="index, follow"
       />
       
       <StructuredData

@@ -16,6 +16,7 @@ export default function About() {
         description={t.meta.aboutDescription}
         canonical={`https://fastbuds-coupon.com/${language}/about`}
         image="https://fastbuds-coupon.com/images/coupons/fastbuds.png"
+        robots="index, follow"
       />
       
       <StructuredData

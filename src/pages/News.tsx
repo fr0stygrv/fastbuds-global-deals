@@ -14,11 +14,12 @@ const News = () => {
 
   return (
     <>
-      <SEOHead 
+      <SEOHead
         title={t.meta.newsTitle}
         description={t.meta.newsDescription}
         canonical={`https://fastbuds-coupon.com/${language}/news`}
         image="https://fastbuds-coupon.com/images/coupons/fastbuds.png"
+        robots="index, follow"
       />
       
       <StructuredData

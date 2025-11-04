@@ -94,6 +94,7 @@ export default function CouponDetail() {
         canonical={`https://fastbuds-coupon.com/${content.slug}`}
         image={coupon.image ? `https://fastbuds-coupon.com${coupon.image}` : undefined}
         hreflangUrls={hreflangUrls}
+        robots="index, follow"
       />
       
       <StructuredData

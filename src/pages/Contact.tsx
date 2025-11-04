@@ -69,6 +69,7 @@ export default function Contact() {
         keywords="fast buds social media, fast buds instagram, fast buds twitter, fast buds tiktok, fast buds pinterest, fast buds contact"
         canonical={`https://fastbuds-coupon.com/${language}/contact`}
         image="https://fastbuds-coupon.com/images/coupons/fastbuds.png"
+        robots="index, follow"
       />
       
       <StructuredData
