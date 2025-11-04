@@ -1,4 +1,8 @@
 {
+  "redirects": [
+    { "source": "/", "destination": "/en", "permanent": true },
+    { "source": "/:lang/", "destination": "/:lang", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/" }
   ]

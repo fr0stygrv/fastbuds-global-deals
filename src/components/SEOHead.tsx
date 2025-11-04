@@ -34,6 +34,7 @@ export const SEOHead = ({ title, description, keywords, canonical, image, hrefla
     updateMeta('description', description);
     if (keywords) updateMeta('keywords', keywords);
     if (robots) updateMeta('robots', robots);
+    updateMeta('googlebot', 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1');
     
     // Open Graph
     updateMeta('og:title', title, true);

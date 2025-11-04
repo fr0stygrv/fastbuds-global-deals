@@ -15,11 +15,19 @@ export default function FAQ() {
 
   return (
     <>
-      <SEOHead
+      <SEOHead 
         title={t.meta.faqTitle}
         description={t.meta.faqDescription}
         canonical={`https://fastbuds-coupon.com/${language}/faq`}
         image="https://fastbuds-coupon.com/images/coupons/fastbuds.png"
+        hreflangUrls={{
+          en: "https://fastbuds-coupon.com/en/faq",
+          de: "https://fastbuds-coupon.com/de/faq",
+          es: "https://fastbuds-coupon.com/es/faq",
+          pt: "https://fastbuds-coupon.com/pt/faq",
+          fr: "https://fastbuds-coupon.com/fr/faq",
+          it: "https://fastbuds-coupon.com/it/faq"
+        }}
         robots="index, follow"
       />
       

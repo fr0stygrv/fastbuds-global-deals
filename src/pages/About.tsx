@@ -11,11 +11,19 @@ export default function About() {
 
   return (
     <>
-      <SEOHead
+      <SEOHead 
         title={t.meta.aboutTitle}
         description={t.meta.aboutDescription}
         canonical={`https://fastbuds-coupon.com/${language}/about`}
         image="https://fastbuds-coupon.com/images/coupons/fastbuds.png"
+        hreflangUrls={{
+          en: "https://fastbuds-coupon.com/en/about",
+          de: "https://fastbuds-coupon.com/de/about",
+          es: "https://fastbuds-coupon.com/es/about",
+          pt: "https://fastbuds-coupon.com/pt/about",
+          fr: "https://fastbuds-coupon.com/fr/about",
+          it: "https://fastbuds-coupon.com/it/about"
+        }}
         robots="index, follow"
       />
       

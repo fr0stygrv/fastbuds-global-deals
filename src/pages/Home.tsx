@@ -70,6 +70,14 @@ export default function Home() {
         keywords={t.meta.homeKeywords}
         canonical={`https://fastbuds-coupon.com/${language}`}
         image="https://fastbuds-coupon.com/images/coupons/fastbuds.png"
+        hreflangUrls={{
+          en: "https://fastbuds-coupon.com/en",
+          de: "https://fastbuds-coupon.com/de",
+          es: "https://fastbuds-coupon.com/es",
+          pt: "https://fastbuds-coupon.com/pt",
+          fr: "https://fastbuds-coupon.com/fr",
+          it: "https://fastbuds-coupon.com/it"
+        }}
         robots="index, follow"
       />
       

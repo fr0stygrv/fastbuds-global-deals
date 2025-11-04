@@ -19,6 +19,14 @@ const News = () => {
         description={t.meta.newsDescription}
         canonical={`https://fastbuds-coupon.com/${language}/news`}
         image="https://fastbuds-coupon.com/images/coupons/fastbuds.png"
+        hreflangUrls={{
+          en: "https://fastbuds-coupon.com/en/news",
+          de: "https://fastbuds-coupon.com/de/news",
+          es: "https://fastbuds-coupon.com/es/news",
+          pt: "https://fastbuds-coupon.com/pt/news",
+          fr: "https://fastbuds-coupon.com/fr/news",
+          it: "https://fastbuds-coupon.com/it/news"
+        }}
         robots="index, follow"
       />
       

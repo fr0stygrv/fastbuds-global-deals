@@ -63,12 +63,20 @@ export default function Contact() {
 
   return (
     <>
-      <SEOHead
+      <SEOHead 
         title={t.meta.contactTitle}
         description={t.meta.contactDescription}
         keywords="fast buds social media, fast buds instagram, fast buds twitter, fast buds tiktok, fast buds pinterest, fast buds contact"
         canonical={`https://fastbuds-coupon.com/${language}/contact`}
         image="https://fastbuds-coupon.com/images/coupons/fastbuds.png"
+        hreflangUrls={{
+          en: "https://fastbuds-coupon.com/en/contact",
+          de: "https://fastbuds-coupon.com/de/contact",
+          es: "https://fastbuds-coupon.com/es/contact",
+          pt: "https://fastbuds-coupon.com/pt/contact",
+          fr: "https://fastbuds-coupon.com/fr/contact",
+          it: "https://fastbuds-coupon.com/it/contact"
+        }}
         robots="index, follow"
       />
       
