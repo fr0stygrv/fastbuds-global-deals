@@ -32,9 +32,17 @@ interface FAQItem {
   answer: string;
 }
 
+interface ItemListItem {
+  name: string;
+  url: string;
+  image?: string;
+  description: string;
+  price?: string;
+}
+
 interface StructuredDataProps {
-  type: 'offer' | 'organization' | 'breadcrumb' | 'website' | 'faqpage';
-  data: OfferData | OrganizationData | BreadcrumbItem[] | WebSiteData | FAQItem[];
+  type: 'offer' | 'organization' | 'breadcrumb' | 'website' | 'faqpage' | 'itemlist';
+  data: OfferData | OrganizationData | BreadcrumbItem[] | WebSiteData | FAQItem[] | ItemListItem[];
 }
 
 export const StructuredData = ({ type, data }: StructuredDataProps) => {
@@ -112,6 +120,27 @@ export const StructuredData = ({ type, data }: StructuredDataProps) => {
           "acceptedAnswer": {
             "@type": "Answer",
             "text": item.answer
+          }
+        }))
+      };
+    } else if (type === 'itemlist' && Array.isArray(data)) {
+      structuredData = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": data.map((item: any, index: number) => ({
+          "@type": "ListItem",
+          "position": index + 1,
+          "item": {
+            "@type": "Offer",
+            "name": item.name,
+            "url": item.url,
+            "image": item.image,
+            "description": item.description,
+            "availability": "https://schema.org/InStock",
+            "seller": {
+              "@type": "Organization",
+              "name": "Fast Buds"
+            }
           }
         }))
       };

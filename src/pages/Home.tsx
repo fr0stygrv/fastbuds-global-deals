@@ -105,6 +105,16 @@ export default function Home() {
         }}
       />
 
+      <StructuredData
+        type="itemlist"
+        data={filteredAndSortedCoupons.map(coupon => ({
+          name: coupon.content[language].title,
+          url: `https://fastbuds-coupon.com/${coupon.content[language].slug}`,
+          image: coupon.image ? `https://fastbuds-coupon.com${coupon.image}` : undefined,
+          description: coupon.content[language].description
+        }))}
+      />
+
       <div className="min-h-screen">
         {/* Hero Section */}
         <section className="gradient-hero border-b border-border">

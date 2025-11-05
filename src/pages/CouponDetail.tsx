@@ -8,6 +8,7 @@ import { StructuredData } from '@/components/StructuredData';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { RelatedCoupons } from '@/components/RelatedCoupons';
 import { BackToTop } from '@/components/BackToTop';
+import { ShareButtons } from '@/components/ShareButtons';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
@@ -189,9 +190,16 @@ export default function CouponDetail() {
                 {content.title}
               </h1>
 
-              <p className="text-lg text-muted-foreground mb-8">
+              <p className="text-lg text-muted-foreground mb-6">
                 {content.description}
               </p>
+
+              <div className="mb-8">
+                <ShareButtons 
+                  title={content.title}
+                  url={`https://fastbuds-coupon.com/${content.slug}`}
+                />
+              </div>
 
               {/* Code Box */}
               <Card className="mb-8 shadow-card-hover">
