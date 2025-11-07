@@ -4,6 +4,17 @@
     { "source": "/:lang/", "destination": "/:lang", "permanent": true }
   ],
   "rewrites": [
+    {
+      "source": "/:lang(en|de|es|pt|fr|it)/:type(coupon|cupon|cupom)/:slug",
+      "destination": "/api/og?slug=:lang/:type/:slug",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": ".*(facebookexternalhit|Twitterbot|LinkedInBot|WhatsApp|TelegramBot|Slackbot|Pinterest|Googlebot).*"
+        }
+      ]
+    },
     { "source": "/(.*)", "destination": "/" }
   ]
 }
