@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 
-// Coupon data - must match src/data/coupons.ts structure
+// Coupon data - synced with src/data/coupons.ts
 const coupons = [
   {
     id: '1',
@@ -8,152 +8,138 @@ const coupons = [
     discount: '20%',
     image: '/images/coupons/savemax.png',
     content: {
-      en: { title: 'Maximum Savings - 20% Off Everything!', description: 'Unlock the biggest discount available! Save 20% on all Fast Buds premium autoflowering seeds.', slug: 'en/coupon/maximum-savings-20-off-everything' },
-      de: { title: 'Maximale Ersparnis - 20% auf Alles!', description: 'Sichern Sie sich den größten verfügbaren Rabatt! Sparen Sie 20% auf alle Fast Buds Premium-Autoflowering-Samen.', slug: 'de/coupon/maximale-ersparnis-20-auf-alles' },
-      es: { title: 'Ahorro Máximo - ¡20% en Todo!', description: '¡Desbloquea el descuento más grande disponible! Ahorra 20% en todas las semillas autoflorecientes premium de Fast Buds.', slug: 'es/cupon/ahorro-maximo-20-en-todo' },
-      pt: { title: 'Economia Máxima - 20% em Tudo!', description: 'Desbloqueie o maior desconto disponível! Economize 20% em todas as sementes autoflorescentes premium da Fast Buds.', slug: 'pt/cupom/economia-maxima-20-em-tudo' },
-      fr: { title: 'Économies Maximales - 20% sur Tout!', description: 'Débloquez la plus grosse réduction disponible! Économisez 20% sur toutes les graines autoflorissantes premium Fast Buds.', slug: 'fr/coupon/economies-maximales-20-sur-tout' },
-      it: { title: 'Risparmi Massimi - 20% su Tutto!', description: 'Sblocca lo sconto più grande disponibile! Risparmia il 20% su tutti i semi autofiorenti premium di Fast Buds.', slug: 'it/coupon/risparmi-massimi-20-su-tutto' }
+      en: { title: 'Maximum Savings - 20% Off Everything!', description: 'Unlock the biggest discount available! Save 20% on all Fast Buds premium autoflowering seeds. Your wallet will thank you.', slug: 'en/coupon/maximum-savings-20-off-everything' },
+      de: { title: 'Maximale Ersparnis - 20% auf Alles!', description: 'Sichern Sie sich den größten verfügbaren Rabatt! Sparen Sie 20% auf alle Fast Buds Premium-Autoflowering-Samen. Ihr Geldbeutel wird es Ihnen danken.', slug: 'de/coupon/maximale-ersparnis-20-auf-alles' },
+      es: { title: 'Ahorro Máximo - ¡20% en Todo!', description: '¡Desbloquea el descuento más grande disponible! Ahorra 20% en todas las semillas autoflorecientes premium de Fast Buds. Tu billetera te lo agradecerá.', slug: 'es/cupon/ahorro-maximo-20-en-todo' },
+      pt: { title: 'Economia Máxima - 20% em Tudo!', description: 'Desbloqueie o maior desconto disponível! Economize 20% em todas as sementes autoflorescentes premium da Fast Buds. Sua carteira agradecerá.', slug: 'pt/cupom/economia-maxima-20-em-tudo' },
+      fr: { title: 'Économies Maximales - 20% sur Tout!', description: 'Débloquez la plus grosse réduction disponible! Économisez 20% sur toutes les graines autoflorissantes premium Fast Buds. Votre portefeuille vous remerciera.', slug: 'fr/coupon/economies-maximales-20-sur-tout' },
+      it: { title: 'Risparmio Massimo - 20% su Tutto!', description: 'Sblocca lo sconto più grande disponibile! Risparmia il 20% su tutti i semi autofiorenti premium Fast Buds. Il tuo portafoglio ti ringrazierà.', slug: 'it/coupon/risparmio-massimo-20-su-tutto' }
     }
   },
   {
     id: '2',
-    code: 'GREEN15',
+    code: 'SAVE4U',
     discount: '15%',
-    image: '/images/coupons/green.png',
+    image: '/images/coupons/save4u.png',
     content: {
-      en: { title: 'Green Thumb Special - 15% Off Seeds', description: 'Perfect for passionate growers! Get 15% off all Fast Buds autoflowering seeds and cultivate your green paradise.', slug: 'en/coupon/green-thumb-15-off-seeds' },
-      de: { title: 'Grüner Daumen Spezial - 15% Rabatt', description: 'Perfekt für leidenschaftliche Züchter! Erhalten Sie 15% Rabatt auf alle Fast Buds Autoflowering-Samen.', slug: 'de/coupon/gruener-daumen-15-rabatt' },
-      es: { title: 'Especial Pulgar Verde - 15% Descuento', description: '¡Perfecto para cultivadores apasionados! Obtén 15% de descuento en todas las semillas autoflorecientes de Fast Buds.', slug: 'es/cupon/pulgar-verde-15-descuento' },
-      pt: { title: 'Especial Polegar Verde - 15% Desconto', description: 'Perfeito para cultivadores apaixonados! Ganhe 15% de desconto em todas as sementes autoflorescentes da Fast Buds.', slug: 'pt/cupom/polegar-verde-15-desconto' },
-      fr: { title: 'Spécial Main Verte - 15% Réduction', description: 'Parfait pour les cultivateurs passionnés! Obtenez 15% de réduction sur toutes les graines autofloraison Fast Buds.', slug: 'fr/coupon/main-verte-15-reduction' },
-      it: { title: 'Speciale Pollice Verde - 15% Sconto', description: 'Perfetto per coltivatori appassionati! Ottieni il 15% di sconto su tutti i semi autofiorenti Fast Buds.', slug: 'it/coupon/pollice-verde-15-sconto' }
+      en: { title: 'Personal Discount Just For You - 15% Off', description: 'This exclusive deal was made with you in mind! Enjoy 15% off on your favorite Fast Buds strains. Because you deserve it.', slug: 'en/coupon/personal-discount-just-for-you-15-off' },
+      de: { title: 'Persönlicher Rabatt Nur für Sie - 15% Rabatt', description: 'Dieses exklusive Angebot wurde speziell für Sie gemacht! Genießen Sie 15% Rabatt auf Ihre Lieblings-Fast Buds Sorten. Weil Sie es verdienen.', slug: 'de/coupon/personlicher-rabatt-nur-fur-sie-15-rabatt' },
+      es: { title: 'Descuento Personal Solo Para Ti - 15% de Descuento', description: '¡Esta oferta exclusiva fue hecha pensando en ti! Disfruta del 15% de descuento en tus variedades favoritas de Fast Buds. Porque te lo mereces.', slug: 'es/cupon/descuento-personal-solo-para-ti-15-descuento' },
+      pt: { title: 'Desconto Pessoal Só Para Você - 15% de Desconto', description: 'Esta oferta exclusiva foi feita pensando em você! Aproveite 15% de desconto nas suas variedades favoritas da Fast Buds. Porque você merece.', slug: 'pt/cupom/desconto-pessoal-so-para-voce-15-desconto' },
+      fr: { title: 'Réduction Personnelle Rien que Pour Vous - 15% de Réduction', description: 'Cette offre exclusive a été créée spécialement pour vous! Profitez de 15% de réduction sur vos variétés Fast Buds préférées. Parce que vous le méritez.', slug: 'fr/coupon/reduction-personnelle-rien-que-pour-vous-15-reduction' },
+      it: { title: 'Sconto Personale Solo Per Te - 15% di Sconto', description: 'Questa offerta esclusiva è stata creata pensando a te! Goditi il 15% di sconto sulle tue varietà Fast Buds preferite. Perché te lo meriti.', slug: 'it/coupon/sconto-personale-solo-per-te-15-sconto' }
     }
   },
   {
     id: '3',
-    code: 'GROW420',
-    discount: '10%',
-    image: '/images/coupons/grow420.png',
+    code: 'STONER',
+    discount: '15%',
+    image: '/images/coupons/stoner.png',
     content: {
-      en: { title: 'Grow Big Discount - 10% Off All Orders', description: 'Start your growing journey right! Save 10% on all Fast Buds premium autoflowering seeds. Perfect for beginners and pros.', slug: 'en/coupon/grow-big-10-off-all-orders' },
-      de: { title: 'Groß Wachsen Rabatt - 10% auf Alle Bestellungen', description: 'Beginnen Sie Ihre Züchterreise richtig! Sparen Sie 10% auf alle Fast Buds Premium-Autoflowering-Samen.', slug: 'de/coupon/gross-wachsen-10-rabatt' },
-      es: { title: 'Descuento Crecer Grande - 10% en Todos los Pedidos', description: '¡Comienza tu viaje de cultivo correctamente! Ahorra 10% en todas las semillas autoflorecientes premium de Fast Buds.', slug: 'es/cupon/crecer-grande-10-descuento' },
-      pt: { title: 'Desconto Crescer Grande - 10% em Todos os Pedidos', description: 'Comece sua jornada de cultivo da maneira certa! Economize 10% em todas as sementes autoflorescentes premium da Fast Buds.', slug: 'pt/cupom/crescer-grande-10-desconto' },
-      fr: { title: 'Réduction Croissance - 10% sur Toutes Commandes', description: 'Commencez votre parcours de culture correctement! Économisez 10% sur toutes les graines autofloraison premium Fast Buds.', slug: 'fr/coupon/croissance-10-reduction' },
-      it: { title: 'Sconto Crescita Grande - 10% su Tutti gli Ordini', description: 'Inizia il tuo viaggio di coltivazione nel modo giusto! Risparmia il 10% su tutti i semi autofiorenti premium Fast Buds.', slug: 'it/coupon/crescita-grande-10-sconto' }
+      en: { title: 'Stoner Special - 15% Off Premium Strains', description: 'For true cannabis enthusiasts! Get 15% off the finest Fast Buds genetics. Elevate your garden with legendary strains.', slug: 'en/coupon/stoner-special-15-off-premium-strains' },
+      de: { title: 'Stoner Special - 15% Rabatt auf Premium-Sorten', description: 'Für echte Cannabis-Enthusiasten! Erhalten Sie 15% Rabatt auf die besten Fast Buds Genetiken. Verbessern Sie Ihren Garten mit legendären Sorten.', slug: 'de/coupon/stoner-special-15-rabatt-auf-premium-sorten' },
+      es: { title: 'Especial Stoner - 15% en Variedades Premium', description: '¡Para verdaderos entusiastas del cannabis! Obtén 15% de descuento en la mejor genética de Fast Buds. Eleva tu jardín con variedades legendarias.', slug: 'es/cupon/especial-stoner-15-en-variedades-premium' },
+      pt: { title: 'Especial Stoner - 15% em Variedades Premium', description: 'Para verdadeiros entusiastas da cannabis! Ganhe 15% de desconto na melhor genética da Fast Buds. Eleve seu jardim com variedades lendárias.', slug: 'pt/cupom/especial-stoner-15-em-variedades-premium' },
+      fr: { title: 'Spécial Stoner - 15% sur les Variétés Premium', description: 'Pour les vrais passionnés de cannabis! Obtenez 15% de réduction sur la meilleure génétique Fast Buds. Élevez votre jardin avec des variétés légendaires.', slug: 'fr/coupon/special-stoner-15-sur-les-varietes-premium' },
+      it: { title: 'Speciale Stoner - 15% su Varietà Premium', description: 'Per veri appassionati di cannabis! Ottieni il 15% di sconto sulla migliore genetica Fast Buds. Eleva il tuo giardino con varietà leggendarie.', slug: 'it/coupon/speciale-stoner-15-su-varieta-premium' }
     }
   },
   {
     id: '4',
-    code: 'AUTOFLOWER',
-    discount: '12%',
-    image: '/images/coupons/autoflower.png',
+    code: 'SLOWDAY',
+    discount: '15%',
+    image: '/images/coupons/chuckle.png',
     content: {
-      en: { title: 'Autoflower Ace - 12% Off Autos', description: 'Master the autoflowering game! Get 12% off all Fast Buds autoflowering seeds - the fastest path to harvest.', slug: 'en/coupon/autoflower-ace-12-off-autos' },
-      de: { title: 'Autoflower Ass - 12% Rabatt auf Autos', description: 'Meistern Sie das Autoflowering-Spiel! Erhalten Sie 12% Rabatt auf alle Fast Buds Autoflowering-Samen.', slug: 'de/coupon/autoflower-ass-12-rabatt' },
-      es: { title: 'As Autofloreciente - 12% Descuento en Autos', description: '¡Domina el juego de las autoflorecientes! Obtén 12% de descuento en todas las semillas autoflorecientes de Fast Buds.', slug: 'es/cupon/as-autofloreciente-12-descuento' },
-      pt: { title: 'Autoflor Asso - 12% Desconto em Autos', description: 'Domine o jogo das autoflorescentes! Ganhe 12% de desconto em todas as sementes autoflorescentes da Fast Buds.', slug: 'pt/cupom/autoflor-asso-12-desconto' },
-      fr: { title: 'As Autoflo - 12% Réduction sur Autos', description: 'Maîtrisez le jeu de l\'autofloraison! Obtenez 12% de réduction sur toutes les graines autofloraison Fast Buds.', slug: 'fr/coupon/as-autoflo-12-reduction' },
-      it: { title: 'Asso Autofiorente - 12% Sconto su Auto', description: 'Padroneggia il gioco degli autofiorenti! Ottieni il 12% di sconto su tutti i semi autofiorenti Fast Buds.', slug: 'it/coupon/asso-autofiorente-12-sconto' }
+      en: { title: 'Slow Day Savings - 15% Off to Relax', description: 'Take it easy with 15% off! Perfect for those chill days when you want to slow down and grow something special.', slug: 'en/coupon/slow-day-savings-15-off-to-relax' },
+      de: { title: 'Entspannungstag Ersparnis - 15% zum Relaxen', description: 'Entspannen Sie sich mit 15% Rabatt! Perfekt für entspannte Tage, an denen Sie es ruhig angehen und etwas Besonderes anbauen möchten.', slug: 'de/coupon/entspannungstag-ersparnis-15-zum-relaxen' },
+      es: { title: 'Ahorro de Día Tranquilo - 15% para Relajarte', description: '¡Tómatelo con calma con 15% de descuento! Perfecto para esos días relajados cuando quieres ir más despacio y cultivar algo especial.', slug: 'es/cupon/ahorro-de-dia-tranquilo-15-para-relajarte' },
+      pt: { title: 'Economia de Dia Tranquilo - 15% para Relaxar', description: 'Relaxe com 15% de desconto! Perfeito para aqueles dias tranquilos quando você quer ir mais devagar e cultivar algo especial.', slug: 'pt/cupom/economia-de-dia-tranquilo-15-para-relaxar' },
+      fr: { title: 'Économies Journée Tranquille - 15% pour se Détendre', description: 'Prenez votre temps avec 15% de réduction! Parfait pour ces journées relax où vous voulez ralentir et cultiver quelque chose de spécial.', slug: 'fr/coupon/economies-journee-tranquille-15-pour-se-detendre' },
+      it: { title: 'Risparmio Giornata Tranquilla - 15% per Rilassarsi', description: 'Prendila con calma con il 15% di sconto! Perfetto per quei giorni rilassanti quando vuoi rallentare e coltivare qualcosa di speciale.', slug: 'it/coupon/risparmio-giornata-tranquilla-15-per-rilassarsi' }
     }
   },
   {
     id: '5',
-    code: 'BUDLOVER',
+    code: '42015',
     discount: '15%',
-    image: '/images/coupons/budlover.png',
+    image: '/images/coupons/grow420.png',
     content: {
-      en: { title: 'Bud Lover\'s Special - 15% Discount', description: 'For true cannabis connoisseurs! Save 15% on Fast Buds premium genetics and grow the finest buds.', slug: 'en/coupon/bud-lovers-special-15-discount' },
-      de: { title: 'Knospenliebhaber Spezial - 15% Rabatt', description: 'Für wahre Cannabis-Kenner! Sparen Sie 15% auf Fast Buds Premium-Genetik und züchten Sie die feinsten Knospen.', slug: 'de/coupon/knospenliebhaber-15-rabatt' },
-      es: { title: 'Especial Amante de Cogollos - 15% Descuento', description: '¡Para verdaderos conocedores del cannabis! Ahorra 15% en genética premium de Fast Buds.', slug: 'es/cupon/amante-cogollos-15-descuento' },
-      pt: { title: 'Especial Amante de Brotos - 15% Desconto', description: 'Para verdadeiros conhecedores de cannabis! Economize 15% em genética premium da Fast Buds.', slug: 'pt/cupom/amante-brotos-15-desconto' },
-      fr: { title: 'Spécial Amoureux des Bourgeons - 15% Réduction', description: 'Pour les vrais connaisseurs de cannabis! Économisez 15% sur la génétique premium Fast Buds.', slug: 'fr/coupon/amoureux-bourgeons-15-reduction' },
-      it: { title: 'Speciale Amante dei Boccioli - 15% Sconto', description: 'Per veri intenditori di cannabis! Risparmia il 15% sulla genetica premium Fast Buds.', slug: 'it/coupon/amante-boccioli-15-sconto' }
+      en: { title: '420 Celebration Code - 15% Off All Seeds', description: 'Celebrate the culture with 15% off! A special code for those who know what 420 really means. Premium genetics at a great price.', slug: 'en/coupon/420-celebration-code-15-off-all-seeds' },
+      de: { title: '420 Feier Code - 15% auf alle Samen', description: 'Feiern Sie die Kultur mit 15% Rabatt! Ein spezieller Code für diejenigen, die wissen, was 420 wirklich bedeutet. Premium-Genetik zu einem tollen Preis.', slug: 'de/coupon/420-feier-code-15-auf-alle-samen' },
+      es: { title: 'Código Celebración 420 - 15% en Todas las Semillas', description: '¡Celebra la cultura con 15% de descuento! Un código especial para quienes saben lo que 420 realmente significa. Genética premium a un gran precio.', slug: 'es/cupon/codigo-celebracion-420-15-en-todas-las-semillas' },
+      pt: { title: 'Código Celebração 420 - 15% em Todas as Sementes', description: 'Celebre a cultura com 15% de desconto! Um código especial para quem sabe o que 420 realmente significa. Genética premium a um ótimo preço.', slug: 'pt/cupom/codigo-celebracao-420-15-em-todas-as-sementes' },
+      fr: { title: 'Code Célébration 420 - 15% sur Toutes les Graines', description: 'Célébrez la culture avec 15% de réduction! Un code spécial pour ceux qui savent ce que 420 signifie vraiment. Génétique premium à un excellent prix.', slug: 'fr/coupon/code-celebration-420-15-sur-toutes-les-graines' },
+      it: { title: 'Codice Celebrazione 420 - 15% su Tutti i Semi', description: 'Celebra la cultura con il 15% di sconto! Un codice speciale per chi sa cosa significa veramente 420. Genetica premium a un ottimo prezzo.', slug: 'it/coupon/codice-celebrazione-420-15-su-tutti-i-semi' }
     }
   },
   {
     id: '6',
-    code: 'SAVE4U',
-    discount: '10%',
-    image: '/images/coupons/save4u.png',
+    code: 'EARTH',
+    discount: '15%',
+    image: '/images/coupons/green.png',
     content: {
-      en: { title: 'High Quality Seeds - 10% Off', description: 'Quality matters! Get 10% off all Fast Buds seeds and experience championship genetics in your grow.', slug: 'en/coupon/high-quality-seeds-10-off' },
-      de: { title: 'Hochwertige Samen - 10% Rabatt', description: 'Qualität zählt! Erhalten Sie 10% Rabatt auf alle Fast Buds Samen und erleben Sie Meisterschafts-Genetik.', slug: 'de/coupon/hochwertige-samen-10-rabatt' },
-      es: { title: 'Semillas de Alta Calidad - 10% Descuento', description: '¡La calidad importa! Obtén 10% de descuento en todas las semillas Fast Buds.', slug: 'es/cupon/semillas-alta-calidad-10-descuento' },
-      pt: { title: 'Sementes de Alta Qualidade - 10% Desconto', description: 'Qualidade importa! Ganhe 10% de desconto em todas as sementes Fast Buds.', slug: 'pt/cupom/sementes-alta-qualidade-10-desconto' },
-      fr: { title: 'Graines Haute Qualité - 10% Réduction', description: 'La qualité compte! Obtenez 10% de réduction sur toutes les graines Fast Buds.', slug: 'fr/coupon/graines-haute-qualite-10-reduction' },
-      it: { title: 'Semi Alta Qualità - 10% Sconto', description: 'La qualità conta! Ottieni il 10% di sconto su tutti i semi Fast Buds.', slug: 'it/coupon/semi-alta-qualita-10-sconto' }
+      en: { title: 'Earth Day Special - 15% Off Green Growing', description: 'Celebrate nature with 15% off! Grow sustainably with Fast Buds premium genetics. For those who care about the planet.', slug: 'en/coupon/earth-day-special-15-off-green-growing' },
+      de: { title: 'Tag der Erde Special - 15% auf Grünen Anbau', description: 'Feiern Sie die Natur mit 15% Rabatt! Bauen Sie nachhaltig mit Fast Buds Premium-Genetik an. Für diejenigen, denen der Planet am Herzen liegt.', slug: 'de/coupon/tag-der-erde-special-15-auf-grunen-anbau' },
+      es: { title: 'Especial Día de la Tierra - 15% en Cultivo Verde', description: '¡Celebra la naturaleza con 15% de descuento! Cultiva de manera sostenible con la genética premium de Fast Buds. Para quienes se preocupan por el planeta.', slug: 'es/cupon/especial-dia-tierra-15-cultivo-verde' },
+      pt: { title: 'Especial Dia da Terra - 15% em Cultivo Verde', description: 'Celebre a natureza com 15% de desconto! Cultive de forma sustentável com a genética premium da Fast Buds. Para quem se preocupa com o planeta.', slug: 'pt/cupom/especial-dia-terra-15-cultivo-verde' },
+      fr: { title: 'Spécial Jour de la Terre - 15% sur Culture Verte', description: 'Célébrez la nature avec 15% de réduction! Cultivez durablement avec la génétique premium Fast Buds. Pour ceux qui se soucient de la planète.', slug: 'fr/coupon/special-jour-terre-15-culture-verte' },
+      it: { title: 'Speciale Giornata della Terra - 15% su Coltivazione Verde', description: 'Celebra la natura con il 15% di sconto! Coltiva in modo sostenibile con la genetica premium Fast Buds. Per chi ha a cuore il pianeta.', slug: 'it/coupon/speciale-giornata-terra-15-coltivazione-verde' }
     }
   },
   {
     id: '7',
-    code: 'CHUCKLE',
-    discount: '8%',
-    image: '/images/coupons/chuckle.png',
+    code: 'BUMP',
+    discount: '15%',
+    image: '/images/coupons/autoflower.png',
     content: {
-      en: { title: 'Chuckle Friendly - 8% Discount', description: 'Bring a smile to your grow! Save 8% on Fast Buds seeds and enjoy the lighter side of cultivation.', slug: 'en/coupon/chuckle-friendly-8-discount' },
-      de: { title: 'Kichern Freundlich - 8% Rabatt', description: 'Bringen Sie ein Lächeln in Ihren Anbau! Sparen Sie 8% auf Fast Buds Samen.', slug: 'de/coupon/kichern-freundlich-8-rabatt' },
-      es: { title: 'Amigable Risa - 8% Descuento', description: '¡Trae una sonrisa a tu cultivo! Ahorra 8% en semillas Fast Buds.', slug: 'es/cupon/risa-amigable-8-descuento' },
-      pt: { title: 'Risada Amigável - 8% Desconto', description: 'Traga um sorriso para seu cultivo! Economize 8% em sementes Fast Buds.', slug: 'pt/cupom/risada-amigavel-8-desconto' },
-      fr: { title: 'Rire Amical - 8% Réduction', description: 'Apportez un sourire à votre culture! Économisez 8% sur les graines Fast Buds.', slug: 'fr/coupon/rire-amical-8-reduction' },
-      it: { title: 'Risata Amichevole - 8% Sconto', description: 'Porta un sorriso alla tua coltivazione! Risparmia l\'8% sui semi Fast Buds.', slug: 'it/coupon/risata-amichevole-8-sconto' }
+      en: { title: 'Bump Up Your Garden - 15% Off Premium Seeds', description: 'Give your grow room a serious upgrade! Get 15% off Fast Buds top-shelf genetics and bump up your yields.', slug: 'en/coupon/bump-up-garden-15-off-premium-seeds' },
+      de: { title: 'Verbessern Sie Ihren Garten - 15% auf Premium-Samen', description: 'Geben Sie Ihrem Anbauraum ein ernsthaftes Upgrade! Erhalten Sie 15% Rabatt auf Fast Buds Top-Genetik und steigern Sie Ihre Erträge.', slug: 'de/coupon/verbessern-sie-ihren-garten-15-premium-samen' },
+      es: { title: 'Mejora Tu Jardín - 15% en Semillas Premium', description: '¡Dale a tu cuarto de cultivo una mejora seria! Obtén 15% de descuento en genética de primera de Fast Buds y aumenta tus cosechas.', slug: 'es/cupon/mejora-tu-jardin-15-semillas-premium' },
+      pt: { title: 'Melhore Seu Jardim - 15% em Sementes Premium', description: 'Dê ao seu espaço de cultivo uma melhoria séria! Ganhe 15% de desconto na genética top da Fast Buds e aumente suas colheitas.', slug: 'pt/cupom/melhore-seu-jardim-15-sementes-premium' },
+      fr: { title: 'Améliorez Votre Jardin - 15% sur Graines Premium', description: 'Donnez à votre espace de culture une sérieuse amélioration! Obtenez 15% de réduction sur la génétique haut de gamme Fast Buds et augmentez vos rendements.', slug: 'fr/coupon/ameliorez-votre-jardin-15-graines-premium' },
+      it: { title: 'Migliora Il Tuo Giardino - 15% su Semi Premium', description: 'Dai al tuo spazio di coltivazione un serio upgrade! Ottieni il 15% di sconto sulla genetica top di Fast Buds e aumenta i tuoi raccolti.', slug: 'it/coupon/migliora-tuo-giardino-15-semi-premium' }
     }
   },
   {
     id: '8',
-    code: 'STONER',
-    discount: '12%',
-    image: '/images/coupons/stoner.png',
+    code: '4EVA',
+    discount: '15%',
+    image: '/images/coupons/fastbuds.png',
     content: {
-      en: { title: 'Stoner Saver - 12% Off', description: 'For the dedicated enthusiast! Get 12% off all Fast Buds seeds and elevate your growing experience.', slug: 'en/coupon/stoner-saver-12-percent-off' },
-      de: { title: 'Kiffer Sparer - 12% Rabatt', description: 'Für den engagierten Enthusiasten! Erhalten Sie 12% Rabatt auf alle Fast Buds Samen.', slug: 'de/coupon/kiffer-sparer-12-prozent-rabatt' },
-      es: { title: 'Ahorrador Fumeta - 12% Descuento', description: '¡Para el entusiasta dedicado! Obtén 12% de descuento en todas las semillas Fast Buds.', slug: 'es/cupon/ahorrador-fumeta-12-por-ciento' },
-      pt: { title: 'Poupador Maconheiro - 12% Desconto', description: 'Para o entusiasta dedicado! Ganhe 12% de desconto em todas as sementes Fast Buds.', slug: 'pt/cupom/poupador-maconheiro-12-por-cento' },
-      fr: { title: 'Économe Fumeur - 12% Réduction', description: 'Pour l\'enthousiaste dévoué! Obtenez 12% de réduction sur toutes les graines Fast Buds.', slug: 'fr/coupon/econome-fumeur-12-pourcent' },
-      it: { title: 'Risparmiatore Fumatore - 12% Sconto', description: 'Per l\'appassionato dedicato! Ottieni il 12% di sconto su tutti i semi Fast Buds.', slug: 'it/coupon/risparmiatore-fumatore-12-percento' }
+      en: { title: 'Forever Grower Deal - 15% Off For Life', description: 'For growers who never stop! Enjoy 15% off Fast Buds premium seeds. Because growing is forever, and so are the savings.', slug: 'en/coupon/forever-grower-deal-15-off-for-life' },
+      de: { title: 'Für Immer Züchter Deal - 15% Rabatt fürs Leben', description: 'Für Züchter, die nie aufhören! Genießen Sie 15% Rabatt auf Fast Buds Premium-Samen. Denn Anbau ist für immer, und die Ersparnisse auch.', slug: 'de/coupon/fur-immer-zuchter-deal-15-rabatt-furs-leben' },
+      es: { title: 'Oferta Cultivador Eterno - 15% de Descuento para Siempre', description: '¡Para cultivadores que nunca se detienen! Disfruta del 15% de descuento en semillas premium de Fast Buds. Porque cultivar es para siempre, y los ahorros también.', slug: 'es/cupon/oferta-cultivador-eterno-15-descuento-siempre' },
+      pt: { title: 'Oferta Cultivador Eterno - 15% de Desconto para Sempre', description: 'Para cultivadores que nunca param! Aproveite 15% de desconto em sementes premium da Fast Buds. Porque cultivar é para sempre, e as economias também.', slug: 'pt/cupom/oferta-cultivador-eterno-15-desconto-sempre' },
+      fr: { title: 'Offre Cultivateur Éternel - 15% de Réduction à Vie', description: 'Pour les cultivateurs qui ne s\'arrêtent jamais! Profitez de 15% de réduction sur les graines premium Fast Buds. Parce que cultiver c\'est pour toujours, et les économies aussi.', slug: 'fr/coupon/offre-cultivateur-eternel-15-reduction-vie' },
+      it: { title: 'Offerta Coltivatore Eterno - 15% di Sconto per Sempre', description: 'Per coltivatori che non si fermano mai! Goditi il 15% di sconto sui semi premium Fast Buds. Perché coltivare è per sempre, e i risparmi anche.', slug: 'it/coupon/offerta-coltivatore-eterno-15-sconto-sempre' }
     }
   },
   {
     id: '9',
-    code: 'NEWGROWER',
-    discount: '10%',
-    image: '/images/coupons/green.png',
+    code: 'LOLZ',
+    discount: '15%',
+    image: '/images/coupons/budlover.png',
     content: {
-      en: { title: 'New Grower Discount - 10% Off', description: 'Welcome to the growing community! Start your journey with 10% off all Fast Buds autoflowering seeds.', slug: 'en/coupon/new-grower-discount-10-off' },
-      de: { title: 'Neuer Züchter Rabatt - 10% Rabatt', description: 'Willkommen in der Züchter-Community! Beginnen Sie mit 10% Rabatt auf alle Fast Buds Autoflowering-Samen.', slug: 'de/coupon/neuer-zuechter-10-rabatt' },
-      es: { title: 'Descuento Nuevo Cultivador - 10% Descuento', description: '¡Bienvenido a la comunidad de cultivadores! Comienza con 10% de descuento en todas las semillas Fast Buds.', slug: 'es/cupon/nuevo-cultivador-10-descuento' },
-      pt: { title: 'Desconto Novo Cultivador - 10% Desconto', description: 'Bem-vindo à comunidade de cultivadores! Comece com 10% de desconto em todas as sementes Fast Buds.', slug: 'pt/cupom/novo-cultivador-10-desconto' },
-      fr: { title: 'Réduction Nouveau Cultivateur - 10% Réduction', description: 'Bienvenue dans la communauté des cultivateurs! Commencez avec 10% de réduction sur toutes les graines Fast Buds.', slug: 'fr/coupon/nouveau-cultivateur-10-reduction' },
-      it: { title: 'Sconto Nuovo Coltivatore - 10% Sconto', description: 'Benvenuto nella comunità dei coltivatori! Inizia con il 10% di sconto su tutti i semi Fast Buds.', slug: 'it/coupon/nuovo-coltivatore-10-sconto' }
+      en: { title: 'Laugh Out Loud Savings - 15% Off Fun Strains', description: 'Why so serious? Have some fun with 15% off! Perfect for those who love to laugh and grow premium Fast Buds genetics.', slug: 'en/coupon/laugh-out-loud-savings-15-off-fun-strains' },
+      de: { title: 'Lach Laut Ersparnis - 15% auf Spaß-Sorten', description: 'Warum so ernst? Haben Sie Spaß mit 15% Rabatt! Perfekt für diejenigen, die gerne lachen und Premium Fast Buds Genetik anbauen.', slug: 'de/coupon/lach-laut-ersparnis-15-spass-sorten' },
+      es: { title: 'Ahorro Reír a Carcajadas - 15% en Variedades Divertidas', description: '¿Por qué tan serio? ¡Diviértete con 15% de descuento! Perfecto para quienes aman reír y cultivar genética premium de Fast Buds.', slug: 'es/cupon/ahorro-reir-carcajadas-15-variedades-divertidas' },
+      pt: { title: 'Economia Rir Alto - 15% em Variedades Divertidas', description: 'Por que tão sério? Divirta-se com 15% de desconto! Perfeito para quem ama rir e cultivar genética premium da Fast Buds.', slug: 'pt/cupom/economia-rir-alto-15-variedades-divertidas' },
+      fr: { title: 'Économies Rire Fort - 15% sur Variétés Amusantes', description: 'Pourquoi si sérieux? Amusez-vous avec 15% de réduction! Parfait pour ceux qui aiment rire et cultiver la génétique premium Fast Buds.', slug: 'fr/coupon/economies-rire-fort-15-varietes-amusantes' },
+      it: { title: 'Risparmio Ridere Forte - 15% su Varietà Divertenti', description: 'Perché così serio? Divertiti con il 15% di sconto! Perfetto per chi ama ridere e coltivare genetica premium Fast Buds.', slug: 'it/coupon/risparmio-ridere-forte-15-varieta-divertenti' }
     }
   },
   {
     id: '10',
-    code: 'ORGANIC8',
-    discount: '8%',
-    image: '/images/coupons/green.png',
+    code: 'BUZZ',
+    discount: '15%',
+    image: '/images/coupons/buzz-trending-seeds.jpg',
     content: {
-      en: { title: 'Organic Grow - 8% Discount', description: 'Grow naturally! Save 8% on all Fast Buds seeds perfect for organic cultivation methods.', slug: 'en/coupon/organic-grow-8-percent-discount' },
-      de: { title: 'Bio-Anbau - 8% Rabatt', description: 'Natürlich wachsen! Sparen Sie 8% auf alle Fast Buds Samen, perfekt für biologische Anbaumethoden.', slug: 'de/coupon/bio-anbau-8-prozent-rabatt' },
-      es: { title: 'Cultivo Orgánico - 8% Descuento', description: '¡Cultiva naturalmente! Ahorra 8% en todas las semillas Fast Buds perfectas para métodos de cultivo orgánico.', slug: 'es/cupon/cultivo-organico-8-por-ciento' },
-      pt: { title: 'Cultivo Orgânico - 8% Desconto', description: 'Cultive naturalmente! Economize 8% em todas as sementes Fast Buds perfeitas para métodos de cultivo orgânico.', slug: 'pt/cupom/cultivo-organico-8-por-cento' },
-      fr: { title: 'Culture Bio - 8% Réduction', description: 'Cultivez naturellement! Économisez 8% sur toutes les graines Fast Buds parfaites pour les méthodes de culture biologique.', slug: 'fr/coupon/culture-bio-8-pourcent' },
-      it: { title: 'Coltivazione Biologica - 8% Sconto', description: 'Coltiva naturalmente! Risparmia l\'8% su tutti i semi Fast Buds perfetti per metodi di coltivazione biologica.', slug: 'it/coupon/coltivazione-biologica-8-percento' }
-    }
-  },
-  {
-    id: '11',
-    code: 'FASTBUDS10',
-    discount: '10%',
-    image: '/images/coupons/fastbuds.png',
-    content: {
-      en: { title: 'Fast Buds Fan Exclusive - 10% Off', description: 'For loyal fans! Enjoy 10% off all Fast Buds seeds and join thousands of satisfied growers worldwide.', slug: 'en/coupon/fastbuds-fan-exclusive-10-off' },
-      de: { title: 'Fast Buds Fan Exklusiv - 10% Rabatt', description: 'Für treue Fans! Genießen Sie 10% Rabatt auf alle Fast Buds Samen.', slug: 'de/coupon/fastbuds-fan-exklusiv-10-rabatt' },
-      es: { title: 'Exclusivo Fan Fast Buds - 10% Descuento', description: '¡Para fans leales! Disfruta 10% de descuento en todas las semillas Fast Buds.', slug: 'es/cupon/fan-fastbuds-exclusivo-10-descuento' },
-      pt: { title: 'Exclusivo Fã Fast Buds - 10% Desconto', description: 'Para fãs leais! Aproveite 10% de desconto em todas as sementes Fast Buds.', slug: 'pt/cupom/fa-fastbuds-exclusivo-10-desconto' },
-      fr: { title: 'Exclusif Fan Fast Buds - 10% Réduction', description: 'Pour les fans fidèles! Profitez de 10% de réduction sur toutes les graines Fast Buds.', slug: 'fr/coupon/fan-fastbuds-exclusif-10-reduction' },
-      it: { title: 'Esclusivo Fan Fast Buds - 10% Sconto', description: 'Per fan fedeli! Goditi il 10% di sconto su tutti i semi Fast Buds.', slug: 'it/coupon/fan-fastbuds-esclusivo-10-sconto' }
+      en: { title: 'Create The Buzz - 15% Off Trending Seeds', description: 'Get the buzz going with 15% off! Join the hype and grow the most talked-about Fast Buds strains at an amazing price.', slug: 'en/coupon/create-buzz-15-off-trending-seeds' },
+      de: { title: 'Sorgen Sie für Aufsehen - 15% auf Trend-Samen', description: 'Bringen Sie das Gespräch in Gang mit 15% Rabatt! Machen Sie mit beim Hype und bauen Sie die meistdiskutierten Fast Buds Sorten zu einem tollen Preis an.', slug: 'de/coupon/sorgen-sie-aufsehen-15-trend-samen' },
+      es: { title: 'Crea el Buzz - 15% en Semillas de Tendencia', description: '¡Genera el buzz con 15% de descuento! Únete al hype y cultiva las variedades de Fast Buds más comentadas a un precio increíble.', slug: 'es/cupon/crea-buzz-15-semillas-tendencia' },
+      pt: { title: 'Crie o Buzz - 15% em Sementes de Tendência', description: 'Comece o buzz com 15% de desconto! Junte-se ao hype e cultive as variedades Fast Buds mais comentadas a um preço incrível.', slug: 'pt/cupom/crie-buzz-15-sementes-tendencia' },
+      fr: { title: 'Créez le Buzz - 15% sur Graines Tendance', description: 'Lancez le buzz avec 15% de réduction! Rejoignez le hype et cultivez les variétés Fast Buds les plus discutées à un prix incroyable.', slug: 'fr/coupon/creez-buzz-15-graines-tendance' },
+      it: { title: 'Crea il Buzz - 15% su Semi Tendenza', description: 'Genera il buzz con il 15% di sconto! Unisciti all\'hype e coltiva le varietà Fast Buds più discusse a un prezzo incredibile.', slug: 'it/coupon/crea-buzz-15-semi-tendenza' }
     }
   }
 ];
@@ -161,7 +147,11 @@ const coupons = [
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   const { slug } = req.query;
   
+  console.log('[OG API] Incoming request for slug:', slug);
+  console.log('[OG API] User-Agent:', req.headers['user-agent']);
+  
   if (!slug || typeof slug !== 'string') {
+    console.log('[OG API] ERROR: Missing or invalid slug parameter');
     return res.status(400).send('Missing slug parameter');
   }
 
@@ -183,8 +173,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   if (!foundCoupon || !foundContent) {
+    console.log('[OG API] ERROR: Coupon not found for slug:', slug);
+    console.log('[OG API] Available slugs sample:', coupons[0]?.content.en.slug);
     return res.status(404).send('Coupon not found');
   }
+  
+  console.log('[OG API] SUCCESS: Found coupon:', foundCoupon.code, '| Image:', foundCoupon.image, '| Lang:', foundLang);
 
   const baseUrl = 'https://fastbuds-coupon.com';
   const imageUrl = foundCoupon.image ? `${baseUrl}${foundCoupon.image}` : `${baseUrl}/images/coupons/savemax.png`;
