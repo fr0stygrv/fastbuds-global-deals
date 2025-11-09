@@ -146,6 +146,11 @@ const coupons = [
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   const { slug } = req.query;
+  const userAgent = req.headers['user-agent'] || 'unknown';
+  
+  console.log('[OG] Request received');
+  console.log('[OG] Slug:', slug);
+  console.log('[OG] User-Agent:', userAgent);
   
   console.log('[OG API] Incoming request for slug:', slug);
   console.log('[OG API] User-Agent:', req.headers['user-agent']);
