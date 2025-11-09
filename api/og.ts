@@ -160,21 +160,36 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(400).send('Missing slug parameter');
   }
 
+  // Check if this is a Telegram bot
+  const isTelegram = userAgent.toLowerCase().includes('telegram');
+  
   // Find coupon by slug across all languages
   let foundCoupon = null;
   let foundLang = null;
   let foundContent = null;
 
-  for (const coupon of coupons) {
-    for (const [lang, content] of Object.entries(coupon.content)) {
-      if (content.slug === slug) {
-        foundCoupon = coupon;
-        foundLang = lang;
-        foundContent = content;
-        break;
+  if (isTelegram) {
+    // Telegram always gets SAVEMAX coupon
+    console.log('[OG API] Telegram detected! Forcing SAVEMAX coupon');
+    foundCoupon = coupons[0]; // SAVEMAX is always first in array
+    
+    // Extract language from slug (e.g., "en/coupon/..." -> "en")
+    const langMatch = slug.match(/^(en|de|es|pt|fr|it)\//);
+    foundLang = langMatch ? langMatch[1] : 'en';
+    foundContent = foundCoupon.content[foundLang];
+  } else {
+    // For all other social media bots - search by slug as before
+    for (const coupon of coupons) {
+      for (const [lang, content] of Object.entries(coupon.content)) {
+        if (content.slug === slug) {
+          foundCoupon = coupon;
+          foundLang = lang;
+          foundContent = content;
+          break;
+        }
       }
+      if (foundCoupon) break;
     }
-    if (foundCoupon) break;
   }
 
   if (!foundCoupon || !foundContent) {
