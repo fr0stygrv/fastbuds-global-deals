@@ -11,7 +11,7 @@
         {
           "type": "header",
           "key": "user-agent",
-          "value": ".*(bot|crawler|spider|crawling|facebookexternalhit|Twitterbot|TwitterBot|LinkedInBot|WhatsApp|WhatsAppBot|Telegram|TelegramBot|Slackbot|Pinterest|Googlebot|SkypeUriPreview|vkShare|redditbot).*"
+          "value": ".*(facebookexternalhit|Twitterbot|TwitterBot|LinkedInBot|WhatsApp|WhatsAppBot|Telegram|TelegramBot|Slackbot|Pinterest|SkypeUriPreview|vkShare|redditbot|Discordbot).*"
         }
       ]
     },
