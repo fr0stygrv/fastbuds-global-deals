@@ -160,7 +160,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(400).send('Missing slug parameter');
   }
 
-  // Check if this is a Telegram bot
+  // Detect social media bots (they need static HTML with Open Graph tags)
+  const isSocialBot = /facebookexternalhit|Twitterbot|LinkedInBot|WhatsApp|Telegram|Pinterest|Slackbot|SkypeUriPreview|vkShare|redditbot|Discordbot|TelegramBot/i.test(userAgent);
+  
+  // Check if this is a Telegram bot (for special SAVEMAX handling)
   const isTelegram = userAgent.toLowerCase().includes('telegram');
   
   // Find coupon by slug across all languages
@@ -204,6 +207,15 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const imageUrl = foundCoupon.image ? `${baseUrl}${foundCoupon.image}` : `${baseUrl}/images/coupons/savemax.png`;
   const canonicalUrl = `${baseUrl}/${foundContent.slug}`;
 
+  // For search bots and regular browsers - use HTTP 301 redirect (better for SEO)
+  if (!isSocialBot) {
+    console.log('[OG API] Non-social bot detected (search engine or browser), doing 301 redirect to:', canonicalUrl);
+    return res.redirect(301, canonicalUrl);
+  }
+
+  // For social media bots - return static HTML with Open Graph tags (no redirects)
+  console.log('[OG API] Social media bot detected, returning static HTML with Open Graph tags');
+
   const html = `<!DOCTYPE html>
 <html lang="${foundLang}">
 <head>
@@ -228,9 +240,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   <meta name="twitter:title" content="${foundContent.title}">
   <meta name="twitter:description" content="${foundContent.description}">
   <meta name="twitter:image" content="${imageUrl}">
-  
-  <meta http-equiv="refresh" content="0;url=${canonicalUrl}">
-  <script>window.location.href = "${canonicalUrl}";</script>
 </head>
 <body>
   <h1>${foundContent.title}</h1>
