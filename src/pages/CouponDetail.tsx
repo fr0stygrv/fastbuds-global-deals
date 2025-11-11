@@ -158,15 +158,21 @@ export default function CouponDetail() {
               {/* Coupon Image */}
               {coupon.image && (
                 <div className="mb-8 overflow-hidden rounded-lg">
-                  <img 
-                    src={coupon.image} 
-                    alt={content.title}
-                    className="w-full h-auto"
-                    loading="eager"
-                    decoding="async"
-                    width="1200"
-                    height="630"
-                  />
+                  <picture>
+                    <source 
+                      srcSet={coupon.image.replace(/\.(png|jpg|jpeg)$/i, '.webp')} 
+                      type="image/webp"
+                    />
+                    <img 
+                      src={coupon.image} 
+                      alt={content.title}
+                      className="w-full h-auto"
+                      loading="eager"
+                      decoding="async"
+                      width="1200"
+                      height="630"
+                    />
+                  </picture>
                 </div>
               )}
 
