@@ -50,25 +50,6 @@ export const CouponCard = ({ coupon, priority = false }: CouponCardProps) => {
   return (
     <Card className="group hover:shadow-card-hover hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300 shadow-card">
       <CardHeader>
-        {coupon.image && (
-          <Link to={`/${language}/${couponPath}/${slugPart}`} className="block mb-4 overflow-hidden rounded-lg">
-            <picture>
-              <source 
-                srcSet={coupon.image.replace(/\.(png|jpg|jpeg)$/i, '.webp')} 
-                type="image/webp"
-              />
-              <img
-                src={coupon.image}
-                alt={`${content.title} - ${coupon.discount} discount on Fast Buds seeds`}
-                loading="lazy"
-                decoding="async"
-                width="600"
-                height="400"
-                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-            </picture>
-          </Link>
-        )}
         <div className="flex items-start justify-between gap-2">
           <Link to={`/${language}/${couponPath}/${slugPart}`} className="flex-1">
             <h3 className="text-lg font-bold group-hover:text-primary transition-colors line-clamp-2 min-h-[3.5rem]">
