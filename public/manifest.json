@@ -1,26 +1,31 @@
 {
   "name": "Fast Buds Coupons",
   "short_name": "FB Coupons",
-  "description": "Save up to 20% on Fast Buds seeds",
+  "description": "Save up to 20% on Fast Buds premium autoflowering seeds with verified coupon codes",
   "start_url": "/en",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#10b981",
+  "categories": ["shopping"],
   "icons": [
     {
       "src": "/favicon.ico",
       "sizes": "48x48",
-      "type": "image/x-icon"
+      "type": "image/x-icon",
+      "purpose": "any"
     },
     {
       "src": "/images/icon-192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "/images/icon-512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     }
   ]
 }
