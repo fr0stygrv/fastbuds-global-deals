@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { coupons } from '@/data/coupons';
 import { CouponCard } from '@/components/CouponCard';
@@ -6,7 +7,7 @@ import { SEOHead } from '@/components/SEOHead';
 import { StructuredData } from '@/components/StructuredData';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { Search, SlidersHorizontal } from 'lucide-react';
+import { Search, SlidersHorizontal, CheckCircle } from 'lucide-react';
 import { getUsageCount } from '@/lib/couponStorage';
 import {
   Select,
@@ -130,6 +131,42 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Benefits Section */}
+        <section className="container py-12 bg-muted/30">
+          <div className="max-w-4xl">
+            <h2 className="text-3xl font-bold mb-8">{t.home.whyChoose}</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+              <div className="space-y-2">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="h-5 w-5 text-primary" />
+                  <h3 className="text-xl font-semibold">{t.home.benefits.verified}</h3>
+                </div>
+                <p className="text-muted-foreground">{t.home.benefits.verifiedDesc}</p>
+              </div>
+              <div className="space-y-2">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="h-5 w-5 text-primary" />
+                  <h3 className="text-xl font-semibold">{t.home.benefits.discount}</h3>
+                </div>
+                <p className="text-muted-foreground">{t.home.benefits.discountDesc}</p>
+              </div>
+              <div className="space-y-2">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="h-5 w-5 text-primary" />
+                  <h3 className="text-xl font-semibold">{t.home.benefits.updated}</h3>
+                </div>
+                <p className="text-muted-foreground">{t.home.benefits.updatedDesc}</p>
+              </div>
+            </div>
+            <p className="text-sm text-muted-foreground">
+              {t.home.questionsLink}{' '}
+              <Link to="/faq" className="text-primary hover:underline">
+                {t.nav.faq}
+              </Link>
+            </p>
+          </div>
+        </section>
+
         {/* Filters and Search */}
         <section className="container py-8 border-b border-border">
           <div className="flex flex-col md:flex-row gap-4">
@@ -171,6 +208,7 @@ export default function Home() {
 
         {/* Coupons Grid */}
         <section className="container py-12">
+          <h2 className="text-3xl font-bold mb-8">{t.home.activeCoupons}</h2>
           {filteredAndSortedCoupons.length === 0 ? (
             <div className="text-center py-16">
               <p className="text-lg text-muted-foreground">No coupons found</p>

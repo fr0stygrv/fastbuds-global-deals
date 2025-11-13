@@ -14,6 +14,17 @@ export interface Translations {
     title: string;
     subtitle: string;
     search: string;
+    activeCoupons: string;
+    whyChoose: string;
+    questionsLink: string;
+    benefits: {
+      verified: string;
+      verifiedDesc: string;
+      discount: string;
+      discountDesc: string;
+      updated: string;
+      updatedDesc: string;
+    };
     filter: {
       all: string;
       active: string;
@@ -117,6 +128,17 @@ export const translations: Record<Language, Translations> = {
       title: 'Fast Buds Coupons & Promo Codes',
       subtitle: 'Save on premium cannabis seeds with exclusive Fast Buds discount codes',
       search: 'Search coupons...',
+      activeCoupons: 'Active Fast Buds Discount Codes',
+      whyChoose: 'Why Use Our Coupon Platform?',
+      questionsLink: 'Questions? Visit our',
+      benefits: {
+        verified: 'Verified Daily',
+        verifiedDesc: 'All discount codes are tested and verified every day to ensure they work',
+        discount: 'Up to 20% Off',
+        discountDesc: 'Maximum savings on premium autoflowering seeds from Fast Buds',
+        updated: 'Always Updated',
+        updatedDesc: 'New coupons and promo codes added regularly throughout the month',
+      },
       filter: {
         all: 'All Coupons',
         active: 'Active',
@@ -218,6 +240,17 @@ export const translations: Record<Language, Translations> = {
       title: 'Fast Buds Gutscheine & Rabattcodes',
       subtitle: 'Sparen Sie bei Premium-Cannabis-Samen mit exklusiven Fast Buds Gutscheincodes',
       search: 'Gutscheine suchen...',
+      activeCoupons: 'Aktive Fast Buds Rabattcodes',
+      whyChoose: 'Warum unsere Gutschein-Plattform nutzen?',
+      questionsLink: 'Fragen? Besuchen Sie unsere',
+      benefits: {
+        verified: 'Täglich verifiziert',
+        verifiedDesc: 'Alle Rabattcodes werden täglich getestet und verifiziert',
+        discount: 'Bis zu 20% Rabatt',
+        discountDesc: 'Maximale Ersparnisse bei Premium-Autoflowering-Samen von Fast Buds',
+        updated: 'Immer aktuell',
+        updatedDesc: 'Neue Gutscheine werden regelmäßig im Monat hinzugefügt',
+      },
       filter: {
         all: 'Alle Gutscheine',
         active: 'Aktiv',
@@ -319,6 +352,17 @@ export const translations: Record<Language, Translations> = {
       title: 'Cupones y Códigos Promocionales Fast Buds',
       subtitle: 'Ahorra en semillas de cannabis premium con códigos de descuento exclusivos de Fast Buds',
       search: 'Buscar cupones...',
+      activeCoupons: 'Códigos de Descuento Fast Buds Activos',
+      whyChoose: '¿Por qué usar nuestra plataforma de cupones?',
+      questionsLink: '¿Preguntas? Visite nuestro',
+      benefits: {
+        verified: 'Verificado diariamente',
+        verifiedDesc: 'Todos los códigos de descuento se prueban y verifican todos los días',
+        discount: 'Hasta 20% de descuento',
+        discountDesc: 'Máximo ahorro en semillas autoflorecientes premium de Fast Buds',
+        updated: 'Siempre actualizado',
+        updatedDesc: 'Nuevos cupones agregados regularmente durante el mes',
+      },
       filter: {
         all: 'Todos los Cupones',
         active: 'Activos',
@@ -420,6 +464,17 @@ export const translations: Record<Language, Translations> = {
       title: 'Cupons e Códigos Promocionais Fast Buds',
       subtitle: 'Economize em sementes de cannabis premium com códigos de desconto exclusivos Fast Buds',
       search: 'Buscar cupons...',
+      activeCoupons: 'Códigos de Desconto Fast Buds Ativos',
+      whyChoose: 'Por que usar nossa plataforma de cupons?',
+      questionsLink: 'Dúvidas? Visite nosso',
+      benefits: {
+        verified: 'Verificado diariamente',
+        verifiedDesc: 'Todos os códigos de desconto são testados e verificados todos os dias',
+        discount: 'Até 20% de desconto',
+        discountDesc: 'Máxima economia em sementes autoflorescentes premium da Fast Buds',
+        updated: 'Sempre atualizado',
+        updatedDesc: 'Novos cupons adicionados regularmente durante o mês',
+      },
       filter: {
         all: 'Todos os Cupons',
         active: 'Ativos',
@@ -521,6 +576,17 @@ export const translations: Record<Language, Translations> = {
       title: 'Coupons et Codes Promo Fast Buds',
       subtitle: 'Économisez sur les graines de cannabis premium avec des codes de réduction exclusifs Fast Buds',
       search: 'Rechercher des coupons...',
+      activeCoupons: 'Codes de Réduction Fast Buds Actifs',
+      whyChoose: 'Pourquoi utiliser notre plateforme de coupons?',
+      questionsLink: 'Des questions? Visitez notre',
+      benefits: {
+        verified: 'Vérifié quotidiennement',
+        verifiedDesc: 'Tous les codes de réduction sont testés et vérifiés chaque jour',
+        discount: 'Jusqu\'à 20% de réduction',
+        discountDesc: 'Économies maximales sur les graines autofloraison premium de Fast Buds',
+        updated: 'Toujours à jour',
+        updatedDesc: 'Nouveaux coupons ajoutés régulièrement tout au long du mois',
+      },
       filter: {
         all: 'Tous les Coupons',
         active: 'Actifs',
@@ -622,6 +688,17 @@ export const translations: Record<Language, Translations> = {
       title: 'Coupon e Codici Promozionali Fast Buds',
       subtitle: 'Risparmia sui semi di cannabis premium con codici sconto esclusivi Fast Buds',
       search: 'Cerca coupon...',
+      activeCoupons: 'Codici Sconto Fast Buds Attivi',
+      whyChoose: 'Perché usare la nostra piattaforma coupon?',
+      questionsLink: 'Domande? Visita le nostre',
+      benefits: {
+        verified: 'Verificato quotidianamente',
+        verifiedDesc: 'Tutti i codici sconto sono testati e verificati ogni giorno',
+        discount: 'Fino al 20% di sconto',
+        discountDesc: 'Massimo risparmio su semi autofiorenti premium di Fast Buds',
+        updated: 'Sempre aggiornato',
+        updatedDesc: 'Nuovi coupon aggiunti regolarmente durante il mese',
+      },
       filter: {
         all: 'Tutti i Coupon',
         active: 'Attivi',
