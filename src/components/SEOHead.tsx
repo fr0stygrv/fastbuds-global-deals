@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { languages } from '@/i18n/languages';
 
@@ -14,6 +15,7 @@ interface SEOHeadProps {
 
 export const SEOHead = ({ title, description, keywords, canonical, image, hreflangUrls, robots }: SEOHeadProps) => {
   const { language } = useLanguage();
+  const location = useLocation();
 
   useEffect(() => {
     document.title = title;
@@ -31,14 +33,23 @@ export const SEOHead = ({ title, description, keywords, canonical, image, hrefla
       element.setAttribute('content', content);
     };
 
-    updateMeta('description', description);
+    // Use different description for root path vs language-specific paths
+    let finalDescription = description;
+    
+    if (location.pathname === '/') {
+      finalDescription = 'Get verified Fast Buds coupon codes, discount codes & promo deals for 2025. Save on Fast Buds seeds with exclusive offers and verified coupons.';
+    } else if (location.pathname.match(/^\/(en|de|es|pt|fr|it)\/?$/)) {
+      finalDescription = description;
+    }
+
+    updateMeta('description', finalDescription);
     if (keywords) updateMeta('keywords', keywords);
     if (robots) updateMeta('robots', robots);
     updateMeta('googlebot', 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1');
     
     // Open Graph
     updateMeta('og:title', title, true);
-    updateMeta('og:description', description, true);
+    updateMeta('og:description', finalDescription, true);
     updateMeta('og:type', 'website', true);
     updateMeta('og:url', canonical || window.location.href, true);
     if (image) updateMeta('og:image', image, true);
@@ -46,7 +57,7 @@ export const SEOHead = ({ title, description, keywords, canonical, image, hrefla
     // Twitter Card
     updateMeta('twitter:card', 'summary_large_image');
     updateMeta('twitter:title', title);
-    updateMeta('twitter:description', description);
+    updateMeta('twitter:description', finalDescription);
     if (image) updateMeta('twitter:image', image);
 
     document.documentElement.lang = language;
@@ -81,7 +92,7 @@ export const SEOHead = ({ title, description, keywords, canonical, image, hrefla
         hreflangLink.hreflang = lang.code;
         
         const url = new URL(window.location.href);
-        const pathParts = url.pathname.split('/').filter(Boolean);
+        let pathParts = url.pathname.split('/').filter(Boolean);
         if (pathParts.length > 0 && ['en', 'de', 'es', 'pt', 'fr', 'it'].includes(pathParts[0])) {
           pathParts[0] = lang.code;
         } else {
@@ -106,7 +117,7 @@ export const SEOHead = ({ title, description, keywords, canonical, image, hrefla
     } else {
       // Fallback: construct EN URL from current location
       const url = new URL(window.location.href);
-      const pathParts = url.pathname.split('/').filter(Boolean);
+      let pathParts = url.pathname.split('/').filter(Boolean);
       if (pathParts.length > 0 && ['en', 'de', 'es', 'pt', 'fr', 'it'].includes(pathParts[0])) {
         pathParts[0] = 'en';
       }
@@ -116,7 +127,7 @@ export const SEOHead = ({ title, description, keywords, canonical, image, hrefla
     
     document.head.appendChild(xDefaultLink);
 
-  }, [title, description, keywords, canonical, image, language, hreflangUrls, robots]);
+  }, [title, description, keywords, canonical, image, language, hreflangUrls, robots, location.pathname]);
 
   return null;
 };
