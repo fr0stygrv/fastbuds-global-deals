@@ -8,7 +8,9 @@ import { StructuredData } from '@/components/StructuredData';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Search, SlidersHorizontal, CheckCircle } from 'lucide-react';
-import { getUsageCount } from '@/lib/couponStorage';
+import { getUsageCount, incrementUsageCount } from '@/lib/couponStorage';
+import { Badge } from '@/components/ui/badge';
+import { toast } from '@/hooks/use-toast';
 import {
   Select,
   SelectContent,
@@ -62,6 +64,17 @@ export default function Home() {
 
     return result;
   }, [search, filter, sort, language]);
+
+  const handleQuickCopy = (coupon: typeof coupons[0]) => {
+    navigator.clipboard.writeText(coupon.code);
+    toast({
+      title: "✅ Code copied!",
+      description: `${coupon.code} is now in your clipboard`,
+    });
+    
+    // Обновить счетчик использований
+    incrementUsageCount(coupon.id, coupon.usageCount);
+  };
 
   return (
     <>
@@ -131,12 +144,53 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Featured Coupon Strip - Минималистичная полоска */}
+        {filteredAndSortedCoupons.length > 0 && (
+          <section className="bg-gradient-to-r from-primary to-primary/80 py-4 animate-in fade-in duration-700">
+            <div className="container">
+              <div className="flex items-center justify-center gap-4 md:gap-6 flex-wrap">
+                {/* Badge */}
+                <Badge className="bg-yellow-500 text-black font-bold px-3 py-1">
+                  🏆 TOP DEAL
+                </Badge>
+                
+                {/* Separator (скрыт на мобилке) */}
+                <span className="hidden md:inline text-white/40">|</span>
+                
+                {/* Discount */}
+                <span className="text-2xl md:text-3xl font-black text-white">
+                  {filteredAndSortedCoupons[0].discount} OFF
+                </span>
+                
+                {/* Separator (скрыт на мобилке) */}
+                <span className="hidden md:inline text-white/40">|</span>
+                
+                {/* Code */}
+                <span className="text-xl md:text-2xl font-bold text-white/90 tracking-wider">
+                  {filteredAndSortedCoupons[0].code}
+                </span>
+                
+                {/* Copy Button */}
+                <Button 
+                  variant="secondary" 
+                  size="lg"
+                  className="font-bold hover-scale"
+                  onClick={() => handleQuickCopy(filteredAndSortedCoupons[0])}
+                >
+                  Copy Code
+                  <span className="ml-2">➜</span>
+                </Button>
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Benefits Section */}
-        <section className="bg-muted/30 py-12">
+        <section className="bg-muted/30 py-8">
           <div className="container">
             <div className="max-w-4xl">
-              <h2 className="text-3xl font-bold mb-8">{t.home.whyChoose}</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+              <h2 className="text-2xl font-bold mb-6">{t.home.whyChoose}</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-primary" />
