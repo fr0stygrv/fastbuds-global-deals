@@ -181,7 +181,7 @@ export default function Home() {
                   size="sm"
                   onClick={() => handleQuickCopy(filteredAndSortedCoupons[0])}
                   className={cn(
-                    "gap-2 bg-white/95 hover:bg-white font-semibold px-4 py-2 h-auto",
+                    "gap-2 bg-white hover:bg-white/90 font-semibold px-4 py-2 h-auto border-white/20",
                     copiedFeatured && "bg-green-500/10 border-green-500 text-green-600 dark:text-green-400"
                   )}
                 >
