@@ -7,10 +7,11 @@ import { SEOHead } from '@/components/SEOHead';
 import { StructuredData } from '@/components/StructuredData';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { Search, SlidersHorizontal, CheckCircle } from 'lucide-react';
+import { Search, SlidersHorizontal, CheckCircle, Copy } from 'lucide-react';
 import { getUsageCount, incrementUsageCount } from '@/lib/couponStorage';
 import { Badge } from '@/components/ui/badge';
 import { toast } from '@/hooks/use-toast';
+import { cn } from '@/lib/utils';
 import {
   Select,
   SelectContent,
@@ -27,6 +28,7 @@ export default function Home() {
   const [search, setSearch] = useState('');
   const [filter, setFilter] = useState<FilterType>('all');
   const [sort, setSort] = useState<SortType>('discount');
+  const [copiedFeatured, setCopiedFeatured] = useState(false);
 
   const filteredAndSortedCoupons = useMemo(() => {
     let result = coupons.filter(coupon => {
@@ -67,13 +69,16 @@ export default function Home() {
 
   const handleQuickCopy = (coupon: typeof coupons[0]) => {
     navigator.clipboard.writeText(coupon.code);
+    setCopiedFeatured(true);
+    
     toast({
       title: "✅ Code copied!",
       description: `${coupon.code} is now in your clipboard`,
     });
     
-    // Обновить счетчик использований
     incrementUsageCount(coupon.id, coupon.usageCount);
+    
+    setTimeout(() => setCopiedFeatured(false), 2000);
   };
 
   return (
@@ -149,36 +154,48 @@ export default function Home() {
           <section className="bg-gradient-to-r from-primary to-primary/80 py-4 animate-in fade-in duration-700">
             <div className="container">
               <div className="flex items-center justify-center gap-4 md:gap-6 flex-wrap">
-                {/* Badge */}
-                <Badge className="bg-yellow-500 text-black font-bold px-3 py-1">
-                  🏆 TOP DEAL
+                {/* TOP DEAL Badge */}
+                <Badge className="bg-white text-black font-bold px-4 py-2 text-sm uppercase">
+                  TOP DEAL
                 </Badge>
                 
-                {/* Separator (скрыт на мобилке) */}
-                <span className="hidden md:inline text-white/40">|</span>
+                {/* Separator */}
+                <span className="hidden md:inline text-white/40 text-2xl">|</span>
                 
                 {/* Discount */}
                 <span className="text-2xl md:text-3xl font-black text-white">
                   {filteredAndSortedCoupons[0].discount} OFF
                 </span>
                 
-                {/* Separator (скрыт на мобилке) */}
-                <span className="hidden md:inline text-white/40">|</span>
+                {/* Separator */}
+                <span className="hidden md:inline text-white/40 text-2xl">|</span>
                 
                 {/* Code */}
-                <span className="text-xl md:text-2xl font-bold text-white/90 tracking-wider">
+                <span className="text-2xl md:text-3xl font-black text-white tracking-wider">
                   {filteredAndSortedCoupons[0].code}
                 </span>
                 
                 {/* Copy Button */}
                 <Button 
-                  variant="secondary" 
-                  size="lg"
-                  className="font-bold hover-scale"
+                  variant="outline" 
+                  size="sm"
                   onClick={() => handleQuickCopy(filteredAndSortedCoupons[0])}
+                  className={cn(
+                    "gap-2 bg-white/95 hover:bg-white font-semibold px-4 py-2 h-auto",
+                    copiedFeatured && "bg-green-500/10 border-green-500 text-green-600 dark:text-green-400"
+                  )}
                 >
-                  Copy Code
-                  <span className="ml-2">➜</span>
+                  {copiedFeatured ? (
+                    <>
+                      <CheckCircle className="h-4 w-4" />
+                      Copied
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="h-4 w-4" />
+                      COPY CODE
+                    </>
+                  )}
                 </Button>
               </div>
             </div>
