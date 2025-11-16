@@ -155,7 +155,7 @@ export default function Home() {
             <div className="container">
               <div className="flex items-center justify-center gap-4 md:gap-6 flex-wrap">
                 {/* TOP DEAL Badge */}
-                <Badge className="bg-white text-black font-bold px-4 py-2 text-sm uppercase animate-pulse">
+                <Badge className="bg-white text-black hover:bg-white hover:text-black font-bold px-4 py-2 text-sm uppercase animate-pulse">
                   TOP DEAL
                 </Badge>
                 
