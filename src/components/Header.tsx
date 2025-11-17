@@ -35,7 +35,7 @@ export const Header = () => {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-3">
           <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
-            <SheetTrigger asChild className="md:hidden">
+            <SheetTrigger asChild className="lg:hidden">
               <Button variant="ghost" size="icon">
                 <Menu className="h-5 w-5" />
               </Button>
@@ -66,7 +66,7 @@ export const Header = () => {
           </Link>
         </div>
 
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) => (
             <Link
               key={link.path}
