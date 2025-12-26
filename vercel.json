@@ -1,7 +1,9 @@
 {
   "redirects": [
     { "source": "/", "destination": "/en", "permanent": true },
-    { "source": "/:lang/", "destination": "/:lang", "permanent": true }
+    { "source": "/:lang/", "destination": "/:lang", "permanent": true },
+    { "source": "/pt/cupom/oferta-buzz-15-melhores-escolhas", "destination": "/pt/cupom/crie-buzz-15-sementes-tendencia", "permanent": true },
+    { "source": "/pt/cupom/buzz-em-alta-15-desconto-melhores-escolhas", "destination": "/pt/cupom/crie-buzz-15-sementes-tendencia", "permanent": true }
   ],
   "rewrites": [
     {
